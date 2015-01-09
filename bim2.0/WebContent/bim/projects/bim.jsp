@@ -23,7 +23,7 @@
 		<p style="margin-top:50px;width:500px">建筑信息模型是以建筑工程项目的各项相关信息数据作为模型的基础 
 		进行建筑模型的建立通过数字信息仿真模拟建筑物所具有的真实信息它具有可视化，
 		协调性，模拟性，优化性和可出图性五大特点 。</p>
-		<div class="content" style="height:950px">
+		<div class="content" style="height:1150px">
 			<div class="three-col">
 				<img src="../../img/projects/bim/ruyitong.png">
 				<div class="img-cover" modal-target="modal-ruyitong">
@@ -88,6 +88,18 @@
 				<img src="../../img/projects/bim/atlantis.png">
 				<div class="img-cover" modal-target="modal-atlantis">
 					亚特兰蒂斯
+				</div>
+			</div>
+			<div class="three-col">
+				<img src="../../img/projects/bim/hailiang.png">
+				<div class="img-cover" modal-target="modal-hailiang">
+					海亮
+				</div>
+			</div>
+			<div class="three-col">
+				<img src="../../img/projects/bim/xinhu.png">
+				<div class="img-cover" modal-target="modal-xinhu">
+					新湖地产
 				</div>
 			</div>
 		</div>
@@ -168,6 +180,20 @@
 		<p>亚特兰蒂斯</p>
 		<div class="arrow-down-black-small"></div>
      	<img src="../../img/projects/bim/modal/atlantis.png">
+	</div>
+	
+	<div id="modal-hailiang" class="modal-projects">
+		<div class="button-close"><img src="../../img/b-close.png"></div>
+		<p>海亮</p>
+		<div class="arrow-down-black-small"></div>
+     	<img src="../../img/projects/bim/modal/hailiang.png">
+	</div>
+	
+	<div id="modal-xinhu" class="modal-projects">
+		<div class="button-close"><img src="../../img/b-close.png"></div>
+		<p>新湖地产</p>
+		<div class="arrow-down-black-small"></div>
+     	<img src="../../img/projects/bim/modal/xinhu.png">
 	</div>
 	
 	<jsp:include page="../../bim/bottom.jsp"/>
