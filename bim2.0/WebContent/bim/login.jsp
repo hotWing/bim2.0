@@ -58,5 +58,10 @@
 		</script>
 </head>
 <body>
+<form name="input" action="../index.jsp" method="post">
+	用户名: <input type="text" name="user" /><br>
+	密码: <input type="text" name="password" /><br>
+	<input type="submit" value="Submit" />
+</form>
 </body>
 </html>

@@ -19,6 +19,13 @@ p {
 	font-size:15px;	
 }
 
+#logintable{
+	margin-top:120px;
+	margin-left:300px;
+	
+	
+}
+
 #rightbar{
 	padding-top:120px;
 	position:fixed;
@@ -27,8 +34,7 @@ p {
 }
 
 #rightbar>ul>li{
-	width:30px;
-	padding:20px 12px;
+	padding:10px;
 	background:rgba(0,0,0,0.8);
 	margin-bottom:20px;
 	font-size:16px;
@@ -36,13 +42,40 @@ p {
 	cursor:pointer
 }
 
-#rightbar>ul>li,{
+#rightbar>ul>li:hover{
 	background:rgba(0,0,0,1);
 }
 
-#rightbar>ul>li>a{
+
+#rightbar ul.sid-menu {
+	display:none;
+	position:absolute;
+	right:42px;
+	margin-top:-32px;
+	padding:10px 10px 0px 10px;
+	width:75px;
+	background:rgba(0,0,0,0.8);
+}
+
+#rightbar ul.sid-menu>li {
+	margin-bottom:10px;
+    list-style-type:none;
+    text-align:center;
+}
+
+#rightbar ul.sid-menu>li>a{
+	display: block;
 	text-decoration: none;
-	color:#fff;
+	font-size: 17px;
+	color: #fff;
+}
+
+#rightbar ul>li:hover ul{
+	display:block; 
+}
+
+#rightbar ul.sid-menu>li a:hover{
+	color:#00953b;
 }
 
 #navbar{
@@ -85,8 +118,6 @@ p {
 
 #navbar ul.menu>li:hover ul{
 	display:block; 
-	height:auto; 
-	width:8em; 
 }
 
 #navbar ul.menu>li:hover .arrow-up{
