@@ -216,6 +216,8 @@ p {
     float:left;
 }
 
+
+
 .three-col img {
 	position:absolute;
 	cursor:pointer;
@@ -379,6 +381,17 @@ input.contact[type="submit"] {
     padding-left:50px;
     }
     
+.text-search {
+	margin-left:-300px;
+	margin-top:15px;
+	background:transparent;
+	border:3px solid white;
+	width:300px;
+	height:45px;
+	color:white;
+	padding-left:10px;
+}
+    
 .button-login {
 	border:0px;
 	background-color:#00953b;
@@ -399,4 +412,55 @@ input.contact[type="submit"] {
 	position: absolute;
 	margin-top:25px;
 	margin-left:25px;
+}
+
+.three-col2 {	
+    float:left;
+    background-color:#DCDCDC;
+    width:200px;
+    height:300px;
+    margin-top:80px;
+    margin-bottom:80px;
+    margin-left:100px;
+    border-radius:9px;
+}
+
+.three-col3 {
+	float:left;
+	border-style:solid; 
+	border-width:2px; 
+	border-color:gray;
+	margin-top:80px;
+	margin-left:100px;
+	height:250px;
+	width:170px;
+	border-radius:9px;
+	
+	
+}
+
+.smalldiv1 {
+	border-style:none; 
+	background-color:#808080;
+	width:200px;
+	height:50px;
+	margin-top:250px;
+	border-radius:0px 0px 6px 6px;
+}
+
+.smalldiv2 {
+	border-style:none; 
+	background-color:#808080;
+	width:170px;
+	height:50px;
+	border-radius:0px 0px 3px 3px;
+	margin-top:200px;
+}
+
+div.bgbar {
+
+	width:100%;
+	height:180px;
+	background-color:black;
+	margin-top:50px;
 }
