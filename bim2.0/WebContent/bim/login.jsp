@@ -65,7 +65,7 @@
 	</div>
 	<div class="login-form" style="text-align:center;position:absolute;top:50%;left:50%;margin:-200px 0 0 -200px;width:400px;height:300px;">
 		<form action="../index.jsp" >
-			<img src="${request.getContextPath()}/bim2.0/img/login/icon-login.png">
+			<img src="${request.getContextPath()}/bim2.0/img/login/icon-login.png" style="margin-bottom:30px">
 			<div>
 				<img src="${request.getContextPath()}/bim2.0/img/login/icon-name.png">
 				<input type="text" name="username" class="text-login"/>
