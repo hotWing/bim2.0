@@ -366,3 +366,37 @@ input.contact[type="submit"] {
 .wall-service-para {
 	margin-left:60px;
 }
+
+.text-login { 
+	border:2px solid #7b7b7b; 
+	color:white; 
+	font-size:20px; 
+	width:330px;
+	height:50px;
+    background-color:rgba(0,0,0,0.2);
+    border-radius:6px;
+    margin:10px;
+    padding-left:50px;
+    }
+    
+.button-login {
+	border:0px;
+	background-color:#00953b;
+	width:335px;
+	height:50px;
+	font-size:20px;
+	color:white;
+	border-radius:6px; 
+	margin:10px;
+	cursor:pointer;
+	}
+	
+.button-login:hover{
+	background-color:#028335;
+	}
+
+.login-form div img {
+	position: absolute;
+	margin-top:25px;
+	margin-left:25px;
+}
