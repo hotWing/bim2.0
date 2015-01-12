@@ -12,7 +12,7 @@
 	<jsp:include page="../bim/right.jsp"/>
 	
 	<div class="container">
-	
+	 dsad
 		
 	</div>
 
