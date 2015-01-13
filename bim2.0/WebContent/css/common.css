@@ -382,14 +382,15 @@ input.contact[type="submit"] {
     }
     
 .text-search {
-	margin-left:-300px;
 	margin-top:15px;
 	background:transparent;
-	border:3px solid white;
-	width:300px;
-	height:45px;
+	border:4px solid white;
+	width:353px;
+	height:66px;
 	color:white;
 	padding-left:10px;
+	font-size:20px;
+	padding-right:55px;
 }
     
 .button-login {
@@ -417,11 +418,11 @@ input.contact[type="submit"] {
 .three-col2 {	
     float:left;
     background-color:#DCDCDC;
-    width:200px;
-    height:300px;
-    margin-top:80px;
-    margin-bottom:80px;
-    margin-left:100px;
+    width:300px;
+    height:387px;
+    margin-top:95px;
+/*     margin-bottom:80px; */
+    margin-right:120px;
     border-radius:9px;
 }
 
@@ -431,30 +432,42 @@ input.contact[type="submit"] {
 	border-width:2px; 
 	border-color:gray;
 	margin-top:80px;
-	margin-left:100px;
-	height:250px;
-	width:170px;
+	margin-right:38px;
+	height:298px;
+	width:193px;
 	border-radius:9px;
 	
 	
 }
 
+.smalldiv {
+	background-color:#808080;
+	width:300px;
+	height:55px;
+	border-radius:9px 9px 0px 0px;
+	text-align:center;
+	font-size:34px;
+	color:white;
+	padding-top:5px;
+}
+
 .smalldiv1 {
 	border-style:none; 
 	background-color:#808080;
-	width:200px;
-	height:50px;
+	width:195px;
+	height:45px;
 	margin-top:250px;
-	border-radius:0px 0px 6px 6px;
+	border-radius:0px 0px 9px 9px;
 }
 
 .smalldiv2 {
 	border-style:none; 
 	background-color:#808080;
-	width:170px;
-	height:30px;
-	border-radius:0px 0px 3px 3px;
-	margin-top:220px;
+	width:195px;
+	height:45px;
+	border-radius:0px 0px 9px 9px;
+	margin-top:255px;
+	text-align:center;
 }
 
 div.bgbar {
