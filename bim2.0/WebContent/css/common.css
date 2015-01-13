@@ -464,3 +464,26 @@ div.bgbar {
 	background-color:black;
 	margin-top:50px;
 }
+
+p.entrance {
+	font-size:20px;
+	padding-top:40px;
+	line-height:30px;
+	
+}
+
+.arrow-right {
+	margin-top:50px;
+	width: 0px; 
+	height: 0px; 
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;	
+	border-left: 10px solid green;
+}
+
+pre.en-title{
+	font-size:30px;
+	color:green;
+	padding-left:30px;
+	margin-top:-18px;
+}
