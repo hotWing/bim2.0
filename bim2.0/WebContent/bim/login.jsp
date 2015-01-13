@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="../theme/supersized.shutter.css" type="text/css" media="screen" />
 	<script type="text/javascript" src="../js/supersized-jquery.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="../js/login.js"></script>
 	<script type="text/javascript" src="../js/supersized.3.2.7.min.js"></script>
 	<script type="text/javascript" src="../theme/supersized.shutter.min.js"></script>
 	
@@ -64,17 +65,18 @@
 		<p style="margin-top:-42px; margin-left:70px;font-size:20px;color:white;">苏州彼慕建筑设计咨询有限公司</p>
 	</div>
 	<div class="login-form" style="text-align:center;position:absolute;top:50%;left:50%;margin:-200px 0 0 -200px;width:400px;height:300px;">
-		<form action="../index.jsp" >
+		<form id="form" action="../usercenter" >
+			<input type="text" name="action" value="login" style="display:none;"/>
 			<img src="${request.getContextPath()}/bim2.0/img/login/icon-login.png" style="margin-bottom:30px">
 			<div>
 				<img src="${request.getContextPath()}/bim2.0/img/login/icon-name.png">
-				<input type="text" name="username" class="text-login"/>
+				<input id="username" type="text" name="username" class="text-login"/>
 			</div>
 			<div>
 				<img src="${request.getContextPath()}/bim2.0/img/login/icon-password.png">
-				<input type="password" name="password" class="text-login"/>
+				<input id="password" type="password" name="password" class="text-login"/>
 			</div>
-			<button type="submit" id="loginbt" class="button-login">Login</button>
+			<input id="loginbt"  type="button"  class="button-login" value="提交">
 		</form>
 	</div>
 

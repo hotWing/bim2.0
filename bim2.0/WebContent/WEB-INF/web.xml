@@ -4,4 +4,16 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
+  
+  <servlet>
+       <description>UserCenter</description>
+       <display-name>usercenter</display-name>
+         <servlet-name>Usercenter</servlet-name>
+       <servlet-class>com.Usercenter</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Usercenter</servlet-name>
+    <url-pattern>/usercenter</url-pattern>
+  </servlet-mapping>
 </web-app>

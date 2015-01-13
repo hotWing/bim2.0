@@ -9,14 +9,15 @@
 				<img src="${request.getContextPath()}/bim2.0/img/right/login.png">
 			</div>
 			<ul class="sid-menu">
-					<% String name = request.getParameter("username"); 
-						String path = request.getContextPath();
-						if (name == null)
-							out.write("<li><a href='"+path+"/bim/login.jsp'>登录</a></li>");
-						else 
-							out.write("<li><a href='#'>"+ name +"</a></li>"
-									+ "<li><a href='#'>退出</a></li>" );
-					%>
+					<c:choose>  
+					   <c:when test="${empty username}">
+					   		<li><a href='${request.getContextPath()}/bim2.0/bim/login.jsp'>登录</a></li>
+					   </c:when>  
+					   <c:otherwise>   
+					   		<li><a href='#'>${username}</a></li>
+					   		<li><a href='${request.getContextPath()}/bim2.0/usercenter?action=logout'>退出</a></li>
+					   </c:otherwise>  
+					</c:choose>
 		    </ul>
 		</li>
 		<li>
