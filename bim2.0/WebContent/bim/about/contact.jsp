@@ -9,7 +9,8 @@
   	<script src="../../js/contact.js"></script>
 </head>
 <body>
-	<input id="page-name" value="about" style="display:none"></input>
+	<input id="tobottom" value="${param.tobottom}" style="display:none">
+	<input id="page-name" value="about" style="display:none">
 	<jsp:include page="../../bim/top.jsp"/>
 	<jsp:include page="../../bim/right.jsp"/>
 	<div class="container">
@@ -43,7 +44,7 @@
 			</div>
 		</div>
 		<div class="content">
-			<form action="../../bim/error.jsp">
+			<form id="contact-form" action="../../bim/error.jsp">
 				<p class="header">联系我们：</p>
 				<p>如果您想联系我们，跟我们谈谈我们的工作，请填写一下表格，我们会尽快与您联系: </p><br>
 				<p>名字*</p>
