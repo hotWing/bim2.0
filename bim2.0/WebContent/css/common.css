@@ -373,12 +373,12 @@ input.contact[type="submit"] {
 	border:2px solid #7b7b7b; 
 	color:white; 
 	font-size:20px; 
-	width:330px;
-	height:50px;
+	width:280px;
+	height:52px;
     background-color:rgba(0,0,0,0.2);
     border-radius:6px;
     margin:10px;
-    padding-left:50px;
+    padding-left:45px;
     }
     
 .text-search {
@@ -395,9 +395,9 @@ input.contact[type="submit"] {
 .button-login {
 	border:0px;
 	background-color:#00953b;
-	width:335px;
-	height:50px;
-	font-size:20px;
+	width:325px;
+	height:52px;
+	font-size:16px;
 	color:white;
 	border-radius:6px; 
 	margin:10px;
@@ -410,7 +410,7 @@ input.contact[type="submit"] {
 
 .login-form div img {
 	position: absolute;
-	margin-top:25px;
+	margin-top:30px;
 	margin-left:25px;
 }
 
