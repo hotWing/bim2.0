@@ -33,7 +33,7 @@
 				<img src="${request.getContextPath()}/bim2.0/img/right/contact.png">
 			</div>
 			<ul class="sid-menu">
-				<li><a href="${request.getContextPath()}/bim2.0/bim/error.jsp">联系</a></li> 
+				<li><a href="${request.getContextPath()}/bim2.0/bim/about/contact.jsp?tobottom=true">联系</a></li> 
 		    </ul>
 		</li>
 		<li >

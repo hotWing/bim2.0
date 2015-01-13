@@ -10,4 +10,10 @@ $(document).ready(function(){
 	$("#our-pos").click( function() {
 		map.centerAndZoom(pos, 18); 
 	});
+	
+	if ($("#tobottom").val()=="true") {
+		var destination = $("#contact-form").offset().top;
+		jQuery(document).scrollTop(destination);
+		return false;
+	}
 });
