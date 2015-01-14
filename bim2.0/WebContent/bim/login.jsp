@@ -4,13 +4,13 @@
 <html>
 <head>
     <jsp:include page="head.jsp"/>
-   	<link rel="stylesheet" href="../css/supersized.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="../theme/supersized.shutter.css" type="text/css" media="screen" />
-	<script type="text/javascript" src="../js/supersized-jquery.min.js"></script>
-	<script type="text/javascript" src="../js/jquery.easing.min.js"></script>
-	<script type="text/javascript" src="../js/login.js"></script>
-	<script type="text/javascript" src="../js/supersized.3.2.7.min.js"></script>
-	<script type="text/javascript" src="../theme/supersized.shutter.min.js"></script>
+   	<link rel="stylesheet" href="${request.getContextPath()}/bim2.0/css/supersized.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="${request.getContextPath()}/bim2.0/theme/supersized.shutter.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="${request.getContextPath()}/bim2.0/js/supersized-jquery.min.js"></script>
+	<script type="text/javascript" src="${request.getContextPath()}/bim2.0/js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="${request.getContextPath()}/bim2.0/js/login.js"></script>
+	<script type="text/javascript" src="${request.getContextPath()}/bim2.0/js/supersized.3.2.7.min.js"></script>
+	<script type="text/javascript" src="${request.getContextPath()}/bim2.0/theme/supersized.shutter.min.js"></script>
 	
     <script type="text/javascript">
 			jQuery(function($){
@@ -46,8 +46,8 @@
 					thumbnail_navigation    :   0,			// Thumbnail navigation
 					slides 					:  	[			// Slideshow Images
 // 														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/kazvan-1.jpg', title : 'Image Credit: Maria Kazvan', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/kazvan-1.jpg', url : 'http://www.nonsensesociety.com/2011/04/maria-kazvan/'},
-														{image : '../img/login/bg1.png', title : '', thumb : '', url : ''},  
-														{image : '../img/login/bg2.png', title : '', thumb : '', url : ''},  
+														{image : '${request.getContextPath()}/bim2.0/img/login/bg1.png', title : '', thumb : '', url : ''},  
+														{image : '${request.getContextPath()}/bim2.0/img/login/bg2.png', title : '', thumb : '', url : ''},  
 													],
 					// Theme Options			   
 					progress_bar			:	1,			// Timer for each slide							
@@ -65,7 +65,7 @@
 		<p style="margin-top:-42px; margin-left:70px;font-size:20px;color:white;">苏州彼慕建筑设计咨询有限公司</p>
 	</div>
 	<div class="login-form" style="text-align:center;position:absolute;top:50%;left:50%;margin:-200px 0 0 -200px;width:400px;height:300px;">
-		<form id="form" action="../usercenter" >
+		<form id="form" action="${request.getContextPath()}/bim2.0/usercenter" >
 			<input type="text" name="action" value="login" style="display:none;"/>
 			<img src="${request.getContextPath()}/bim2.0/img/login/icon-login.png" style="margin-bottom:30px">
 			<div>

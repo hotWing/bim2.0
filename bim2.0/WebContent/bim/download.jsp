@@ -5,6 +5,7 @@
 <head>
 	<jsp:include page="../bim/head.jsp"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="${request.getContextPath()}/bim2.0/js/download.js"></script>
 </head>
 <body>
 	<input id="page-name" value="download" style="display:none"></input>
@@ -48,7 +49,11 @@
 		<p style="font-size:60px;margin-top:100px;text-align:left">族文件</p>
 		<div style="height:400px;">
 			<div class="three-col3">
-				<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div></div>
+				<a class="login-needed" href="../usercenter?action=check&web=http://pan.baidu.com">
+					<div class="smalldiv2">
+						<img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png">
+					</div>
+				</a></div>
 			<div class="three-col3">
 				<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div></div>
 			<div class="three-col3">

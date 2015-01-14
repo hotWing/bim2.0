@@ -14,7 +14,7 @@
 					   		<li><a href='${request.getContextPath()}/bim2.0/bim/login.jsp'>登录</a></li>
 					   </c:when>  
 					   <c:otherwise>   
-					   		<li><a href='#'>${username}</a></li>
+					   		<li><a id="loginname" href='#'>${username}</a></li>
 					   		<li><a href='${request.getContextPath()}/bim2.0/usercenter?action=logout'>退出</a></li>
 					   </c:otherwise>  
 					</c:choose>
@@ -41,8 +41,8 @@
 				<img src="${request.getContextPath()}/bim2.0/img/right/entrance.png">
 			</div>
 			<ul class="sid-menu">
-				<li><a href="${request.getContextPath()}/bim2.0/bim/error.jsp">制造商</a></li>
-				<li><a href="${request.getContextPath()}/bim2.0/bim/error.jsp">投资者</a></li>  
+				<li><a href="${request.getContextPath()}/bim2.0/bim/entrance.jsp">制造商</a></li>
+				<li><a href="${request.getContextPath()}/bim2.0/bim/entrance.jsp">投资者</a></li>  
 		    </ul>
 		</li>
 	</ul>

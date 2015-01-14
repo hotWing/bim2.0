@@ -33,11 +33,26 @@ public class Usercenter extends HttpServlet {
 				 e.printStackTrace();  
 			 }  
 		 }
-		 if ("logout".equals(action)) {
+		 else if ("logout".equals(action)) {
 			 try {  
 				 HttpSession session = req.getSession();
 				 session.removeAttribute("username");
 				 req.getRequestDispatcher("/index.jsp").forward(req, resp);
+			 } catch (Exception e) {  
+				 e.printStackTrace();  
+			 }  
+		 }
+		 else if ("check".equals(action)) {
+			 try {  
+				 HttpSession session = req.getSession();
+				 String name = (String) session.getAttribute("username");
+				 if (name==null || name.isEmpty()) {
+					 req.getRequestDispatcher("/bim/login.jsp").forward(req, resp);
+				 }
+				 else {
+					 String web = req.getParameter("web");
+					 resp.sendRedirect(web);
+				 }
 			 } catch (Exception e) {  
 				 e.printStackTrace();  
 			 }  
