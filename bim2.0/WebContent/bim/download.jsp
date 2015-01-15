@@ -69,7 +69,7 @@
 		<p style="font-size:60px;margin-top:100px;text-align:left">文本文档</p>
 		<div style="height:400px;">
 			<div class="three-col3" style="background-image:url('../img/download/document/bimchat-2014spring.png');background-position:center top;">
-				<a class="login-needed" href="../download/bimchat.pdf">
+				<a class="login-needed" href="../usercenter?action=check&web=${request.getContextPath()}/bim2.0/download/bimchat.pdf">
 					<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div>
 				</a>
 			</div>
