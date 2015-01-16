@@ -24,7 +24,7 @@
 	</div>
 	
 	<div class="container" style="text-align:center">
-			<h1 style="color:green;text-align:center;padding-top:100px;">—————— THE BIM WORLD WAS CHANGED ——————</h1>		
+<!-- 			<h1 style="color:green;text-align:center;padding-top:100px;">—————— THE BIM WORLD WAS CHANGED ——————</h1>		 -->
 			<div style="height:520px;">
 				<div class="three-col2"><div class="smalldiv">族文件</div></div>
 				<div class="three-col2" ><div class="smalldiv">文本文档</div></div>
@@ -74,10 +74,18 @@
 					<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div>
 				</a>
 			</div>
-			<div class="three-col3">
-				<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div></div>
-			<div class="three-col3">
-				<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div></div>
+			<div class="three-col3" style="background-image:url('../img/download/document/bimchat-2014summer.png');background-position:center top;">
+				<div class="download-cover">笔墨闲谈2014夏</div>
+				<a class="login-needed" href="../usercenter?action=check&web=${request.getContextPath()}/bim2.0/download/bimchat-2014summer.pdf">
+					<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div>
+				</a>
+			</div>
+			<div class="three-col3" style="background-image:url('../img/download/document/bimchat-2014autumn.png');background-position:center top;">
+				<div class="download-cover">笔墨闲谈2014秋</div>
+				<a class="login-needed" href="../usercenter?action=check&web=${request.getContextPath()}/bim2.0/download/bimchat-2014autumn.pdf">
+					<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div>
+				</a>
+			</div>
 				<div class="three-col3">
 				<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div></div>
 				<div class="three-col3" style="margin-right:0px;">
