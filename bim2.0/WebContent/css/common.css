@@ -436,8 +436,6 @@ input.contact[type="submit"] {
 	height:298px;
 	width:193px;
 	border-radius:9px;
-	
-	
 }
 
 .smalldiv {
@@ -469,6 +467,22 @@ input.contact[type="submit"] {
 	margin-top:255px;
 	text-align:center;
 	cursor:pointer;
+}
+
+.download-cover {
+	display:none;
+	position:absolute;
+	width:195px;
+	height:40px;
+	margin-top:215px;
+	background:rgba(0,0,0,0.8);
+	line-height:40px;
+	text-align:center;
+	color:white;
+}
+
+.three-col3:hover .download-cover{
+	display:block;
 }
 
 div.bgbar {
