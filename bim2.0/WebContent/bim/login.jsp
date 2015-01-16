@@ -69,12 +69,12 @@
 			<input type="text" name="action" value="login" style="display:none;"/>
 			<img src="${request.getContextPath()}/bim2.0/img/login/icon-login.png" style="margin-bottom:30px">
 			<div>
-				<img src="${request.getContextPath()}/bim2.0/img/login/icon-name.png">
-				<input id="username" type="text" name="username" class="text-login" value="用户名" onblur="if(this.value=='') {this.value='用户名';}" onfocus="if(this.value=='用户名') {this.value='';}"/>
+				<input style="background-image:url('${request.getContextPath()}/bim2.0/img/login/icon-name.png');"
+					id="username" type="text" name="username" class="text-login" value="用户名" onblur="if(this.value=='') {this.value='用户名';}" onfocus="if(this.value=='用户名') {this.value='';}"/>
 			</div>
 			<div>
-				<img src="${request.getContextPath()}/bim2.0/img/login/icon-password.png">
-				<input id="password"  value="请输入密码" onfocus="if(this.value==defaultValue) {this.value='';this.type='password'}" name="password" class="text-login" onblur="if(!value) {value=defaultValue; this.type='text';}"/>
+				<input style="background-image:url('${request.getContextPath()}/bim2.0/img/login/icon-password.png');" 
+					id="password"  value="请输入密码" onfocus="if(this.value==defaultValue) {this.value='';this.type='password'}" name="password" class="text-login" onblur="if(!value) {value=defaultValue; this.type='text';}"/>
 			</div>
 			<input id="loginbt"  type="button"  class="button-login" value="提交">
 		</form>

@@ -373,12 +373,12 @@ input.contact[type="submit"] {
 	border:2px solid #7b7b7b; 
 	color:white; 
 	font-size:20px; 
-	width:280px;
+	width:260px;
 	height:52px;
     background-color:rgba(0,0,0,0.2);
     border-radius:6px;
     margin:10px;
-    padding-left:45px;
+    padding-left:65px;
     }
     
 .text-search {
@@ -409,11 +409,11 @@ input.contact[type="submit"] {
 	background-color:#028335;
 	}
 
-.login-form div img {
-	position: absolute;
-	margin-top:30px;
-	margin-left:25px;
-}
+/* .login-form div img { */
+/* 	position: absolute; */
+/* 	margin-top:30px; */
+/* 	margin-left:25px; */
+/* } */
 
 .three-col2 {	
     float:left;
