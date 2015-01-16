@@ -17,13 +17,9 @@
 			<img src="../../img/projects/page-mark.png">
 		</div>
 		<div class="header">
-			<p class="header">室内设计</p>
+			<p class="header">室内设计工程</p>
 			<div class="arrow-down-black-small"></div>
 		</div>
-		<p style="margin-top:50px;width:500px">
-		室内设计是根据建筑物的使用性质、所处环境和相应标准 运用物质技术手段和建筑设计原理 创造功能合理、舒适优美、
-		满足人们物质和精神生活需要的室内环境 这一空间环境既具有使用价值，满足相应的功能要求 同时也反映了历史文脉、
-		建筑风格、环境气氛等精神因素 明确地把“创造满足人们物质和精神生活需要的室内环境” 作为室内设计的目的。</p>
 		<div class="content" style="height:550px">
 			<div class="three-col">
 				<img src="../../img/projects/interior/guoda.png">

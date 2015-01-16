@@ -30,9 +30,10 @@
 				<div class="arrow-down"></div>
 				<div class="arrow-up"></div>
 				<ul class="sub-menu">
-					<li><a id="projects" href="${request.getContextPath()}/bim2.0/bim/projects/bim.jsp">建筑信息模型案例</a></li> 
-					<li><a id="projects" href="${request.getContextPath()}/bim2.0/bim/projects/interior.jsp">室内装饰案例</a></li> 
-					<li><a class="login-needed" id="projects" href="${request.getContextPath()}/bim2.0/usercenter?action=check&web=${request.getContextPath()}/bim2.0/bim/projects/project-trace.jsp">项目跟踪</a></li> 
+					<li><a id="projects" href="${request.getContextPath()}/bim2.0/bim/projects/bim.jsp">幕墙工程</a></li> 
+					<li><a id="projects" href="${request.getContextPath()}/bim2.0/bim/projects/interior.jsp">室内装饰工程</a></li> 
+					<li><a id="projects" href="${request.getContextPath()}/bim2.0/bim/projects/pipeline.jsp">管线综合工程</a></li> 
+<%-- 					<li><a class="login-needed" id="projects" href="${request.getContextPath()}/bim2.0/usercenter?action=check&web=${request.getContextPath()}/bim2.0/bim/projects/project-trace.jsp">项目跟踪</a></li>  --%>
 				</ul> 
 			</li>
 			<li>
