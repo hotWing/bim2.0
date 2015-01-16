@@ -28,7 +28,7 @@ public class Usercenter extends HttpServlet {
 				 String username = req.getParameter("username"); 
 				 HttpSession session = req.getSession();
 				 session.setAttribute("username", username);
-				 req.getRequestDispatcher("/index.jsp").forward(req, resp);
+				 resp.sendRedirect("/bim2.0/index.jsp");
 			 } catch (Exception e) {  
 				 e.printStackTrace();  
 			 }  
@@ -37,7 +37,7 @@ public class Usercenter extends HttpServlet {
 			 try {  
 				 HttpSession session = req.getSession();
 				 session.removeAttribute("username");
-				 req.getRequestDispatcher("/index.jsp").forward(req, resp);
+				 resp.sendRedirect("/bim2.0/index.jsp");
 			 } catch (Exception e) {  
 				 e.printStackTrace();  
 			 }  
@@ -47,7 +47,7 @@ public class Usercenter extends HttpServlet {
 				 HttpSession session = req.getSession();
 				 String name = (String) session.getAttribute("username");
 				 if (name==null || name.isEmpty()) {
-					 req.getRequestDispatcher("/bim/login.jsp").forward(req, resp);
+					 resp.sendRedirect("/bim2.0/bim/login.jsp");
 				 }
 				 else {
 					 String web = req.getParameter("web");
