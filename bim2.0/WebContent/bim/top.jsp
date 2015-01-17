@@ -10,8 +10,8 @@
 	<div class="container">
 		<ul class="menu">
 			<li><a style="margin-top:19px; margin-right:28px"  href="${request.getContextPath()}/bim2.0/index.jsp"><img src="${request.getContextPath()}/bim2.0/img/index/logo.png"></a></li>
-			<li><a style="margin-right:150px" id="index" href="${request.getContextPath()}/bim2.0/index.jsp">苏州彼慕建筑设计咨询有限公司</a></li>
-<%-- 			<li><a style="margin-right:250px" id="index" href="${request.getContextPath()}/bim2.0/index.jsp">DESIGN BIM</a></li> --%>
+<%-- 			<li><a style="margin-right:150px" id="index" href="${request.getContextPath()}/bim2.0/index.jsp">苏州彼慕建筑设计咨询有限公司</a></li> --%>
+			<li><a style="margin-right:250px" id="index" href="${request.getContextPath()}/bim2.0/index.jsp">DESIGN BIM</a></li>
 			<li>
 				<a id="solution" href="${request.getContextPath()}/bim2.0/bim/solution.jsp">解决方案</a>
 				<div class="arrow-down"></div>
