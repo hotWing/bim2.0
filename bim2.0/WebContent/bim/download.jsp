@@ -113,6 +113,42 @@
 		</div>
 	</div>
 	
+	
+	<ul id="tabs">
+	    <li><a href="#" name="#tab1">族文件</a></li>
+	    <li><a href="#" name="#tab2">文本文档</a></li>
+	    <li><a href="#" name="#tab3">视频教程</a></li>
+	</ul>
+	
+	<div id="tab-content">
+      <div id="tab1" style="display: block;">
+         族文件  
+      </div>
+      <div id="tab2" style="display: none;">
+         文本文档
+      </div>
+      <div id="tab3" style="display: none;">
+         视频教程
+      </div>
+  </div>
+
+	<ul id="tabs2">
+	    <li><a href="#" name="#tab21">已完成项目</a></li>
+	    <li><a href="#" name="#tab22">进行中项目</a></li>
+	    <li><a href="#" name="#tab23">洽谈中项目</a></li>
+	</ul>
+	
+	<div id="tab-content2">
+      <div id="tab21" style="display: block;">
+        已完成项目
+      </div>
+      <div id="tab22" style="display: none;">
+        进行中项目
+      </div>
+      <div id="tab23" style="display: none;">
+       洽谈中项目
+      </div>
+  </div>
 	<jsp:include page="../bim/bottom.jsp"/>
 </body>
 </html>
