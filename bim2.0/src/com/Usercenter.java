@@ -28,7 +28,7 @@ public class Usercenter extends HttpServlet {
 				 String username = req.getParameter("username"); 
 				 HttpSession session = req.getSession();
 				 session.setAttribute("username", username);
-				 resp.sendRedirect("/bim2.0/index.jsp");
+				 resp.sendRedirect("/bim2.0/bim/usercenter.jsp");
 			 } catch (Exception e) {  
 				 e.printStackTrace();  
 			 }  
