@@ -15,7 +15,7 @@
 					   </c:when>  
 					   <c:otherwise>   
 					   		<li><a id="loginname" href='#'>${username}</a></li>
-					   		<li><a href='${request.getContextPath()}/bim2.0/usercenter?action=logout'>退出</a></li>
+					   		<li><a href='${request.getContextPath()}/bim2.0/usercenter/logout'>退出</a></li>
 					   </c:otherwise>  
 					</c:choose>
 		    </ul>

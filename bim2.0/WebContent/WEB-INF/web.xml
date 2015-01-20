@@ -6,14 +6,24 @@
   </welcome-file-list>
   
   <servlet>
-       <description>UserCenter</description>
-       <display-name>usercenter</display-name>
-         <servlet-name>Usercenter</servlet-name>
-       <servlet-class>com.Usercenter</servlet-class>
+  	<servlet-name>usercenter</servlet-name>
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  	<load-on-startup>1</load-on-startup>
   </servlet>
-  
   <servlet-mapping>
-    <servlet-name>Usercenter</servlet-name>
-    <url-pattern>/usercenter</url-pattern>
+  	<servlet-name>usercenter</servlet-name>
+  	<url-pattern>/usercenter/*</url-pattern>
   </servlet-mapping>
+  
+<!--   <servlet> -->
+<!--        <description>UserCenter</description> -->
+<!--        <display-name>usercenter</display-name> -->
+<!--          <servlet-name>Usercenter</servlet-name> -->
+<!--        <servlet-class>com.Usercenter</servlet-class> -->
+<!--   </servlet> -->
+  
+<!--   <servlet-mapping> -->
+<!--     <servlet-name>Usercenter</servlet-name> -->
+<!--     <url-pattern>/usercenter</url-pattern> -->
+<!--   </servlet-mapping> -->
 </web-app>

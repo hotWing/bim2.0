@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%> 	
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -65,8 +66,8 @@
 		<p style="margin-top:-42px; margin-left:70px;font-size:20px;color:white;">苏州彼慕建筑设计咨询有限公司</p>
 	</div>
 	<div class="login-form" style="text-align:center;position:absolute;top:50%;left:50%;margin:-200px 0 0 -200px;width:400px;height:300px;">
-		<form id="form" action="${request.getContextPath()}/bim2.0/usercenter" >
-			<input type="text" name="action" value="login" style="display:none;"/>
+		<form id="form" action="${request.getContextPath()}/bim2.0/usercenter/login" method="post">
+<!-- 			<input type="text" name="action" value="login" style="display:none;"/> -->
 			<img src="${request.getContextPath()}/bim2.0/img/login/icon-login.png" style="margin-bottom:30px">
 			<div>
 				<input style="background-image:url('${request.getContextPath()}/bim2.0/img/login/icon-name.png');"
