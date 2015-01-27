@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.services.UserService;
+import com.service.UserService;
 
 public class UserserviceTest {
 	private BeanFactory factory = new ClassPathXmlApplicationContext("beans.xml");
@@ -12,7 +12,7 @@ public class UserserviceTest {
 	@Test
 	public void test() {
 		UserService us = factory.getBean("userService",UserService.class);
-		us.login();
+//		us.login();
 	}
 
 }
