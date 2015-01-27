@@ -1,12 +1,14 @@
 $(function(){
 	
 	$("#loginbt").click(function(){
-		if($("#username").val()!="admin"|| $("#password").val()!="123456") {
-			alert("用户名或密码错误！");
+		if($("#username").val()=="") {
+			alert("请填写用户名！");
+		}
+		else if ($("#password").val()==""){
+			alert("请填写密码！");
 		}
 		else {
 			$("#form").submit();
 		}
 	});
-
 });

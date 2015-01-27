@@ -18,7 +18,7 @@ public class UserServiceImpl implements UserService {
 	 }
 	
 	@Override
-	public boolean checkUser(String username) {
-		return userDao.checkUser(username);
+	public boolean checkUser(String username, String password) {
+		return userDao.checkUser(username,password);
 	}
 }

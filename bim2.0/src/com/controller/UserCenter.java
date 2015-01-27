@@ -21,8 +21,15 @@ public class UserCenter {
 	
 	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public String login(String username, String password, HttpSession session){
-		session.setAttribute("username", username);
-		return "bim/usercenter";
+		boolean isUser = userService.checkUser(username,password);
+		if (isUser) {
+			session.setAttribute("username", username);
+			session.setAttribute("password", password);
+			return "bim/usercenter";
+		}
+		else {
+			return "bim/login";
+		}
 	}
 	
 	@RequestMapping(value="/logout")
@@ -34,18 +41,12 @@ public class UserCenter {
 	@RequestMapping(value="/check")
 	public String check(HttpSession session){
 		String name = (String) session.getAttribute("username");
-		
-//		 if (name==null || name.isEmpty()) {
-//			 return "bim/login";
-//		 }
-//		 else {
-//			 return "bim/usercenter";
-//		 }
-		boolean isUser = userService.checkUser(name);
-		if (isUser)
+
+		if (name==null || name.isEmpty()) {
 			 return "bim/login";
-		else 
+		 }
+		 else {
 			 return "bim/usercenter";
-		
+		 }
 	}
 }

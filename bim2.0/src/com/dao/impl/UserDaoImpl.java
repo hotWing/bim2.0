@@ -1,8 +1,10 @@
 package com.dao.impl;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.annotation.Resource;
 
-import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
@@ -19,8 +21,12 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
-	public boolean checkUser(@Param("username")String username) {
-		int i =  sqlSession.selectOne("com.mybatis.UserMapper.checkUser");
+	public boolean checkUser(String username, String password) {
+		Map<String, Object> parms = new HashMap<String, Object>();
+		parms.put("username", username);
+		parms.put("password", password);
+		
+		int i =  sqlSession.selectOne("com.mybatis.UserMapper.checkUser", parms);
 		if (i == 0)
 			return false;
 		else 
