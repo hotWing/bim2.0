@@ -49,7 +49,6 @@
 // 														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/kazvan-1.jpg', title : 'Image Credit: Maria Kazvan', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/kazvan-1.jpg', url : 'http://www.nonsensesociety.com/2011/04/maria-kazvan/'},
 														{image : 'img/index/logo-slide.png', title : '', thumb : 'img/index/logo-slide.png', url : ''},  
 														{image : 'img/index/solution-slide.png', title : '', thumb : 'img/index/solution-slide.png', url : ''},  
-														{image : 'img/index/back-slide.png', title : '', thumb : 'img/index/back-slide.png', url : ''},  
 														{image : 'img/index/why-slide.png', title : '', thumb : 'img/index/why-slide.png', url : ''},  
 														{image : 'img/index/project-slide.png', title : '', thumb : 'img/index/project-slide.png', url : ''},  
 														{image : 'img/index/contact-slide.png', title : '', thumb : 'img/index/contact-slide.png', url : ''},  
