@@ -39,8 +39,8 @@
 		<div class="arrow-down-black-small"></div>
 		<div class="content" style="height:250px">
 			<div class="three-col">
-				<img src="../../img/projects/bim/hailiang.png">
-				<div class="img-cover" modal-target="modal-hailiang">
+				<img src="../../img/projects/bim/guoda.png">
+				<div class="img-cover" modal-target="modal-guoda">
 					海亮
 				</div>
 			</div>
@@ -141,11 +141,11 @@
      	<img src="../../img/projects/bim/modal/atlantis.png">
 	</div>
 	
-	<div id="modal-hailiang" class="modal-projects">
+	<div id="modal-guoda" class="modal-projects">
 		<div class="button-close"><img src="../../img/b-close.png"></div>
 		<p>海亮</p>
 		<div class="arrow-down-black-small"></div>
-     	<img src="../../img/projects/bim/modal/hailiang.png">
+     	<img src="../../img/projects/bim/modal/guoda.png">
 	</div>
 	
 	<div id="modal-xinhu" class="modal-projects">

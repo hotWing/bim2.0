@@ -4,7 +4,6 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -21,7 +20,7 @@ public class UserCenter {
 	}
 	
 	@RequestMapping(value="/login", method=RequestMethod.POST)
-	public String login(String username, String password, HttpSession session, Model model){
+	public String login(String username, String password, HttpSession session){
 		boolean isUser = userService.checkUser(username,password);
 		if (isUser) {
 			session.setAttribute("username", username);
@@ -29,7 +28,6 @@ public class UserCenter {
 			return "bim/usercenter";
 		}
 		else {
-			model.addAttribute("msg", "用户名或密码错误！请重新输入");
 			return "bim/login";
 		}
 	}
@@ -37,13 +35,13 @@ public class UserCenter {
 	@RequestMapping(value="/logout")
 	public String logout(HttpSession session){
 		session.removeAttribute("username");
-		session.removeAttribute("password");
 		return "redirect:../index.jsp";
 	}
 	
 	@RequestMapping(value="/check")
 	public String check(HttpSession session){
 		String name = (String) session.getAttribute("username");
+
 		if (name==null || name.isEmpty()) {
 			 return "bim/login";
 		 }
