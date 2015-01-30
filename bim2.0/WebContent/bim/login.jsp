@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="${request.getContextPath()}/bim2.0/theme/supersized.shutter.css" type="text/css" media="screen" />
 	<script type="text/javascript" src="${request.getContextPath()}/bim2.0/js/supersized-jquery.min.js"></script>
 	<script type="text/javascript" src="${request.getContextPath()}/bim2.0/js/jquery.easing.min.js"></script>
-	<script type="text/javascript" src="${request.getContextPath()}/bim2.0/js/login.js"></script>
+	
 	<script type="text/javascript" src="${request.getContextPath()}/bim2.0/js/supersized.3.2.7.min.js"></script>
 	<script type="text/javascript" src="${request.getContextPath()}/bim2.0/theme/supersized.shutter.min.js"></script>
 	
@@ -61,6 +61,7 @@
 </head>
 <body>
 <div>
+	<input id="msg" value="${msg}" style="display:none"></input>
 	<div style="margin-top:60px; margin-left:100px">
 		<img src="${request.getContextPath()}/bim2.0/img/index/logo.png">
 		<p style="margin-top:-42px; margin-left:70px;font-size:20px;color:white;">苏州彼慕建筑设计咨询有限公司</p>
@@ -71,7 +72,7 @@
 			<img src="${request.getContextPath()}/bim2.0/img/login/icon-login.png" style="margin-bottom:30px">
 			<div>
 				<input style="background-image:url('${request.getContextPath()}/bim2.0/img/login/icon-name.png');"
-					id="username" type="text" name="username" class="text-login" value="用户名" onblur="if(this.value=='') {this.value='用户名';}" onfocus="if(this.value=='用户名') {this.value='';}"/>
+					id="username" type="text" name="username" class="text-login" value="请输入用户名" onblur="if(this.value=='') {this.value='请输入用户名';}" onfocus="if(this.value=='请输入用户名') {this.value='';}"/>
 			</div>
 			<div>
 				<input style="background-image:url('${request.getContextPath()}/bim2.0/img/login/icon-password.png');" 
@@ -80,14 +81,8 @@
 			<input id="loginbt"  type="button"  class="button-login" value="登录">
 		</form>
 	</div>
-
-<!-- 		<img style="margin-top:-12em;margin-left:41.5%;position:absolute" width="22" height="22"  -->
-<%-- 			src="${request.getContextPath()}/bim2.0/img/login/icon-name.png"> --%>
-<!-- 		<br/> -->
-<!-- 		<img style="margin-top:-8.5em;margin-left:41.5%;position:absolute" width="22" height="22"  -->
-<%-- 			src="${request.getContextPath()}/bim2.0/img/login/icon-password.png"> --%>
-<!-- 	</div> -->
 </div>
-
 </body>
+
+<script type="text/javascript" src="${request.getContextPath()}/bim2.0/js/login.js"></script>
 </html>
