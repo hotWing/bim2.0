@@ -31,8 +31,40 @@
 		<div class="content">
 			<iframe src="http://www.tudou.com/programs/view/html5embed.action?type=0&code=EZmGLUnnWbY&lcode=&resourceId=336412473_06_05_99" allowtransparency="true" allowfullscreen="true" scrolling="no" border="0" frameborder="0" style="width:1000px;height:550px;"></iframe>		
 		</div>
+		
+		<p class="header">CSC BIM 加工设计</p>
+		<div class="arrow-down-black-small"></div>
+		<div class="content">
+			<iframe src="http://www.tudou.com/programs/view/html5embed.action?type=0&code=axzS5CyGOys&lcode=&resourceId=120750584_06_05_99" allowtransparency="true" allowfullscreen="true" scrolling="no" border="0" frameborder="0" style="width:1000px;height:550px;"></iframe>
+		</div>
+		
+		<p class="header">CSC BIM 指导安装</p>
+		<div class="arrow-down-black-small"></div>
+		<div class="content">
+			<iframe src="http://www.tudou.com/programs/view/html5embed.action?type=0&code=LH_RetUx5Q0&lcode=&resourceId=120750584_06_05_99" allowtransparency="true" allowfullscreen="true" scrolling="no" border="0" frameborder="0" style="width:1000px;height:550px;"></iframe>
+		</div>
+		
+		
+		<p class="header">CSC BIM 施工图设计</p>
+		<div class="arrow-down-black-small"></div>
+		<div class="content">
+			<iframe src="http://www.tudou.com/programs/view/html5embed.action?type=0&code=qbRjKU73Q_A&lcode=&resourceId=120750584_06_05_99" allowtransparency="true" allowfullscreen="true" scrolling="no" border="0" frameborder="0" style="width:1000px;height:550px;"></iframe>
+		</div>
+		
+		<p class="header">CSC BIM 方案设计</p>
+		<div class="arrow-down-black-small"></div>
+		<div class="content">
+			<iframe src="http://www.tudou.com/programs/view/html5embed.action?type=0&code=v7j2lqSRKfI&lcode=&resourceId=120750584_06_05_99" allowtransparency="true" allowfullscreen="true" scrolling="no" border="0" frameborder="0" style="width:1000px;height:550px;"></iframe>
+		</div>
+		
+		<p class="header">CSC BIM 施工模拟</p>
+		<div class="arrow-down-black-small"></div>
+		<div class="content">
+			<iframe src="http://www.tudou.com/programs/view/html5embed.action?type=0&code=7ddY-TTsx4Y&lcode=&resourceId=120750584_06_05_99" allowtransparency="true" allowfullscreen="true" scrolling="no" border="0" frameborder="0" style="width:1000px;height:550px;"></iframe>
+		</div>
+		
+		
 	</div>
-
 	<jsp:include page="../bim/bottom.jsp"/>
 </body>
 </html>
