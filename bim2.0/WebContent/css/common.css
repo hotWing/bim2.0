@@ -276,6 +276,14 @@ input.contact[type="submit"] {
 	display:none;
 }
 
+.modal-projects-new {
+	background: white;
+	width:740px;
+	height:610px;
+	padding:20px;
+	display:none;
+}
+
 .modal-projects>p {
 	font-size:30px;
 }
@@ -322,7 +330,7 @@ input.contact[type="submit"] {
 	margin-left:55px;
 }
 
-.modal-people>div.button-close, .modal-projects>div.button-close  {
+.modal-people>div.button-close, .modal-projects>div.button-close, .modal-projects-new>div.button-close  {
 	cursor:pointer;
 	position:absolute;
 	top:5px;
@@ -578,6 +586,7 @@ pre.en-title{
 }
 
 #tab-content,#tab-content2,#tab-content3,#tab-content4,#tab-content5,#tab-content6,#tab-content7 {
+	padding-top:10px;
 	background:#fff;
 	border-top:2px solid #3d3d3d;
 }
