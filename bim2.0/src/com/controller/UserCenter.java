@@ -1,13 +1,18 @@
 package com.controller;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
+import org.apache.tomcat.jni.Address;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.model.Product;
 import com.service.ProductService;
 import com.service.UserService;
 
@@ -26,7 +31,7 @@ public class UserCenter {
 	public void setProductService(ProductService productService) {
 		this.productService = productService;
 	}
-	
+	 
 	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public String login(String username, String password, HttpSession session, Model model){
 		boolean isUser = userService.checkUser(username,password);
@@ -59,9 +64,9 @@ public class UserCenter {
 		 }
 	}
 	
-	@RequestMapping(value="/test")
-	public String test(){
-		productService.getProduct("11");
-		return "redirect:../index.jsp";
+	@RequestMapping(value="/products")
+	public String test(Model model){
+		model.addAttribute("products",productService.getAllProducts());
+		return "bim/download";
 	}
 }

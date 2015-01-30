@@ -1,6 +1,7 @@
 package com.dao.impl;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
@@ -29,5 +30,10 @@ public class ProductDaoImpl implements ProductDao {
 		Product product =  sqlSession.selectOne("com.mybatis.ProductMapper.getProduct", parms);
 		return product;
 	}
-
+	
+	@Override
+	public List<Product> getAllProducts() {
+		List<Product> products =  sqlSession.selectList("com.mybatis.ProductMapper.getAllProducts");
+		return products;
+	}
 }

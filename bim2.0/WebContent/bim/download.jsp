@@ -1,138 +1,176 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 	<jsp:include page="../bim/head.jsp"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<script type="text/javascript" src="${request.getContextPath()}/bim2.0/js/download.js"></script>
+	<link href="../css/jquery.selectbox.css" type="text/css" rel="stylesheet" />
+	<link href="../css/jquery.selectbox2.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
 	<input id="page-name" value="download" style="display:none"></input>
 	<jsp:include page="../bim/top.jsp"/>
 	<jsp:include page="../bim/right.jsp"/>
 	
-	<div style="background-image:url('../img/download/top-bg.png');background-position:center top; height:765px;">
-		<div class="container" style="text-align:center">
-			<img src="${request.getContextPath()}/bim2.0/img/download/download.png" style="margin-top:215px;">
-			<pre style="font-size:65px;color:white;margin-top:25px;">族文件   文本文档   视频教程 </pre>	
-			<div style="margin-top:55px;"> 
-   				<img src="${request.getContextPath()}/bim2.0/img/download/search.png" style="margin-left:375px; margin-top:37px; position:absolute;">
-				<input type="text" name="search" class="text-search"/> 
-            </div> 
+	<div class="container" style="height:250px;">	
+				<input type="text" name="search" value="搜索" class="text-search2" onblur="if(this.value=='') {this.value='搜索';}" onfocus="if(this.value=='搜索') {this.value='';}"/> 
+   				<img src="${request.getContextPath()}/bim2.0/img/download/search2.png" style="margin-left:-35px;margin-top:2px"> 
+   				<div style="border: solid 2px #8e8e8e;height:28px;width:28px;position:relative;left:240px;top:-32px;">
+   					<div style="padding-top:0px;border: solid 1px #8e8e8e;margin-top:7px;margin-left:7px;width:12px;"></div>
+   					<div style="padding-top:0px;border: solid 1px #8e8e8e;margin-top:3px;margin-left:7px;width:12px;"></div>
+   					<div style="padding-top:0px;border: solid 1px #8e8e8e;margin-top:3px;margin-left:7px;width:12px;"></div>             
+   				</div>
+   				
+   				<div name="select1">			
+	   				<select name="country_id" id="country_id" tabindex="1">
+						<option value="">品牌</option>
+							<option value="1">USA</option>
+							<option value="2">Canada</option>
+							<option value="3">France</option>
+							<option value="4">Spain</option>
+					</select>					
+					<script type="text/javascript">
+					$(function () {
+						$("#country_id").selectbox();
+					});
+					</script> 
+				</div>     
+				
+				<div name="select2">			
+	   				<select name="country_id2" id="country_id2" tabindex="1">
+						<option value="">-- 种类 --</option>
+							<option value="1">USA</option>
+							<option value="2">Canada</option>
+							<option value="3">France</option>
+							<option value="4">Spain</option>
+					</select>					
+					<script type="text/javascript">
+					$(function () {
+						$("#country_id2").selectbox();
+						});
+					</script> 
+				</div>    
+				
+				<div name="select3">			
+	   				<select name="country_id3" id="country_id3" tabindex="1">
+						<option value="">-- 材料 --</option>
+							<option value="1">USA</option>
+							<option value="2">Canada</option>
+							<option value="3">France</option>
+							<option value="4">Spain</option>
+					</select>					
+					<script type="text/javascript">
+					$(function () {
+						$("#country_id3").selectbox();
+						});
+					</script> 
+				</div>      
+   				 			
+   				<div name="select4">			
+	   				<select name="country_id4" id="country_id4" tabindex="1">
+						<option value="">-- 建筑类型 --</option>
+							<option value="1">USA</option>
+							<option value="2">Canada</option>
+							<option value="3">France</option>
+							<option value="4">Spain</option>
+					</select>					
+					<script type="text/javascript">
+					$(function () {
+						$("#country_id4").selectbox();
+						});
+					</script> 
+				</div> 	
+				
+				<div name="select5">			
+	   				<select name="country_id5" id="country_id5" tabindex="1">
+						<option value="">-- 功能 --</option>
+							<option value="1">USA</option>
+							<option value="2">Canada</option>
+							<option value="3">France</option>
+							<option value="4">Spain</option>
+					</select>					
+					<script type="text/javascript">
+					$(function () {
+						$("#country_id5").selectbox();
+						});
+					</script> 
+				</div> 						 								
+	</div>
+	
+	<div class="container" style="margin-top:-120px;height:150px;width:1140px;">
+		<div style="border:none;height:100px;">			            
+   		</div>	
+   		<div >
+   			<img src="${request.getContextPath()}/bim2.0/img/download/reset.png" 
+   			style="position:absolute;width:12px;margin-top:-42px;margin-left:380px;">
+   			<input type="button" name="reset" value="重置" class="reset-button"/>
+   		</div>	
+   		
+   		<div name="select6">			
+	   				<select name="country_id6" id="country_id6" tabindex="1">
+						<option value="">-- 最近添加 --</option>
+							<option value="1">USA</option>
+							<option value="2">Canada</option>
+							<option value="3">France</option>
+							<option value="4">Spain</option>
+					</select>					
+					<script type="text/javascript">
+					$(function () {
+						$("#country_id6").selectbox2();
+						});
+					</script> 
+		</div> 	
+		<div name="select7">			
+	   				<select name="country_id7" id="country_id7" tabindex="1">
+						<option value="">-- 类型 --</option>
+							<option value="1">USA</option>
+							<option value="2">Canada</option>
+							<option value="3">France</option>
+							<option value="4">Spain</option>
+					</select>					
+					<script type="text/javascript">
+					$(function () {
+						$("#country_id7").selectbox2();
+						});
+					</script> 
+		</div> 	
+		<div name="select8">			
+	   				<select name="country_id8" id="country_id8" tabindex="1">
+						<option value="">-- 文件类型 --</option>
+							<option value="1">USA</option>
+							<option value="2">Canada</option>
+							<option value="3">France</option>
+							<option value="4">Spain</option>
+					</select>					
+					<script type="text/javascript">
+					$(function () {
+						$("#country_id8").selectbox2();
+						});
+					</script> 
 		</div>
+		
 	</div>
-	
-	<div class="container" style="text-align:center">
-<!-- 			<h1 style="color:green;text-align:center;padding-top:100px;">—————— THE BIM WORLD WAS CHANGED ——————</h1>		 -->
-			<div style="height:520px;">
-				<div class="three-col2"><div class="smalldiv">族文件</div></div>
-				<div class="three-col2" ><div class="smalldiv">文本文档</div></div>
-				<div class="three-col2" style="margin-right:0px;"><div class="smalldiv">视频教程</div></div>	
-			</div>							
-	</div>
-	<div class="bgbar"  style="height:3px;">
-<!-- 			<div class="container" > -->
-<!-- 				<p style="color:white;font-size:70px;"> -->
-<!-- 				<span>00000+</span> -->
-<!-- 				<span style="margin-left:150px;">00000+</span> -->
-<!-- 				<span style="margin-left:150px;">00000+</span> -->
-<!-- 				</p> -->
-<!-- 				<p style="color:white;font-size:20px;"> -->
-<!-- 				<span style="margin-left:50px;">DOWNLOADS</span> -->
-<!-- 				<span style="margin-left:300px;">PRODUCTS</span> -->
-<!-- 				<span style="margin-left:320px;">BRANDS</span> -->
-<!-- 				</p> -->
-<!-- 			</div> -->
-	</div>
-	<div class="container" style="text-align:center">
-		<p style="font-size:60px;margin-top:100px;text-align:left">族文件</p>
-		<div style="height:400px;">
-			<div class="three-col3">
-				<a class="login-needed" href="../usercenter?action=check&web=http://pan.baidu.com">
-					<div class="smalldiv2">
-						<img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png">
-					</div>
-				</a></div>
-			<div class="three-col3">
-				<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div></div>
-			<div class="three-col3">
-				<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div></div>
-			<div class="three-col3">
-				<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div></div>
-			<div class="three-col3" style="margin-right:0px;">
-				<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div></div>
-		</div>
-	</div>
-	<div class="bgbar" style="height:3px;"></div>
-	<div class="container">
-		<p style="font-size:60px;margin-top:100px;text-align:left">文本文档</p>
-		<div style="height:400px;">
-			<div class="three-col3" style="background-image:url('../img/download/document/bimchat-2014spring.png');background-position:center top;">
-				<div class="download-cover">笔墨闲谈2014春</div>
-				<a class="login-needed" href="../usercenter?action=check&web=${request.getContextPath()}/bim2.0/download/bimchat-2014spring.pdf">
-					<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div>
-				</a>
-			</div>
-			<div class="three-col3" style="background-image:url('../img/download/document/bimchat-2014summer.png');background-position:center top;">
-				<div class="download-cover">笔墨闲谈2014夏</div>
-				<a class="login-needed" href="../usercenter?action=check&web=${request.getContextPath()}/bim2.0/download/bimchat-2014summer.pdf">
-					<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div>
-				</a>
-			</div>
-			<div class="three-col3" style="background-image:url('../img/download/document/bimchat-2014autumn.png');background-position:center top;">
-				<div class="download-cover">笔墨闲谈2014秋</div>
-				<a class="login-needed" href="../usercenter?action=check&web=${request.getContextPath()}/bim2.0/download/bimchat-2014autumn.pdf">
-					<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div>
-				</a>
-			</div>
-				<div class="three-col3">
-				<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div></div>
-				<div class="three-col3" style="margin-right:0px;">
-				<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div></div>
-		</div>
-	</div>
-	<div class="bgbar" style="height:3px;">
-<!-- 		<div class="container" style="text-align:center;padding-top:50px;"> -->
-<!-- 			<p style="color:white;font-size:30px;">建筑信息模型（Building Information Modeling）是以建筑工程项目的各项相关信息数据作为模型的基础，进行建筑模型的建立，通过数字信息仿真模拟建筑物所具有的真实信息。它具有可视化，协调性，模拟性，优化性和可出图性五大特点。</p> -->
-<!-- 		</div>		 -->
-	</div>
-	<div class="container" style="text-align:center">
-		<p style="font-size:60px;margin-top:100px;text-align:left">视频教程</p>
-		<div style="height:450px;">
-			<div class="three-col3" >
-				<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div></div>
-			<div class="three-col3">
-				<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div></div>
-			<div class="three-col3">
-				<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div></div>
-				<div class="three-col3">
-				<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div></div>
-				<div class="three-col3" style="margin-right:0px;">
-				<div class="smalldiv2"><img style="margin-top:10px;" src="${request.getContextPath()}/bim2.0/img/download/cloud.png"></div></div>
-		</div>
+		
+	<div class="container" >
+			<c:forEach items="${products}" var="product">  
+				<div class="multi-col" style="text-align:center;">
+					<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}" style="width:140px;heigth:220;"/>
+					<input type="button" value="${product.name}" class="dorwa-button"/>
+				</div>
+			</c:forEach>  
+				
+				
+		
 	</div>
 	
 	
+	<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.selectbox-0.2.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.selectbox-0.2.min2.js"></script>
 	
-
-	<ul id="tabs2">
-	    <li><a href="#" name="#tab21">已完成项目</a></li>
-	    <li><a href="#" name="#tab22">进行中项目</a></li>
-	    <li><a href="#" name="#tab23">洽谈中项目</a></li>
-	</ul>
 	
-	<div id="tab-content2">
-      <div id="tab21" style="display: block;">
-        已完成项目
-      </div>
-      <div id="tab22" style="display: none;">
-        进行中项目
-      </div>
-      <div id="tab23" style="display: none;">
-       洽谈中项目
-      </div>
-  </div>
-	<jsp:include page="../bim/bottom.jsp"/>
 </body>
 </html>

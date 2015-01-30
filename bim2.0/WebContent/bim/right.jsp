@@ -25,7 +25,7 @@
 			 	<img src="${request.getContextPath()}/bim2.0/img/right/search.png">
 			 </div>
 			 <ul class="sid-menu">
-				<li><a href="${request.getContextPath()}/bim2.0/bim/error.jsp">搜索</a></li> 
+				<li><a href="${request.getContextPath()}/bim2.0/usercenter/products">搜索</a></li> 
 		     </ul>
 		</li>
 		<li>

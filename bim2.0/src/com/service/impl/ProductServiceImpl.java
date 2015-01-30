@@ -1,5 +1,7 @@
 package com.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -21,6 +23,11 @@ public class ProductServiceImpl implements ProductService{
 	@Override
 	public Product getProduct(String id) {
 		return productDao.getProduct(id);
+	}
+	
+	@Override
+	public List<Product> getAllProducts() {
+		return productDao.getAllProducts();
 	}
 
 }

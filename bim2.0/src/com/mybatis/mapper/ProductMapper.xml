@@ -11,4 +11,8 @@
     	    and id = #{id}
         </if>
    </select>
+   
+   <select id="getAllProducts" resultType="com.model.Product">
+    	 SELECT * FROM PRODUCT
+   </select>
 </mapper>

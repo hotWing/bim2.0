@@ -27,6 +27,8 @@ public class Product {
 	private String attachment;
 	private String sccClass;
 	private String IFCType;
+	private String thumbDir;
+	private String downloadDir;
 	public String getId() {
 		return id;
 	}
@@ -170,5 +172,17 @@ public class Product {
 	}
 	public void setIFCType(String iFCType) {
 		IFCType = iFCType;
+	}
+	public String getThumbDir() {
+		return thumbDir;
+	}
+	public void setThumbDir(String thumbDir) {
+		this.thumbDir = thumbDir;
+	}
+	public String getDownloadDir() {
+		return downloadDir;
+	}
+	public void setDownloadDir(String downloadDir) {
+		this.downloadDir = downloadDir;
 	}
 }
