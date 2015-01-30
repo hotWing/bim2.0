@@ -33,6 +33,42 @@
 				</div>
 			</div>
 			<div class="three-col">
+				<img src="../../img/projects/bim/guoda.png">
+				<div class="img-cover" modal-target="modal-guoda">
+					杭州国大城市广场
+				</div>				
+			</div>
+				<div class="three-col">
+				<img src="../../img/projects/bim/atlantis.png">
+				<div class="img-cover" modal-target="modal-atlantis">
+					亚特兰蒂斯
+				</div>
+			</div>
+			<div class="three-col">
+				<img src="../../img/projects/bim/hailiang.png">
+				<div class="img-cover" modal-target="modal-hailiang">
+					海亮
+				</div>
+			</div>
+			<div class="three-col">
+				<img src="../../img/projects/bim/huanai.png">
+				<div class="img-cover" modal-target="modal-huanai">
+					华耐家居
+				</div>
+			</div>
+			<div class="three-col">
+				<img src="../../img/projects/bim/tongcheng.png">
+				<div class="img-cover" modal-target="modal-tongcheng">
+					桐城家具城
+				</div>
+			</div>
+			<div class="three-col">
+				<img src="../../img/projects/bim/zhangjiakoubank.png">
+				<div class="img-cover" modal-target="modal-zhangjiakoubank">
+					张家口人民银行家属楼
+				</div>
+			</div>
+			<div class="three-col">
 				<img src="../../img/projects/bim/xinqin.png">
 				<div class="img-cover" modal-target="modal-xinqin">
 					新沂人民医院
@@ -74,12 +110,7 @@
 					某市民活动中心外装饰工程BIM配合
 				</div>
 			</div>
-			<div class="three-col">
-				<img src="../../img/projects/bim/guoda.png">
-				<div class="img-cover" modal-target="modal-guoda">
-					杭州国大城市广场
-				</div>				
-			</div>
+			
 			
 			<div class="three-col">
 				<img src="../../img/projects/bim/yabaolu.png">
@@ -87,18 +118,7 @@
 					北京雅宝路
 				</div>
 			</div>
-			<div class="three-col">
-				<img src="../../img/projects/bim/atlantis.png">
-				<div class="img-cover" modal-target="modal-atlantis">
-					亚特兰蒂斯
-				</div>
-			</div>
-			<div class="three-col">
-				<img src="../../img/projects/bim/hailiang.png">
-				<div class="img-cover" modal-target="modal-hailiang">
-					海亮
-				</div>
-			</div>
+		
 			<div class="three-col">
 				<img src="../../img/projects/bim/xinhu.png">
 				<div class="img-cover" modal-target="modal-xinhu">
@@ -106,39 +126,22 @@
 				</div>
 			</div>
 			
-			<div class="three-col">
-				<img src="../../img/projects/bim/huanai.png">
-				<div class="img-cover" modal-target="modal-huanai">
-					华耐家居
-				</div>
-			</div>
-			<div class="three-col">
-				<img src="../../img/projects/bim/tongcheng.png">
-				<div class="img-cover" modal-target="modal-tongcheng">
-					桐城家具城
-				</div>
-			</div>
-			<div class="three-col">
-				<img src="../../img/projects/bim/zhangjiakoubank.png">
-				<div class="img-cover" modal-target="modal-zhangjiakoubank">
-					张家口人民银行家属楼
-				</div>
-			</div>
 			
 		</div>
 	</div>
 	
 <!-- 	弹出框 -->
 
-	<div id="modal-ruyitong" class="modal-projects">
+	<div id="modal-ruyitong" class="modal-projects-new">
 		<div class="modal-head">张家港如意通大厦</div>
-		<ul id="tabs1">
+		<div class="button-close"><img src="../../img/b-close.png"></div>
+		<ul id="tabs">
 	    	<li><a href="#" name="#tab11">渲染</a></li>
 	    	<li><a href="#" name="#tab21">图纸</a></li>
 	    	<li><a href="#" name="#tab31">信息</a></li>
 	    	<li><a href="#" name="#tab41">参与人员</a></li>
 		</ul>
-		<div id="tab-content1">
+		<div id="tab-content">
       		<div id="tab11" style="display: block;"> 
       			<div class="fotorama" data-nav="thumbs">		
 	      		  <a href="../../img/projects/bim/modal/ruyitong/xuanran/1.png">
@@ -259,8 +262,9 @@
      	<img src="../../img/projects/bim/modal/huodong.png">
 	</div>
 	
-	<div id="modal-guoda" class="modal-projects">
+	<div id="modal-guoda" class="modal-projects-new">
 		<div class="modal-head">杭州国大城市广场</div>
+		<div class="button-close"><img src="../../img/b-close.png"></div>
 		<ul id="tabs2">
 	    	<li><a href="#" name="#tab12">渲染</a></li>
 	    	<li><a href="#" name="#tab22">图纸</a></li>
@@ -311,8 +315,9 @@
      	<img src="../../img/projects/bim/modal/yabaolu.png">
 	</div>
 	
-	<div id="modal-atlantis" class="modal-projects">
+	<div id="modal-atlantis" class="modal-projects-new">
 		<div class="modal-head">亚特兰蒂斯</div>
+		<div class="button-close"><img src="../../img/b-close.png"></div>
 		<ul id="tabs6">
 	    	<li><a href="#" name="#tab16">渲染</a></li>
 	    	<li><a href="#" name="#tab26">图纸</a></li>
@@ -359,8 +364,9 @@
   		</div>
 	</div>
 	
-	<div id="modal-hailiang" class="modal-projects">
+	<div id="modal-hailiang" class="modal-projects-new">
 		<div class="modal-head">海亮</div>
+		<div class="button-close"><img src="../../img/b-close.png"></div>
 			<ul id="tabs3">
 		    	<li><a href="#" name="#tab13">渲染</a></li>
 		    	<li><a href="#" name="#tab23">图纸</a></li>
@@ -444,15 +450,16 @@
   		</div>
 	</div>
 	
-	<div id="modal-xinhu" class="modal-projects">
+	<div id="modal-xinhu" class="modal-projects-new">
 		<div class="button-close"><img src="../../img/b-close.png"></div>
 		<p>新湖地产</p>
 		<div class="arrow-down-black-small"></div>
      	<img src="../../img/projects/bim/modal/xinhu.png">
 	</div>
 	
-	<div id="modal-huanai" class="modal-projects">
+	<div id="modal-huanai" class="modal-projects-new">
 		<div class="modal-head">华耐家居</div>
+		<div class="button-close"><img src="../../img/b-close.png"></div>
 			<ul id="tabs4">			   
 		    	<li><a href="#" name="#tab14">渲染</a></li>
 		    	<li><a href="#" name="#tab24">图纸</a></li>
@@ -494,8 +501,9 @@
   		</div>
 	</div>
 	
-	<div id="modal-tongcheng" class="modal-projects">
+	<div id="modal-tongcheng" class="modal-projects-new">
 		<div class="modal-head">桐城家具城</div>
+		<div class="button-close"><img src="../../img/b-close.png"></div>
 		<ul id="tabs7">
 	    	<li><a href="#" name="#tab17">渲染</a></li>
 	    	<li><a href="#" name="#tab27">图纸</a></li>
@@ -550,8 +558,9 @@
   		</div>
 	</div>
 	
-	<div id="modal-zhangjiakoubank" class="modal-projects">
+	<div id="modal-zhangjiakoubank" class="modal-projects-new">
 		<div class="modal-head">张家口人民银行家属楼</div>
+		<div class="button-close"><img src="../../img/b-close.png"></div>
 		<ul id="tabs5">
 	    	<li><a href="#" name="#tab15">渲染</a></li>
 	    	<li><a href="#" name="#tab25">图纸</a></li>
@@ -600,10 +609,6 @@
       		</div>
   		</div>
 	</div>
-	
-	
-	
-	
 	<jsp:include page="../../bim/bottom.jsp"/>
 </body>
 </html>
