@@ -8,14 +8,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.service.FamilyService;
+import com.service.ProductService;
 import com.service.UserService;
 
 @Controller
 public class UserCenter {
 	
 	private UserService userService;
-	private FamilyService familyService;
+	private ProductService productService;
 	
 	@Resource
 	public void setUserService(UserService userService) {
@@ -23,8 +23,8 @@ public class UserCenter {
 	}
 	
 	@Resource
-	public void setFamilyService(FamilyService familyService) {
-		this.familyService = familyService;
+	public void setProductService(ProductService productService) {
+		this.productService = productService;
 	}
 	
 	@RequestMapping(value="/login", method=RequestMethod.POST)
@@ -61,7 +61,7 @@ public class UserCenter {
 	
 	@RequestMapping(value="/test")
 	public String test(){
-		familyService.getFamily("11");
+		productService.getProduct("11");
 		return "redirect:../index.jsp";
 	}
 }

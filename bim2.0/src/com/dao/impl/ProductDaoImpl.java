@@ -8,11 +8,11 @@ import javax.annotation.Resource;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
-import com.dao.FamilyDao;
-import com.model.Family;
+import com.dao.ProductDao;
+import com.model.Product;
 
 @Repository
-public class FamilyDaoImpl implements FamilyDao {
+public class ProductDaoImpl implements ProductDao {
 	
 	private SqlSession sqlSession;
 
@@ -22,12 +22,12 @@ public class FamilyDaoImpl implements FamilyDao {
 	}
 	
 	@Override
-	public Family getFamily(String id) {
+	public Product getProduct(String id) {
 		Map<String, Object> parms = new HashMap<String, Object>();
 		parms.put("id", id);
 		
-		Family family =  sqlSession.selectOne("com.mybatis.FamilyMapper.getFamily", parms);
-		return family;
+		Product product =  sqlSession.selectOne("com.mybatis.ProductMapper.getProduct", parms);
+		return product;
 	}
 
 }

@@ -2,10 +2,10 @@
 <!DOCTYPE mapper  
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.mybatis.FamilyMapper">
-  <select id="getFamily" parameterType="map" resultType="com.model.Family">
+<mapper namespace="com.mybatis.ProductMapper">
+  <select id="getProduct" parameterType="map" resultType="com.model.Product">
         SELECT * 
-        FROM FAMILY_INFO
+        FROM PRODUCT
         WHERE 1=1
         <if test="id != null and id != ''">  
     	    and id = #{id}
