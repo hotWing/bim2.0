@@ -29,5 +29,18 @@ public class ProductServiceImpl implements ProductService{
 	public List<Product> getAllProducts() {
 		return productDao.getAllProducts();
 	}
+	
+	@Override
+	public List<Product> getProductsByName(String name){
+		return productDao.getProductsByName(name);
+	}
+
+	@Override
+	public List<Product> getProductsBySearch(String name, String brand,
+			String familyType, String mainMaterial, String buildingType,
+			String function) {
+		
+		return productDao.getProductsBySearch(name,brand,familyType,mainMaterial,buildingType,function);
+	}
 
 }

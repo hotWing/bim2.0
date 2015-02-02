@@ -666,6 +666,19 @@ pre.en-title{
 	color:white;
 }
 
+.search-button{
+	width:140px;
+	height:28px;
+	background-color:#00953b;
+	border:none;
+	padding-right:20px;
+	font-size:16px;
+	color:white;
+	margin-top:180px;
+	margin-left:20px;
+	position:absolute;
+}
+
 .dorwa-button{
 	width:120px;
 	height:30px;

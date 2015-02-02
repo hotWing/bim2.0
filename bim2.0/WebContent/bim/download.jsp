@@ -15,9 +15,13 @@
 	<jsp:include page="../bim/top.jsp"/>
 	<jsp:include page="../bim/right.jsp"/>
 	
-	<div class="container" style="height:250px;">	
-				<input type="text" name="search" value="搜索" class="text-search2" onblur="if(this.value=='') {this.value='搜索';}" onfocus="if(this.value=='搜索') {this.value='';}"/> 
-   				<img src="${request.getContextPath()}/bim2.0/img/download/search2.png" style="margin-left:-35px;margin-top:2px"> 
+	<div class="container" style="height:250px;">
+		<form action="${request.getContextPath()}/bim2.0/usercenter/search">
+					<input type="text" name="search" value="搜索" class="text-search2" onblur="if(this.value=='') {this.value='搜索';}" onfocus="if(this.value=='搜索') {this.value='';}"/> 
+	   				<img src="${request.getContextPath()}/bim2.0/img/download/search2.png" style="margin-left:-35px;margin-top:2px">
+	   				<input type="submit" value="搜索" name="submit" class="search-button">
+
+				 
    				<div style="border: solid 2px #727171;height:28px;width:28px;position:relative;left:250px;top:-32px;">
    					<div style="padding-top:0px;border: solid 1px #8e8e8e;margin-top:7px;margin-left:7px;width:12px;"></div>
    					<div style="padding-top:0px;border: solid 1px #8e8e8e;margin-top:3px;margin-left:7px;width:12px;"></div>
@@ -25,7 +29,7 @@
    				</div>
    				
    				<div name="select1" style="margin-left:12px;">			
-	   				<select name="country_id" id="country_id" tabindex="1">
+	   				<select name="brand" id="brand" tabindex="1">
 						<option value="">品牌</option>
 							<option value="1">USA</option>
 							<option value="2">Canada</option>
@@ -34,13 +38,13 @@
 					</select>					
 					<script type="text/javascript">
 					$(function () {
-						$("#country_id").selectbox();
+						$("#brand").selectbox();
 					});
 					</script> 
 				</div>     
 				
 				<div name="select2">			
-	   				<select name="country_id2" id="country_id2" tabindex="1">
+	   				<select name="familyType" id="familyType" tabindex="1">
 						<option value="">种类</option>
 							<option value="1">USA</option>
 							<option value="2">Canada</option>
@@ -49,13 +53,13 @@
 					</select>					
 					<script type="text/javascript">
 					$(function () {
-						$("#country_id2").selectbox();
+						$("#familyType").selectbox();
 						});
 					</script> 
 				</div>    
 				
 				<div name="select3">			
-	   				<select name="country_id3" id="country_id3" tabindex="1">
+	   				<select name="mainMaterial" id="mainMaterial" tabindex="1">
 						<option value="">材料</option>
 							<option value="1">USA</option>
 							<option value="2">Canada</option>
@@ -64,13 +68,13 @@
 					</select>					
 					<script type="text/javascript">
 					$(function () {
-						$("#country_id3").selectbox();
+						$("#mainMaterial").selectbox();
 						});
 					</script> 
 				</div>      
    				 			
    				<div name="select4">			
-	   				<select name="country_id4" id="country_id4" tabindex="1">
+	   				<select name="buildingType" id="buildingType" tabindex="1">
 						<option value="">建筑类型</option>
 							<option value="1">USA</option>
 							<option value="2">Canada</option>
@@ -79,13 +83,13 @@
 					</select>					
 					<script type="text/javascript">
 					$(function () {
-						$("#country_id4").selectbox();
+						$("#buildingType").selectbox();
 						});
 					</script> 
 				</div> 	
 				
 				<div name="select5">			
-	   				<select name="country_id5" id="country_id5" tabindex="1">
+	   				<select name="function" id="function" tabindex="1">
 						<option value="">功能</option>
 							<option value="1">USA</option>
 							<option value="2">Canada</option>
@@ -94,11 +98,14 @@
 					</select>					
 					<script type="text/javascript">
 					$(function () {
-						$("#country_id5").selectbox();
+						$("#function").selectbox();
 						});
 					</script> 
-				</div> 						 								
+				</div> 
+		</form>							 								
 	</div>
+	
+	<!--  -->
 	
 	<div class="container" style="margin-top:-120px;height:150px;width:1140px;">
 		<div style="border:none;height:100px;">			            
@@ -156,12 +163,10 @@
 	<div class="container" >
 			<c:forEach items="${products}" var="product">  
 				<div class="multi-col" style="text-align:center;">
-
 					<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}" style="width:140px;heigth:220;"/>
 					<a href="${request.getContextPath()}/bim2.0/usercenter/getProduct/${product.id}">
 						<input type="button" value="${product.name}" class="dorwa-button"></input>
-					</a>
-					
+					</a>					
 				</div>
 			</c:forEach>  
 	</div>

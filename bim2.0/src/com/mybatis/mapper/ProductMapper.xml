@@ -15,4 +15,38 @@
    <select id="getAllProducts" resultType="com.model.Product">
     	 SELECT * FROM PRODUCT
    </select>
+   
+   <select id="getProductsByName" parameterType="map" resultType="com.model.Product">
+        SELECT * 
+        FROM PRODUCT
+       
+        <if test="name != null and name != '' and name != '搜索'">  
+    	    WHERE name = #{name}
+        </if>
+   </select>
+   
+   <select id="getProductsBySearch" parameterType="map" resultType="com.model.Product">
+        SELECT * 
+        FROM PRODUCT
+       	WHERE 1=1
+        <if test="name != null and name != '' and name != '搜索'">  
+    	    and name = #{name}
+        </if>
+        <if test="brand != null and brand != '' ">
+            and brand = #{brand}
+        </if>
+        <if test="familyType != null and familyType != '' ">
+            and familyType = #{familyType}
+        </if>
+        <if test="mainMaterial != null and mainMaterial != '' ">
+            and mainMaterial = #{mainMaterial}
+        </if>
+        <if test="buildingType != null and buildingType != ''">
+            and buildingType = #{buildingType}
+        </if>
+        <if test="function != null and function != ''">
+            and function = #{function}
+        </if>
+   </select>
+   
 </mapper>
