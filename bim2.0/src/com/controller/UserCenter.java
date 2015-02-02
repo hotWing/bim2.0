@@ -9,6 +9,7 @@ import org.apache.tomcat.jni.Address;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -41,7 +42,7 @@ public class UserCenter {
 			return "bim/usercenter";
 		}
 		else {
-			model.addAttribute("msg", "ÓÃ»§Ãû»òÃÜÂë´íÎó£¡ÇëÖØÐÂÊäÈë");
+			model.addAttribute("msg", "ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			return "bim/login";
 		}
 	}
@@ -68,5 +69,12 @@ public class UserCenter {
 	public String test(Model model){
 		model.addAttribute("products",productService.getAllProducts());
 		return "bim/download";
+	}
+	
+	@RequestMapping(value="/getProduct/{id}")
+	public String getProduct(@PathVariable("id") String id,Model model){
+		model.addAttribute("product",productService.getProduct(id));
+		return "bim/detail";
+		
 	}
 }

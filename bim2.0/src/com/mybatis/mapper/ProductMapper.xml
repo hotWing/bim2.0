@@ -6,9 +6,9 @@
   <select id="getProduct" parameterType="map" resultType="com.model.Product">
         SELECT * 
         FROM PRODUCT
-        WHERE 1=1
+       
         <if test="id != null and id != ''">  
-    	    and id = #{id}
+    	    WHERE id = #{id}
         </if>
    </select>
    
