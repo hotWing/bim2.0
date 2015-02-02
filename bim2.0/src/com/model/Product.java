@@ -27,8 +27,13 @@ public class Product {
 	private String attachment;
 	private String sccClass;
 	private String IFCType;
+	private String manufacturerID;
 	private String thumbDir;
 	private String downloadDir;
+	private String buildingType;
+	private String function;
+	
+	
 	public String getId() {
 		return id;
 	}
@@ -184,5 +189,23 @@ public class Product {
 	}
 	public void setDownloadDir(String downloadDir) {
 		this.downloadDir = downloadDir;
+	}
+	public String getManufacturerID() {
+		return manufacturerID;
+	}
+	public void setManufacturerID(String manufacturerID) {
+		this.manufacturerID = manufacturerID;
+	}
+	public String getBuildingType() {
+		return buildingType;
+	}
+	public void setBuildingType(String buildingType) {
+		this.buildingType = buildingType;
+	}
+	public String getFunction() {
+		return function;
+	}
+	public void setFunction(String function) {
+		this.function = function;
 	}
 }

@@ -1,5 +1,6 @@
 package com.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -73,7 +74,12 @@ public class UserCenter {
 	
 	@RequestMapping(value="/getProduct/{id}")
 	public String getProduct(@PathVariable("id") String id,Model model){
-		model.addAttribute("product",productService.getProduct(id));
+		try {
+			String idUTF8 = new String(id.getBytes("ISO-8859-1"), "utf-8");
+			model.addAttribute("product",productService.getProduct(idUTF8));
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
 		return "bim/detail";
 		
 	}

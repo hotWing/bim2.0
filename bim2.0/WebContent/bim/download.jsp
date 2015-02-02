@@ -27,10 +27,10 @@
    				<div name="select1" style="margin-left:12px;">			
 	   				<select name="country_id" id="country_id" tabindex="1">
 						<option value="">品牌</option>
-							<option value="1">USA</option>
-							<option value="2">Canada</option>
-							<option value="3">France</option>
-							<option value="4">Spain</option>
+							<option value="1">肇庆亚洲铝厂有限公司</option>
+<!-- 							<option value="2">Canada</option> -->
+<!-- 							<option value="3">France</option> -->
+<!-- 							<option value="4">Spain</option> -->
 					</select>					
 					<script type="text/javascript">
 					$(function () {
@@ -42,10 +42,10 @@
 				<div name="select2">			
 	   				<select name="country_id2" id="country_id2" tabindex="1">
 						<option value="">种类</option>
-							<option value="1">USA</option>
-							<option value="2">Canada</option>
-							<option value="3">France</option>
-							<option value="4">Spain</option>
+							<option value="1">明框幕墙系统</option>
+							<option value="2">隐框玻璃幕墙</option>
+							<option value="3">横明竖隐玻璃幕墙</option>
+							<option value="4">竖明横隐玻璃幕墙</option>
 					</select>					
 					<script type="text/javascript">
 					$(function () {
@@ -57,10 +57,10 @@
 				<div name="select3">			
 	   				<select name="country_id3" id="country_id3" tabindex="1">
 						<option value="">材料</option>
-							<option value="1">USA</option>
-							<option value="2">Canada</option>
-							<option value="3">France</option>
-							<option value="4">Spain</option>
+							<option value="1">铝型材</option>
+<!-- 							<option value="2">Canada</option> -->
+<!-- 							<option value="3">France</option> -->
+<!-- 							<option value="4">Spain</option> -->
 					</select>					
 					<script type="text/javascript">
 					$(function () {
@@ -160,7 +160,7 @@
 
 					<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}" style="width:140px;heigth:220;"/>
 					<a href="${request.getContextPath()}/bim2.0/usercenter/getProduct/${product.id}">
-						<input type="button" value="${product.name}" class="dorwa-button"></input>
+						<input type="button" value="${product.id}" class="dorwa-button"></input>
 					</a>
 					
 				</div>
