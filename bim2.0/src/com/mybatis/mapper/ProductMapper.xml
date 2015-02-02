@@ -30,7 +30,7 @@
         FROM PRODUCT
        	WHERE 1=1
         <if test="name != null and name != '' and name != '搜索'">  
-    	    and name = #{name}
+    	    and name like '%${name}%'
         </if>
         <if test="brand != null and brand != '' ">
             and brand = #{brand}

@@ -31,7 +31,7 @@
    				<div name="select1" style="margin-left:12px;">			
 	   				<select name="brand" id="brand" tabindex="1">
 						<option value="">品牌</option>
-							<option value="1">肇庆亚洲铝厂有限公司</option>
+							<option value="肇庆亚洲铝厂有限公司">肇庆亚洲铝厂有限公司</option>
 <!-- 							<option value="2">Canada</option> -->
 <!-- 							<option value="3">France</option> -->
 <!-- 							<option value="4">Spain</option> -->
@@ -46,10 +46,10 @@
 				<div name="select2">			
 	   				<select name="familyType" id="familyType" tabindex="1">
 						<option value="">种类</option>
-							<option value="1">明框幕墙系统</option>
-							<option value="2">隐框玻璃幕墙</option>
-							<option value="3">横明竖隐玻璃幕墙</option>
-							<option value="4">竖明横隐玻璃幕墙</option>
+							<option value="明框幕墙系统">明框幕墙系统</option>
+							<option value="隐框幕墙系统">隐框幕墙系统</option>
+							<option value="横明竖隐幕墙系统">横明竖隐幕墙系统</option>
+							<option value="竖明横隐幕墙系统">竖明横隐幕墙系统</option>
 					</select>					
 					<script type="text/javascript">
 					$(function () {
