@@ -1,5 +1,6 @@
 package com.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -42,7 +43,7 @@ public class UserCenter {
 			return "bim/usercenter";
 		}
 		else {
-			model.addAttribute("msg", "�û����������������������");
+			model.addAttribute("msg", "用户名或密码错误!");
 			return "bim/login";
 		}
 	}
@@ -66,14 +67,19 @@ public class UserCenter {
 	}
 	
 	@RequestMapping(value="/products")
-	public String test(Model model){
-		model.addAttribute("products",productService.getAllProducts());
+	public String test(String page,Model model){
+		model.addAttribute("products",productService.getAllProducts(page));
 		return "bim/download";
 	}
 	
 	@RequestMapping(value="/getProduct/{id}")
 	public String getProduct(@PathVariable("id") String id,Model model){
-		model.addAttribute("product",productService.getProduct(id));
+		try {
+			String idUTF8 = new String(id.getBytes("ISO-8859-1"), "utf-8");
+			model.addAttribute("product",productService.getProduct(idUTF8));
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
 		return "bim/detail";
 		
 	}

@@ -31,10 +31,10 @@
    				<div name="select1" style="margin-left:12px;">			
 	   				<select name="brand" id="brand" tabindex="1">
 						<option value="">品牌</option>
-							<option value="1">USA</option>
-							<option value="2">Canada</option>
-							<option value="3">France</option>
-							<option value="4">Spain</option>
+							<option value="1">肇庆亚洲铝厂有限公司</option>
+<!-- 							<option value="2">Canada</option> -->
+<!-- 							<option value="3">France</option> -->
+<!-- 							<option value="4">Spain</option> -->
 					</select>					
 					<script type="text/javascript">
 					$(function () {
@@ -46,10 +46,10 @@
 				<div name="select2">			
 	   				<select name="familyType" id="familyType" tabindex="1">
 						<option value="">种类</option>
-							<option value="1">USA</option>
-							<option value="2">Canada</option>
-							<option value="3">France</option>
-							<option value="4">Spain</option>
+							<option value="1">明框幕墙系统</option>
+							<option value="2">隐框玻璃幕墙</option>
+							<option value="3">横明竖隐玻璃幕墙</option>
+							<option value="4">竖明横隐玻璃幕墙</option>
 					</select>					
 					<script type="text/javascript">
 					$(function () {
@@ -61,10 +61,10 @@
 				<div name="select3">			
 	   				<select name="mainMaterial" id="mainMaterial" tabindex="1">
 						<option value="">材料</option>
-							<option value="1">USA</option>
-							<option value="2">Canada</option>
-							<option value="3">France</option>
-							<option value="4">Spain</option>
+							<option value="1">铝型材</option>
+<!-- 							<option value="2">Canada</option> -->
+<!-- 							<option value="3">France</option> -->
+<!-- 							<option value="4">Spain</option> -->
 					</select>					
 					<script type="text/javascript">
 					$(function () {
@@ -160,20 +160,28 @@
 		</div>
 	</div>
 		
-	<div class="container" >
+	<div id="scroll-container" class="container">
+		<div class="scroll">
 			<c:forEach items="${products}" var="product">  
 				<div class="multi-col" style="text-align:center;">
 					<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}" style="width:140px;heigth:220;"/>
 					<a href="${request.getContextPath()}/bim2.0/usercenter/getProduct/${product.id}">
 						<input type="button" value="${product.name}" class="dorwa-button"></input>
 					</a>					
+
 				</div>
 			</c:forEach>  
+		</div>
+		
+		<div id="navigation" align="center"> 
+        	<a href="${request.getContextPath()}/bim2.0/usercenter/products?page=1"></a>    
+        </div>
 	</div>
 	
 	<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.selectbox-0.2.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.selectbox-0.2.min2.js"></script>
+	<script type="text/javascript" src="../js/jquery.infinitescroll.js"></script>
 	
 </body>
 </html>
