@@ -18,13 +18,13 @@
 	<div class="container" style="height:250px;">	
 				<input type="text" name="search" value="搜索" class="text-search2" onblur="if(this.value=='') {this.value='搜索';}" onfocus="if(this.value=='搜索') {this.value='';}"/> 
    				<img src="${request.getContextPath()}/bim2.0/img/download/search2.png" style="margin-left:-35px;margin-top:2px"> 
-   				<div style="border: solid 2px #8e8e8e;height:28px;width:28px;position:relative;left:240px;top:-32px;">
+   				<div style="border: solid 2px #727171;height:28px;width:28px;position:relative;left:250px;top:-32px;">
    					<div style="padding-top:0px;border: solid 1px #8e8e8e;margin-top:7px;margin-left:7px;width:12px;"></div>
    					<div style="padding-top:0px;border: solid 1px #8e8e8e;margin-top:3px;margin-left:7px;width:12px;"></div>
    					<div style="padding-top:0px;border: solid 1px #8e8e8e;margin-top:3px;margin-left:7px;width:12px;"></div>             
    				</div>
    				
-   				<div name="select1">			
+   				<div name="select1" style="margin-left:12px;">			
 	   				<select name="country_id" id="country_id" tabindex="1">
 						<option value="">品牌</option>
 							<option value="1">USA</option>
@@ -41,7 +41,7 @@
 				
 				<div name="select2">			
 	   				<select name="country_id2" id="country_id2" tabindex="1">
-						<option value="">-- 种类 --</option>
+						<option value="">种类</option>
 							<option value="1">USA</option>
 							<option value="2">Canada</option>
 							<option value="3">France</option>
@@ -56,7 +56,7 @@
 				
 				<div name="select3">			
 	   				<select name="country_id3" id="country_id3" tabindex="1">
-						<option value="">-- 材料 --</option>
+						<option value="">材料</option>
 							<option value="1">USA</option>
 							<option value="2">Canada</option>
 							<option value="3">France</option>
@@ -71,7 +71,7 @@
    				 			
    				<div name="select4">			
 	   				<select name="country_id4" id="country_id4" tabindex="1">
-						<option value="">-- 建筑类型 --</option>
+						<option value="">建筑类型</option>
 							<option value="1">USA</option>
 							<option value="2">Canada</option>
 							<option value="3">France</option>
@@ -86,7 +86,7 @@
 				
 				<div name="select5">			
 	   				<select name="country_id5" id="country_id5" tabindex="1">
-						<option value="">-- 功能 --</option>
+						<option value="">功能</option>
 							<option value="1">USA</option>
 							<option value="2">Canada</option>
 							<option value="3">France</option>
@@ -151,26 +151,20 @@
 						});
 					</script> 
 		</div>
-		
 	</div>
 		
 	<div class="container" >
 			<c:forEach items="${products}" var="product">  
 				<div class="multi-col" style="text-align:center;">
-					<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}" style="width:140px;heigth:220;"/>
+					<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}" style="width:140px;heigth:220px;"/>
 					<input type="button" value="${product.name}" class="dorwa-button"/>
 				</div>
 			</c:forEach>  
-				
-				
-		
 	</div>
-	
 	
 	<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.selectbox-0.2.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.selectbox-0.2.min2.js"></script>
-	
 	
 </body>
 </html>
