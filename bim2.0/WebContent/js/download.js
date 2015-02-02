@@ -1,70 +1,11 @@
 $(document).ready(function(){
-	function resetTabs(){
-	    $("#tab-content > div").hide(); //Hide all content
-	    $("#tabs a").attr("id",""); //Reset id's      
-	}
-
-	var myUrl = window.location.href; //get URL
-	var myUrlTab = myUrl.substring(myUrl.indexOf("#")); // For mywebsite.com/tabs.html#tab2, myUrlTab = #tab2     
-	var myUrlTabName = myUrlTab.substring(0,4); // For the above example, myUrlTabName = #tab
-
-    $("#tab-content > div").hide(); // Initially hide all content
-    $("#tabs li:first a").attr("id","current"); // Activate first tab
-    $("#tab-content > div:first").fadeIn(); // Show first tab content
-    
-    $("#tabs a").on("click",function(e) {
-        e.preventDefault();
-        if ($(this).attr("id") == "current"){ //detection for current tab
-         return       
-        }
-        else{             
-        resetTabs();
-        $(this).attr("id","current"); // Activate this
-        $($(this).attr('name')).fadeIn(); // Show content for current tab
-        }
-    });
-
-    for (i = 1; i <= $("#tabs li").length; i++) {
-      if (myUrlTab == myUrlTabName + i) {
-          resetTabs();
-          $("a[name='"+myUrlTab+"']").attr("id","current"); // Activate url tab
-          $(myUrlTab).fadeIn(); // Show url tab content        
-      }
-    }
-    
-    
-    //
-    
-    function resetTabs2(){
-	    $("#tab-content2 > div").hide(); //Hide all content
-	    $("#tabs2 a").attr("id",""); //Reset id's      
-	}
-
-	var myUrl = window.location.href; //get URL
-	var myUrlTab = myUrl.substring(myUrl.indexOf("#")); // For mywebsite.com/tabs.html#tab2, myUrlTab = #tab2     
-	var myUrlTabName = myUrlTab.substring(0,4); // For the above example, myUrlTabName = #tab
-
-    $("#tab-content2 > div").hide(); // Initially hide all content
-    $("#tabs2 li:first a").attr("id","current2"); // Activate first tab
-    $("#tab-content2 > div:first").fadeIn(); // Show first tab content
-    
-    $("#tabs2 a").on("click",function(e) {
-        e.preventDefault();
-        if ($(this).attr("id") == "current2"){ //detection for current tab
-         return       
-        }
-        else{             
-        resetTabs2();
-        $(this).attr("id","current2"); // Activate this
-        $($(this).attr('name')).fadeIn(); // Show content for current tab
-        }
-    });
-
-    for (i = 1; i <= $("#tabs2 li").length; i++) {
-      if (myUrlTab == myUrlTabName + i) {
-          resetTabs2();
-          $("a[name='"+myUrlTab+"']").attr("id","current2"); // Activate url tab
-          $(myUrlTab).fadeIn(); // Show url tab content        
-      }
-    }
+	$("#scroll-container").infinitescroll({  
+        navSelector: "#navigation",      //页面分页元素--本页的导航，意思就是一个可以触发ajax函数的模块  
+        nextSelector: "#navigation a",  //下一页的导航  
+        itemSelector: ".scroll " ,             //此处我用了类选择器，选择的是你要加载的那一个块（每次载入的数据放的地方）        
+        animate: true,                          //加载时候时候需要动画，默认是false  
+        loadingImg   : "../img/download/loading.gif",                   //加载时候显示的进度条，用户可以自定义       
+        loadingText  : "读取中...",            //加载时显示的文字     
+        donetext     : "" 
+    });  
 });

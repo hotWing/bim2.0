@@ -32,8 +32,12 @@ public class ProductDaoImpl implements ProductDao {
 	}
 	
 	@Override
-	public List<Product> getAllProducts() {
-		List<Product> products =  sqlSession.selectList("com.mybatis.ProductMapper.getAllProducts");
+	public List<Product> getAllProducts(int startRow, int pageSize) {
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("startRow", startRow);
+		params.put("pageSize", pageSize);
+		
+		List<Product> products =  sqlSession.selectList("com.mybatis.ProductMapper.getAllProducts", params);
 		return products;
 	}
 }

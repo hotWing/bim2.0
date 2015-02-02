@@ -42,7 +42,7 @@ public class UserCenter {
 			return "bim/usercenter";
 		}
 		else {
-			model.addAttribute("msg", "�û����������������������");
+			model.addAttribute("msg", "用户名或密码错误!");
 			return "bim/login";
 		}
 	}
@@ -66,8 +66,8 @@ public class UserCenter {
 	}
 	
 	@RequestMapping(value="/products")
-	public String test(Model model){
-		model.addAttribute("products",productService.getAllProducts());
+	public String test(String page,Model model){
+		model.addAttribute("products",productService.getAllProducts(page));
 		return "bim/download";
 	}
 	

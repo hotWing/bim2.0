@@ -153,7 +153,8 @@
 		</div>
 	</div>
 		
-	<div class="container" >
+	<div id="scroll-container" class="container">
+		<div class="scroll">
 			<c:forEach items="${products}" var="product">  
 				<div class="multi-col" style="text-align:center;">
 
@@ -164,11 +165,17 @@
 					
 				</div>
 			</c:forEach>  
+		</div>
+		
+		<div id="navigation" align="center"> 
+        	<a href="${request.getContextPath()}/bim2.0/usercenter/products?page=1"></a>    
+        </div>
 	</div>
 	
 	<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.selectbox-0.2.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.selectbox-0.2.min2.js"></script>
+	<script type="text/javascript" src="../js/jquery.infinitescroll.js"></script>
 	
 </body>
 </html>

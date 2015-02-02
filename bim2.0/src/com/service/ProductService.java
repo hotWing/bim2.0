@@ -7,5 +7,5 @@ import com.model.Product;
 public interface ProductService {
 	Product getProduct(String id);
 
-	List<Product> getAllProducts();
+	List<Product> getAllProducts(String page);
 }

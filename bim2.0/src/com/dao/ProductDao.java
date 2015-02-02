@@ -6,5 +6,5 @@ import com.model.Product;
 
 public interface ProductDao {
 	public Product getProduct(String id);
-	public List<Product> getAllProducts();
+	public List<Product> getAllProducts(int startRow, int pageSize);
 }

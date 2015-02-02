@@ -26,8 +26,11 @@ public class ProductServiceImpl implements ProductService{
 	}
 	
 	@Override
-	public List<Product> getAllProducts() {
-		return productDao.getAllProducts();
+	public List<Product> getAllProducts(String page) {
+		int pageSize = 10;
+		int startRow = Integer.valueOf(page) * pageSize;
+//		int endRow = startRow + pageSize - 1;
+		return productDao.getAllProducts(startRow,pageSize);
 	}
 
 }

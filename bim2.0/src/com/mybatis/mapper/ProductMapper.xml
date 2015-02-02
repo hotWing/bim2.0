@@ -13,6 +13,6 @@
    </select>
    
    <select id="getAllProducts" resultType="com.model.Product">
-    	 SELECT * FROM PRODUCT
+    	 SELECT * FROM PRODUCT LIMIT ${startRow},${pageSize} 
    </select>
 </mapper>
