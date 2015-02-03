@@ -645,9 +645,9 @@ pre.en-title{
 	border-width:2px; 
 	border-color:#9b9999;
 	margin-bottom:30px;
-	margin-right:35px;
-	height:240px;
-	width:155px;
+	margin-right:22px;
+	height:250px;
+	width:170px;
 	border-radius:0;
  	background-repeat: no-repeat;
 }
@@ -683,9 +683,12 @@ pre.en-title{
 	height:30px;
 	background-color:#2f9710;
 	text-align:center;
+	width:170px;
 	color:white;
 	border:none;
 	font-size:13px;	
+	cursor:pointer;
+	margin-top:10px;
 }
 
 .example3-img{
