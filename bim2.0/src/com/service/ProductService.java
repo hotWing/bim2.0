@@ -11,7 +11,7 @@ public interface ProductService {
 	
 	List<Product> getProductsByName(String name);
 	
-	List<Product> getProductsBySearch(String name,String brand,String familyType,String mainMaterial,String buildingType,String function);
+	List<Product> getProductsBySearch(String name,String manufacturer,String familyType,String mainMaterial,String buildingType,String function);
 
 	List<Product> getAllProducts(String page);
 

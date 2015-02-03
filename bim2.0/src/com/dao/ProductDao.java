@@ -8,7 +8,7 @@ public interface ProductDao {
 	public Product getProduct(String id);
 
 	public List<Product> getProductsByName(String name);
-	public List<Product> getProductsBySearch(String name, String brand,String familyType, String mainMaterial, String buildingType,String function);
+	public List<Product> getProductsBySearch(String name, String manufacturer,String familyType, String mainMaterial, String buildingType,String function);
 
 	public List<Product> getAllProducts(int startRow, int pageSize);
 

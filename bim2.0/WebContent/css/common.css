@@ -645,7 +645,7 @@ pre.en-title{
 	border-width:2px; 
 	border-color:#9b9999;
 	margin-bottom:30px;
-	margin-right:22px;
+	margin-right:19px;
 	height:250px;
 	width:170px;
 	border-radius:0;
@@ -721,8 +721,3 @@ pre.en-title{
 	color:green;
 }
 
-.detail-para{
-	font-size:16px;
-	color:black;
-	line-height:30px;
-}

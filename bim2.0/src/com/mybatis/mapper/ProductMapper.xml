@@ -4,11 +4,12 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.mybatis.ProductMapper">
   <select id="getProduct" parameterType="map" resultType="com.model.Product">
-        SELECT * 
-        FROM PRODUCT
-       
+         SELECT product.id,product.name,familyType,length, width,height,publishDate,edition,discription,link,installInstruction,
+				product.certification,document,video,code,mainMaterial,secMaterial,design,production,weight,similarProduct,
+                attachment,sccClass,IFCType,manufacturerID,thumbDir,downloadDir,buildingType,function,manufacturer.name as manufacturer
+        FROM product join manufacturer on manufacturer.id = product.manufacturerID
         <if test="id != null and id != ''">  
-    	    WHERE id = #{id}
+    	    WHERE product.id = #{id}
         </if>
    </select>
    
@@ -26,14 +27,16 @@
    </select>
    
    <select id="getProductsBySearch" parameterType="map" resultType="com.model.Product">
-        SELECT * 
-        FROM PRODUCT
+        SELECT product.id,product.name,familyType,length, width,height,publishDate,edition,discription,link,installInstruction,
+				product.certification,document,video,code,mainMaterial,secMaterial,design,production,weight,similarProduct,
+                attachment,sccClass,IFCType,manufacturerID,thumbDir,downloadDir,buildingType,function,manufacturer.name as manufacturer
+        FROM product join manufacturer on manufacturer.id = product.manufacturerID
        	WHERE 1=1
         <if test="name != null and name != '' and name != '搜索'">  
-    	    and name like '%${name}%'
+    	    and product.name like '%${name}%'
         </if>
-        <if test="brand != null and brand != '' ">
-            and brand = #{brand}
+        <if test="manufacturer != null and manufacturer != '' ">
+            and manufacturer.name = #{manufacturer}
         </if>
         <if test="familyType != null and familyType != '' ">
             and familyType = #{familyType}

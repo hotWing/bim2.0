@@ -9,7 +9,7 @@ public class Product {
 	private float length;
 	private float width;
 	private float height;
-	private Date date;
+	private Date publishDate;
 	private float edition;
 	private String discription;
 	private String link;
@@ -32,8 +32,15 @@ public class Product {
 	private String downloadDir;
 	private String buildingType;
 	private String function;
+	private String manufacturer;
 	
 	
+	public String getManufacturer() {
+		return manufacturer;
+	}
+	public void setManufacturer(String manufacturer) {
+		this.manufacturer = manufacturer;
+	}
 	public String getId() {
 		return id;
 	}
@@ -70,11 +77,12 @@ public class Product {
 	public void setHeight(float height) {
 		this.height = height;
 	}
-	public Date getDate() {
-		return date;
+	
+	public Date getPublishDate() {
+		return publishDate;
 	}
-	public void setDate(Date date) {
-		this.date = date;
+	public void setPublishDate(Date publishDate) {
+		this.publishDate = publishDate;
 	}
 	public float getEdition() {
 		return edition;

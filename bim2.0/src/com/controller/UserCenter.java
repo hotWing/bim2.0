@@ -94,6 +94,8 @@ public class UserCenter {
 	}
 	*/
 	
+	
+	//这里的brand是后面的manufacturer
 	@RequestMapping(value="/search")
 	public String search(String search,String brand,String familyType,String mainMaterial,String buildingType,String function,Model model){
 		model.addAttribute("products",productService.getProductsBySearch(search,brand,familyType,mainMaterial,buildingType,function));

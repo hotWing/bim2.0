@@ -52,12 +52,12 @@ public class ProductDaoImpl implements ProductDao {
 	}
 
 	@Override
-	public List<Product> getProductsBySearch(String name, String brand,
+	public List<Product> getProductsBySearch(String name, String manufacturer,
 			String familyType, String mainMaterial, String buildingType,
 			String function) {
 		Map<String, Object> parms = new HashMap<String, Object>();
 		parms.put("name", name);
-		parms.put("brand", brand);
+		parms.put("brand", manufacturer);
 		parms.put("familyType", familyType);
 		parms.put("mainMaterial", mainMaterial);
 		parms.put("buildingType", buildingType);
