@@ -8,4 +8,36 @@ $(document).ready(function(){
         loadingText  : "读取中...",            //加载时显示的文字     
         donetext     : "" 
     });  
+
+	 var family_type = $("#familyType-input").val();  
+	 var brand = $("#brand-input").val();  
+	 var main_material = $("#mainMaterial-input").val();  
+	 var building_type = $("#buildingType-input").val();  
+	 var function_type = $("#function-input").val();  
+	 
+	 $("#familyType").find("option[value='"+ family_type +"']").attr("selected",true);
+	 $("#brand").find("option[value='"+ brand +"']").attr("selected",true);
+	 $("#mainMaterial").find("option[value='"+ main_material +"']").attr("selected",true);
+	 $("#buildingType").find("option[value='"+ building_type +"']").attr("selected",true);
+	 $("#function").find("option[value='"+ function_type +"']").attr("selected",true);
+	 
+//	    $("#<%=familyType%> option").each(function() {  
+//	    if ($(this).text() == reg_name) {  
+//	            $(this).attr("selected", "selected");  
+//	            break;  
+//	        }  
+//	    });  
+	
 });
+
+
+
+         
+
+
+
+
+
+
+
+

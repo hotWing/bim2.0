@@ -97,7 +97,13 @@ public class UserCenter {
 	@RequestMapping(value="/search")
 	public String search(String search,String brand,String familyType,String mainMaterial,String buildingType,String function,Model model){
 		model.addAttribute("products",productService.getProductsBySearch(search,brand,familyType,mainMaterial,buildingType,function));
-		
+		model.addAttribute("search",search);
+		model.addAttribute("brand",brand);
+		model.addAttribute("familyType",familyType);
+		model.addAttribute("mainMaterial",mainMaterial);
+		model.addAttribute("buildingType",buildingType);
+		model.addAttribute("function",function);
+				
 		return "bim/download";
 		
 	}

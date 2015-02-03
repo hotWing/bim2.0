@@ -15,12 +15,17 @@
 	<jsp:include page="../bim/top.jsp"/>
 	<jsp:include page="../bim/right.jsp"/>
 	
+	<input id="familyType-input" value="${familyType}" style="display:none"></input>
+	<input id="brand-input" value="${brand}" style="display:none"></input>
+	<input id="mainMaterial-input" value="${mainMaterial}" style="display:none"></input>
+	<input id="buildingType-input" value="${buildingType}" style="display:none"></input>
+	<input id="function-input" value="${function}" style="display:none"></input>
+	
 	<div class="container" style="height:250px;">
 		<form action="${request.getContextPath()}/bim2.0/usercenter/search">
-					<input type="text" name="search" value="搜索" class="text-search2" onblur="if(this.value=='') {this.value='搜索';}" onfocus="if(this.value=='搜索') {this.value='';}"/> 
+					<input type="text" name="search" value="${search}" class="text-search2" onblur="if(this.value=='') {this.value='搜索';}" onfocus="if(this.value=='搜索') {this.value='';}"/> 
 	   				<img src="${request.getContextPath()}/bim2.0/img/download/search2.png" style="margin-left:-35px;margin-top:2px">
 	   				<input type="submit" value="搜索" name="submit" class="search-button">
-
 				 
    				<div style="border: solid 2px #727171;height:28px;width:28px;position:relative;left:250px;top:-32px;">
    					<div style="padding-top:0px;border: solid 1px #8e8e8e;margin-top:7px;margin-left:7px;width:12px;"></div>
@@ -45,7 +50,7 @@
 				
 				<div name="select2">			
 	   				<select name="familyType" id="familyType" tabindex="1">
-						<option value="">种类</option>
+							<option value="">种类</option>
 							<option value="明框幕墙系统">明框幕墙系统</option>
 							<option value="隐框幕墙系统">隐框幕墙系统</option>
 							<option value="横明竖隐幕墙系统">横明竖隐幕墙系统</option>
@@ -54,14 +59,14 @@
 					<script type="text/javascript">
 					$(function () {
 						$("#familyType").selectbox();
-						});
+					});
 					</script> 
 				</div>    
 				
 				<div name="select3">			
 	   				<select name="mainMaterial" id="mainMaterial" tabindex="1">
 						<option value="">材料</option>
-							<option value="1">铝型材</option>
+							<option value="铝型材">铝型材</option>
 <!-- 							<option value="2">Canada</option> -->
 <!-- 							<option value="3">France</option> -->
 <!-- 							<option value="4">Spain</option> -->
@@ -162,13 +167,25 @@
 		
 	<div id="scroll-container" class="container">
 		<div class="scroll">
-			<c:forEach items="${products}" var="product">  
-				<div class="multi-col" style="text-align:center;">
-					<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}" style="width:140px;height:200px;"/>
-					<a href="${request.getContextPath()}/bim2.0/usercenter/getProduct/${product.id}">
-						<input type="button" value="${product.name}" class="dorwa-button"></input>
-					</a>					
-				</div>
+			<c:forEach items="${products}" var="product" varStatus="status" >  
+				<c:choose>
+					<c:when test="${(status.index+1)%6!=0}">
+						<div class="multi-col" style="text-align:center;">
+							<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}" style="width:140px;height:200px;"/>
+							<a href="${request.getContextPath()}/bim2.0/usercenter/getProduct/${product.id}">
+								<input type="button" value="${product.name}" class="dorwa-button"></input>
+							</a>										
+						</div>
+					</c:when>
+					<c:otherwise>
+						<div class="multi-col" style="text-align:center;margin-right:0px;">
+								<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}" style="width:140px;height:200px;"/>
+								<a href="${request.getContextPath()}/bim2.0/usercenter/getProduct/${product.id}">
+									<input type="button" value="${product.name}" class="dorwa-button"></input>
+								</a>												
+						</div>
+					</c:otherwise>
+				</c:choose>			
 			</c:forEach>  
 		</div>
 		
