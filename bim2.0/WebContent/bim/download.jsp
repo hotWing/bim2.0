@@ -37,6 +37,7 @@
 	   				<select name="brand" id="brand" tabindex="1">
 						<option value="">品牌</option>
 							<option value="肇庆亚洲铝厂有限公司">肇庆亚洲铝厂有限公司</option>
+							<option value="华为技术有限公司">华为技术有限公司</option>
 <!-- 							<option value="2">Canada</option> -->
 <!-- 							<option value="3">France</option> -->
 <!-- 							<option value="4">Spain</option> -->
@@ -55,6 +56,8 @@
 							<option value="隐框幕墙系统">隐框幕墙系统</option>
 							<option value="横明竖隐幕墙系统">横明竖隐幕墙系统</option>
 							<option value="竖明横隐幕墙系统">竖明横隐幕墙系统</option>
+							<option value="电气">电气</option>
+							<option value="悬窗幕墙系统">悬窗幕墙系统</option>
 					</select>					
 					<script type="text/javascript">
 					$(function () {
@@ -67,6 +70,7 @@
 	   				<select name="mainMaterial" id="mainMaterial" tabindex="1">
 						<option value="">材料</option>
 							<option value="铝型材">铝型材</option>
+							
 <!-- 							<option value="2">Canada</option> -->
 <!-- 							<option value="3">France</option> -->
 <!-- 							<option value="4">Spain</option> -->
