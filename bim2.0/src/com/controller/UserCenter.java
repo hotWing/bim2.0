@@ -40,7 +40,7 @@ public class UserCenter {
 		if (isUser) {
 			session.setAttribute("username", username);
 			session.setAttribute("password", password);
-			return "bim/usercenter";
+			return "redirect:../usercenter/products?page=0";
 		}
 		else {
 			model.addAttribute("msg", "用户名或密码错误!");
@@ -59,7 +59,7 @@ public class UserCenter {
 	public String check(HttpSession session){
 		String name = (String) session.getAttribute("username");
 		if (name==null || name.isEmpty()) {
-			 return "bim/login";
+			 return "redirect:../bim/login.jsp";
 		 }
 		 else {
 			 return "bim/usercenter";
@@ -67,9 +67,15 @@ public class UserCenter {
 	}
 	
 	@RequestMapping(value="/products")
-	public String test(String page,Model model){
-		model.addAttribute("products",productService.getAllProducts(page));
-		return "bim/download";
+	public String test(HttpSession session,String page,Model model){
+		String name = (String) session.getAttribute("username");
+		if (name==null || name.isEmpty()) {
+			 return "redirect:../bim/login.jsp";
+		 }
+		 else {
+			model.addAttribute("products",productService.getAllProducts(page));
+			return "bim/download";
+		 }
 	}
 	
 	@RequestMapping(value="/getProduct/{id}")
