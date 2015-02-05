@@ -81,10 +81,10 @@
    				<div name="select4">			
 	   				<select name="buildingType" id="buildingType" tabindex="1">
 						<option value="">建筑类型</option>
-							<option value="1">USA</option>
-							<option value="2">Canada</option>
-							<option value="3">France</option>
-							<option value="4">Spain</option>
+<!-- 							<option value="1">USA</option> -->
+<!-- 							<option value="2">Canada</option> -->
+<!-- 							<option value="3">France</option> -->
+<!-- 							<option value="4">Spain</option> -->
 					</select>					
 					<script type="text/javascript">
 					$(function () {
@@ -96,10 +96,10 @@
 				<div name="select5">			
 	   				<select name="function" id="function" tabindex="1">
 						<option value="">功能</option>
-							<option value="1">USA</option>
-							<option value="2">Canada</option>
-							<option value="3">France</option>
-							<option value="4">Spain</option>
+<!-- 							<option value="1">USA</option> -->
+<!-- 							<option value="2">Canada</option> -->
+<!-- 							<option value="3">France</option> -->
+<!-- 							<option value="4">Spain</option> -->
 					</select>					
 					<script type="text/javascript">
 					$(function () {
@@ -124,10 +124,10 @@
    		<div name="select6">			
 	   				<select name="country_id6" id="country_id6" tabindex="1">
 						<option value="">-- 最近添加 --</option>
-							<option value="1">USA</option>
-							<option value="2">Canada</option>
-							<option value="3">France</option>
-							<option value="4">Spain</option>
+<!-- 							<option value="1">USA</option> -->
+<!-- 							<option value="2">Canada</option> -->
+<!-- 							<option value="3">France</option> -->
+<!-- 							<option value="4">Spain</option> -->
 					</select>					
 					<script type="text/javascript">
 					$(function () {
@@ -138,10 +138,10 @@
 		<div name="select7">			
 	   				<select name="country_id7" id="country_id7" tabindex="1">
 						<option value="">-- 类型 --</option>
-							<option value="1">USA</option>
-							<option value="2">Canada</option>
-							<option value="3">France</option>
-							<option value="4">Spain</option>
+<!-- 							<option value="1">USA</option> -->
+<!-- 							<option value="2">Canada</option> -->
+<!-- 							<option value="3">France</option> -->
+<!-- 							<option value="4">Spain</option> -->
 					</select>					
 					<script type="text/javascript">
 					$(function () {
@@ -152,10 +152,10 @@
 		<div name="select8">			
 	   				<select name="country_id8" id="country_id8" tabindex="1">
 						<option value="">-- 文件类型 --</option>
-							<option value="1">USA</option>
-							<option value="2">Canada</option>
-							<option value="3">France</option>
-							<option value="4">Spain</option>
+<!-- 							<option value="1">USA</option> -->
+<!-- 							<option value="2">Canada</option> -->
+<!-- 							<option value="3">France</option> -->
+<!-- 							<option value="4">Spain</option> -->
 					</select>					
 					<script type="text/javascript">
 					$(function () {
@@ -171,7 +171,7 @@
 				<c:choose>
 					<c:when test="${(status.index+1)%6!=0}">
 						<div class="multi-col" style="text-align:center;">
-							<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}"/>
+							<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}.jpg"/>
 							<a href="${request.getContextPath()}/bim2.0/usercenter/getProduct/${product.id}">
 								<input type="button" value="${product.name}" class="dorwa-button"></input>
 							</a>										
@@ -179,7 +179,7 @@
 					</c:when>
 					<c:otherwise>
 						<div class="multi-col" style="text-align:center;margin-right:0px;">
-								<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}"/>
+								<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}.jpg"/>
 								<a href="${request.getContextPath()}/bim2.0/usercenter/getProduct/${product.id}">
 									<input type="button" value="${product.name}" class="dorwa-button"></input>
 								</a>												
