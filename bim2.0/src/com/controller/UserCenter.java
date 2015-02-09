@@ -1,20 +1,15 @@
 package com.controller;
 
 import java.io.UnsupportedEncodingException;
-import java.util.List;
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
-import org.apache.tomcat.jni.Address;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.model.Product;
 import com.service.ProductService;
 import com.service.UserService;
 

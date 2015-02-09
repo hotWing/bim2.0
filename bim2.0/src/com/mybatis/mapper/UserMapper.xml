@@ -15,4 +15,28 @@
         </if>
         
    </select>
+   
+  <select id="checkByUsername" parameterType="map" resultType="int">
+        SELECT COUNT(*) 
+        FROM USER
+        WHERE 1=1
+        <if test="username != null and username != ''">  
+    	    and username = #{username}
+        </if>
+   </select>
+   
+   <select id="getAllUsers" parameterType="map" resultType="com.model.User">
+        SELECT *
+        FROM USER
+   </select>
+   
+   <insert id="addUsers" parameterType="map">
+       INSERT INTO USER VALUES (#{username}, #{password}, #{name2}, 
+       #{company}, #{certification},#{country}, #{province}, #{city}, 
+       #{company_type}, #{user_role})
+   </insert>
+   
+   <delete id="deleteUser" parameterType="map">
+       DELETE FROM USER WHERE username = #{username}
+   </delete>
 </mapper>
