@@ -13,7 +13,7 @@
 	<input id="page-name" value="download" style="display:none"></input>
 	<jsp:include page="../bim/top.jsp"/>
 	<jsp:include page="../bim/right.jsp"/>
-	<div class="container" style="padding-top:200px;">
+	<div class="container" style="padding-top:200px;height:500px">
 		<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}-d.jpg" />		
 		
 			<div style="border:solid 1px;height:365px;width:440px;margin-top:-365px;margin-left:580px;padding-top:20px;padding-left:20px;">

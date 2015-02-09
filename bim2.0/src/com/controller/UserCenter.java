@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.model.Product;
 import com.service.ProductService;
 import com.service.UserService;
 
@@ -114,8 +115,10 @@ public class UserCenter {
 	}
 	
 	@RequestMapping(value="/contact")
-	@ResponseBody
-	public String contactSubmit(String name){
-		return "cc";
+	public @ResponseBody Product contactSubmit(String name){
+		Product p =  new Product();
+		p.setName("aa");
+		p.setId("bb");
+		return p;
 	}
 }

@@ -12,15 +12,16 @@ $(document).ready(function(){
 		        url: "../../usercenter/contact",
 		        type: "post",
 		        data:  "name="+$('#contact-name').val(),
-		        		
+		        contentType : 'application/json; charset=utf-8',
+		        dataType: 'json',		
 		        success: function(data, textStatus){
 		        			alert(data);
 			        	},
-	        	error: function(msg){
-        			alert("error");
-	        	}
+	        	error: function(XMLHttpRequest, error, errorThrown){  
+		        		  alert(error);  
+		        		  alert(errorThrown);  
+        		  },  
 		    });
-		
 	});
 	
 	if ($("#tobottom").val()=="true") {
