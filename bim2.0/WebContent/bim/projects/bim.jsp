@@ -368,10 +368,10 @@
 		<div class="modal-head">海亮</div>
 		<div class="button-close"><img src="../../img/b-close.png"></div>
 			<ul id="tabs3">
-		    	<li><a href="#" name="#tab13">渲染</a></li>
-		    	<li><a href="#" name="#tab23">图纸</a></li>
-		    	<li><a href="#" name="#tab33">信息</a></li>
-		    	<li><a href="#" name="#tab43">参与人员</a></li>
+		    	<li><a href="#" name="#tab13">设计元素</a></li>
+		    	<li><a href="#" name="#tab23">施工图纸</a></li>
+		    	<li><a href="#" name="#tab33">项目信息</a></li>
+		    	<li><a href="#" name="#tab43">设计团队</a></li>
 			</ul>
 	
 		<div id="tab-content3">
@@ -442,10 +442,34 @@
 				</div>
       		</div>
       		<div id="tab33" style="display: none;">
-         		信息
+         		工程概况<br>
+         			&nbsp&nbsp 01 建设单位：苏州海亮地产有限公司,<br>
+         			&nbsp&nbsp 02 建筑设计单位：苏州科技学院设计研究院有限公司<br>
+         			&nbsp&nbsp 03 建筑形式：本工程幕墙高度26.8米，地下3层，地上4层。<br>
+         			&nbsp&nbsp 04 工程量：<br>
+         				&nbsp&nbsp&nbsp&nbsp 1、玻璃幕墙：约2500平方米<br>
+         				&nbsp&nbsp&nbsp&nbsp 2、屋面采光顶：约830平方米<br>
+         				&nbsp&nbsp&nbsp&nbsp 3、门窗系统：约360平方米<br>
+         				&nbsp&nbsp&nbsp&nbsp 4、墙面真石漆：约8120平方米<br>
+         				&nbsp&nbsp&nbsp&nbsp 5、外装总面积：约11800平方米<br>
+         			&nbsp&nbsp 04 建筑结构安全等级：二级<br>
+         			&nbsp&nbsp 05 幕墙结构构件安全等级：二级<br>
+         			&nbsp&nbsp 06 幕墙结构设计使用年限：25年以上<br>
+         			&nbsp&nbsp 07 主要外装形式：<br>
+         				&nbsp&nbsp&nbsp&nbsp 1、铝合金明框玻璃幕墙<br>
+         				&nbsp&nbsp&nbsp&nbsp 2、钢结构半隐框玻璃幕墙<br>
+         				&nbsp&nbsp&nbsp&nbsp 3、点式玻璃幕墙<br>
+         				&nbsp&nbsp&nbsp&nbsp 4、铝合金断热门窗<br>
+         				&nbsp&nbsp&nbsp&nbsp 5、铝合金防雨百叶系统<br>
+         				&nbsp&nbsp&nbsp&nbsp 6、墙面真石漆<br>
+         				&nbsp&nbsp&nbsp&nbsp 7、钢结构玻璃雨棚<br>
+         				&nbsp&nbsp&nbsp&nbsp 8、钢结构玻璃采光顶<br>
       		</div>
       		<div id="tab43" style="display: none;">
-         		参与人员
+         		设计团队：<br>
+         		主任设计师：丁泽南<br>
+         		毕业自苏州大学土木工程专业，从事幕墙专业设计多年，参与过昆山文化艺术中心、市民文化广场等外装项目，对装饰设计、建筑语言有独特的见解。<br>
+         		助理设计师：郑炎<br>
       		</div>
   		</div>
 	</div>
@@ -493,10 +517,34 @@
 				 </div>
       		</div>
       		<div id="tab34" style="display: none;">
-         		
+         		    华耐家居外装工程概况
+         			01 建设单位：苏州海亮地产有限公司
+         			02 建筑设计单位：苏州科技学院设计研究院有限公司
+         			03 建筑形式：本工程幕墙高度26.8米，地下3层，地上4层。
+         			04 工程量：
+         				1、玻璃幕墙：约2500平方米
+         				2、屋面采光顶：约830平方米
+         				3、门窗系统：约360平方米
+         				4、墙面真石漆：约8120平方米
+         				5、外装总面积：约11800平方米
+         			04 建筑结构安全等级：二级
+         			05 幕墙结构构件安全等级：二级
+         			06 幕墙结构设计使用年限：25年以上
+         			07 主要外装形式：
+         				1、铝合金明框玻璃幕墙
+         				2、钢结构半隐框玻璃幕墙
+         				3、点式玻璃幕墙
+         				4、铝合金断热门窗
+         				5、铝合金防雨百叶系统
+         				6、墙面真石漆
+         				7、钢结构玻璃雨棚
+         				8、钢结构玻璃采光顶
       		</div>
       		<div id="tab44" style="display: none;">
+         		设计团队：
+         		主任设计师：李喆
          		
+         		助理设计师：王叶飞
       		</div>
   		</div>
 	</div>

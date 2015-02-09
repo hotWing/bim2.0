@@ -57,7 +57,7 @@ public class ProductDaoImpl implements ProductDao {
 			String function) {
 		Map<String, Object> parms = new HashMap<String, Object>();
 		parms.put("name", name);
-		parms.put("brand", manufacturer);
+		parms.put("manufacturer", manufacturer);
 		parms.put("familyType", familyType);
 		parms.put("mainMaterial", mainMaterial);
 		parms.put("buildingType", buildingType);

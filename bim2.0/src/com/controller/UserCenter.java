@@ -1,6 +1,7 @@
 package com.controller;
 
 import java.io.UnsupportedEncodingException;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
@@ -9,7 +10,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.model.Product;
 import com.service.ProductService;
 import com.service.UserService;
 
@@ -35,7 +38,7 @@ public class UserCenter {
 		if (isUser) {
 			session.setAttribute("username", username);
 			session.setAttribute("password", password);
-			return "bim/usercenter";
+			return "redirect:../usercenter/products?page=0";
 		}
 		else {
 			model.addAttribute("msg", "用户名或密码错误!");
@@ -54,7 +57,7 @@ public class UserCenter {
 	public String check(HttpSession session){
 		String name = (String) session.getAttribute("username");
 		if (name==null || name.isEmpty()) {
-			 return "bim/login";
+			 return "redirect:../bim/login.jsp";
 		 }
 		 else {
 			 return "bim/usercenter";
@@ -62,9 +65,15 @@ public class UserCenter {
 	}
 	
 	@RequestMapping(value="/products")
-	public String test(String page,Model model){
-		model.addAttribute("products",productService.getAllProducts(page));
-		return "bim/download";
+	public String test(HttpSession session,String page,Model model){
+		String name = (String) session.getAttribute("username");
+		if (name==null || name.isEmpty()) {
+			 return "redirect:../bim/login.jsp";
+		 }
+		 else {
+			model.addAttribute("products",productService.getAllProducts(page));
+			return "bim/download";
+		 }
 	}
 	
 	@RequestMapping(value="/getProduct/{id}")
@@ -100,8 +109,14 @@ public class UserCenter {
 		model.addAttribute("mainMaterial",mainMaterial);
 		model.addAttribute("buildingType",buildingType);
 		model.addAttribute("function",function);
-				
 		return "bim/download";
-		
+	}
+	
+	@RequestMapping(value="/contact")
+	public @ResponseBody Product contactSubmit(String name){
+		Product p =  new Product();
+		p.setName("aa");
+		p.setId("bb");
+		return p;
 	}
 }
