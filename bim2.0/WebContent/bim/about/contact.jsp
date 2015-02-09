@@ -44,22 +44,22 @@
 			</div>
 		</div>
 		<div class="content">
-			<form id="contact-form" action="../../bim/error.jsp">
+			<form id="contact-form" action="../../usercenter/contact">
 				<p class="header">联系我们：</p>
 				<p>如果您想联系我们，跟我们谈谈我们的工作，请填写一下表格，我们会尽快与您联系: </p><br>
 				<p>名字*</p>
-				<input class="contact" type="text" name="name" />
+				<input id="contact-name" class="contact" type="text" name="name" />
 				<p>电话*</p>
-				<input class="contact" type="text" name="tel" />
+				<input id="contact-tel" class="contact" type="text" name="tel" />
 				<p>电子邮件*</p>
-				<input class="contact" type="text" name="email" />
+				<input id="contact-email" class="contact" type="text" name="email" />
 				<p>消息*</p>
-				<textarea class="contact" name="msg" tabindex="16" rows="10" cols="50"></textarea>
+				<textarea  id="contact-msg" class="contact" name="msg" tabindex="16" rows="10" cols="50"></textarea>
 				<br>
-				<input class="contact" type="submit" value="提交"/>
+				<div id="submitBt" class="contact" ></div>
 			</form>
 		</div>
 	</div>
-	<jsp:include page="../../bim/bottom.jsp"/>
+	<jsp:include page="../bottom.jsp"/>
 </body>
 </html>

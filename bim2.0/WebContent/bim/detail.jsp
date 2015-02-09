@@ -87,6 +87,6 @@
 <!-- 		      </div> -->
 <!-- 	  	</div> -->
 <!-- 	</div> -->
-
+		<jsp:include page="bottom.jsp"/>
 </body>
 </html>

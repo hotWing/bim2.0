@@ -723,3 +723,12 @@ pre.en-title{
 	color:green;
 }
 
+#submitBt {
+	width:150px;
+	height:40px;
+	cursor:pointer;
+	background-color:#00953b;
+	border:0px;
+	color:white;
+	font-size:16px;
+}
