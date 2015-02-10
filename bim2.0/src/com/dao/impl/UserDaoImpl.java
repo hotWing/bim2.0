@@ -77,5 +77,11 @@ public class UserDaoImpl implements UserDao {
 		sqlSession.delete("com.mybatis.UserMapper.deleteUser", parms);
 	}
 	
+	public User getUserInfo(String username){
+		Map<String, Object> parms = new HashMap<String, Object>();
+		parms.put("username", username);
+		User user = sqlSession.selectOne("com.mybatis.UserMapper.getUserInfo", parms);
+		return user;
+	}
 
 }

@@ -16,5 +16,27 @@ $(document).ready(function(){
 	$("#alt-users").click(function(){
 		var alt_username = $("#user-info tr.active td:first").text()
 		
+		$.ajax({
+	        url: "revise/",
+	        type: "post",
+	       
+	        data:  {name: $("#user-info tr.active td:first").text()},
+//	        contentType : 'application/json; charset=utf-8',
+	        dataType: 'json',		
+	        success: function(User,textStatus){
+	        	
+	        	alert(User.name);  
+		        	},
+        	error: function(XMLHttpRequest, error, errorThrown){  
+	        		  alert(error);  
+	        		  alert(errorThrown);  
+    		  },  
+	    });
 	})
+	
+	$("#product-info").click(function(){
+		
+		location.href = "productinfo";
+	})
+	
 });

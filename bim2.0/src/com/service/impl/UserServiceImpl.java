@@ -48,4 +48,8 @@ public class UserServiceImpl implements UserService {
 	public void deleteUser(String username){
 		userDao.deleteUser(username);
 	}
+	
+	public User getUserInfo(String username){
+		return userDao.getUserInfo(username);
+	}
 }

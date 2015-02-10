@@ -3,13 +3,16 @@ package com.controller;
 import java.io.UnsupportedEncodingException;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.model.User;
+import com.service.ProductService;
 import com.service.UserService;
 
 
@@ -24,11 +27,18 @@ public class AdminCenter {
 //	}
 	
 	private UserService userService;
+	private ProductService productService;
 	
 	@Resource
 	public void setUserService(UserService userService) {
 		this.userService = userService;
 	}
+	
+	@Resource
+	public void setProductService(ProductService productService) {
+		this.productService = productService;
+	}
+	 
 	
 	@RequestMapping(value="/usermanager")
 	public String manager(Model model){
@@ -61,5 +71,17 @@ public class AdminCenter {
 		}
 		return "redirect:../usermanager";
 		
+	}
+	
+	@RequestMapping(value="/revise")
+	public @ResponseBody User userRevise( String name){
+		User p =  userService.getUserInfo(name);
+		return p;
+	}
+	
+	@RequestMapping(value="/productinfo")
+	public String productinfo(Model model){
+		model.addAttribute("products",productService.getAllProducts());
+		return "productinfo";
 	}
 }

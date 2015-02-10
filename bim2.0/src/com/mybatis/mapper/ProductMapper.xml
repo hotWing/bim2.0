@@ -52,4 +52,9 @@
         </if>
    </select>
    
+   <select id="getProducts" resultType="com.model.Product">
+        SELECT * 
+        FROM PRODUCT      
+   </select>
+   
 </mapper>

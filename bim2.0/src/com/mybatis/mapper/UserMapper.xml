@@ -39,4 +39,13 @@
    <delete id="deleteUser" parameterType="map">
        DELETE FROM USER WHERE username = #{username}
    </delete>
+   
+   <select id="getUserInfo" parameterType="map" resultType="com.model.User">
+        SELECT *
+        FROM USER
+        WHERE 1=1
+        <if test="username != null and username != ''">  
+    	    and username = #{username}
+        </if>
+   </select>
 </mapper>

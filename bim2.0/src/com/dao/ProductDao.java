@@ -12,4 +12,6 @@ public interface ProductDao {
 
 	public List<Product> getAllProducts(int startRow, int pageSize);
 
+	public List<Product> getAllProducts();
+
 }

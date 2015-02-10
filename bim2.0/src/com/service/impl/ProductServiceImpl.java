@@ -45,5 +45,11 @@ public class ProductServiceImpl implements ProductService{
 		
 		return productDao.getProductsBySearch(name,manufacturer,familyType,mainMaterial,buildingType,function);
 	}
+	
+	@Override
+	public List<Product> getAllProducts(){
+		return productDao.getAllProducts();
+		
+	}
 
 }

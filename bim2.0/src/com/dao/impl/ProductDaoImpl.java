@@ -67,5 +67,9 @@ public class ProductDaoImpl implements ProductDao {
 		return products;
 	}
 	
+	public List<Product> getAllProducts(){
+		List<Product> products =  sqlSession.selectList("com.mybatis.ProductMapper.getProducts");
+		return products;
+	}
 	
 }
