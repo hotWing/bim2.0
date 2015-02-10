@@ -13,7 +13,7 @@
 			<li><a style="margin-right:150px" id="index" href="${request.getContextPath()}/bim2.0/index.jsp">苏州彼慕建筑设计咨询有限公司</a></li>
 <%-- 			<li><a style="margin-right:250px" id="index" href="${request.getContextPath()}/bim2.0/index.jsp">DESIGN BIM</a></li> --%>
 			<li>
-				<a id="projects" href="#">解决方案</a>
+				<a id="projects">解决方案</a>
 				<div class="arrow-down"></div>
 				<div class="arrow-up"></div>
 				<ul class="sub-menu">
