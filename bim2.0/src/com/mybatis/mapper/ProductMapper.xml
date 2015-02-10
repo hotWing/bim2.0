@@ -57,4 +57,10 @@
         FROM PRODUCT      
    </select>
    
+     <select id="getManufacturer" parameterType="map" resultType="com.model.Manufacturer">
+        SELECT * 
+        FROM manufacturer
+        where id = #{id}   
+   </select>
+   
 </mapper>

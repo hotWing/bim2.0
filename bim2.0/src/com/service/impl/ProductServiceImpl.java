@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import com.dao.ProductDao;
+import com.model.Manufacturer;
 import com.model.Product;
 import com.service.ProductService;
 
@@ -49,6 +50,12 @@ public class ProductServiceImpl implements ProductService{
 	@Override
 	public List<Product> getAllProducts(){
 		return productDao.getAllProducts();
+		
+	}
+	
+	@Override
+	public Manufacturer getManufacturer(String id){
+		return productDao.getManufacturer(id);
 		
 	}
 

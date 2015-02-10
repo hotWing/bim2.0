@@ -7,16 +7,16 @@
 <head>
 	<jsp:include page="../bim/head.jsp"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<script type="text/javascript" src="${request.getContextPath()}/bim2.0/js/download.js"></script>
+	<script type="text/javascript" src="${request.getContextPath()}/bim2.0/js/detail.js"></script>
 </head>
 <body>
 	<input id="page-name" value="download" style="display:none"></input>
 	<jsp:include page="../bim/top.jsp"/>
 	<jsp:include page="../bim/right.jsp"/>
-	<div class="container" style="padding-top:200px;height:500px">
+	<div class="container" style="padding-top:200px;height:400px">
 		<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}-d.jpg" />		
 		
-			<div style="border:solid 1px;height:365px;width:440px;margin-top:-365px;margin-left:580px;padding-top:20px;padding-left:20px;">
+			<div style="border:solid 1px;height:340px;width:440px;margin-top:-365px;margin-left:580px;padding-top:20px;padding-left:20px;">
 				<h1 style="line-height:40px;">${product.name}</h1>
 				
 				<table border="0px" style="margin-top:40px">
@@ -50,9 +50,7 @@
 				  </tr>
 				</table>
 			</div>
-		
-		
-			<a href="${request.getContextPath()}/bim2.0/${product.downloadDir}" class="download-button">DOWNLOAD</a>
+			
 <!-- 		<div> -->
 <!-- 			<input type="button" class="downloads-button" value="DOWNLOAD"/> -->
 <!-- 		</div> -->
@@ -63,30 +61,33 @@
 <!-- 			<input type="button" value="Embed" class="share-button" style="margin-left:400px;"/> -->
 <!-- 		</div> -->
 	</div>
-<!-- 	<div class="container"> -->
+	<div class="container" style="height:400px;">
 		
-<!-- 		<ul id="tabs"> -->
-<!-- 		    <li><a href="#" name="#tab1">渲染</a></li> -->
-<!-- 		    <li><a href="#" name="#tab2">图纸</a></li> -->
-<!-- 		    <li><a href="#" name="#tab3">信息</a></li> -->
-<!-- 		    <li><a href="#" name="#tab3">参与人员</a></li> -->
-<!-- 		</ul> -->
+		<ul id="tabs">
+		    <li><a href="#" name="#tab1">供应商介绍</a></li>
+		    <li><a href="#" name="#tab2">供应商地址</a></li>
+		    <li><a href="#" name="#tab3">供应商电话</a></li>
+		</ul>
 	
-<!-- 		<div id="tab-content"> -->
-<!-- 		      <div id="tab1" style="display: block;width:1000px;height:350px;padding-top:20px;"> -->
-<!-- 		         渲染 -->
-<!-- 		      </div> -->
-<!-- 		      <div id="tab2" style="display: none;width:1000px;height:350px;padding-top:20px;"> -->
-<!-- 		         图纸 -->
-<!-- 		      </div> -->
-<!-- 		      <div id="tab3" style="display: none;width:1000px;height:350px;padding-top:20px;"> -->
-<!-- 		         信息 -->
-<!-- 		      </div> -->
-<!-- 		      <div id="tab3" style="display: none;width:1000px;height:350px;padding-top:20px;"> -->
-<!-- 		         参与人员 -->
-<!-- 		      </div> -->
-<!-- 	  	</div> -->
-<!-- 	</div> -->
-		<jsp:include page="bottom.jsp"/>
+		<div id="tab-content" style="width:600px;float:left">
+		      <div id="tab1" style="display: block;width:500px;height:200px;padding-top:20px;">
+		         ${manufacturer.intro}
+		      </div>
+		      <div id="tab2" style="display: none;width:500px;height:200px;padding-top:20px;">
+		        ${manufacturer.country} ${manufacturer.province} ${manufacturer.city}
+		      </div>
+		      <div id="tab3" style="display: none;width:500px;height:200px;padding-top:20px;">
+		        ${manufacturer.tel}
+		      </div>
+	  	</div>
+	  	
+	  	<div  style="margin-left:100px; margin-top:30px; float:left">
+		<a href="${request.getContextPath()}/bim2.0/${product.downloadDir}" class="download-button" style="padding:10px 50px">下载</a>
+		<p style="margin-top:80px;margin-bottom:30px">想在Revit中直接下载使用此产品？</p>
+		<a href="${request.getContextPath()}/bim2.0/download/plugin/FamilyManager.rar" class="download-button">下载Revit插件</a>
+	</div>
+	</div>
+	
+	<jsp:include page="bottom.jsp"/>
 </body>
 </html>

@@ -10,6 +10,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import com.dao.ProductDao;
+import com.model.Manufacturer;
 import com.model.Product;
 
 @Repository
@@ -70,6 +71,14 @@ public class ProductDaoImpl implements ProductDao {
 	public List<Product> getAllProducts(){
 		List<Product> products =  sqlSession.selectList("com.mybatis.ProductMapper.getProducts");
 		return products;
+	}
+	
+	@Override
+	public Manufacturer getManufacturer(String id){
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("id", id);
+		Manufacturer m=  sqlSession.selectOne("com.mybatis.ProductMapper.getManufacturer", params);
+		return m;
 	}
 	
 }

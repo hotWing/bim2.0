@@ -8,11 +8,11 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.model.Manufacturer;
 import com.model.Product;
 import com.service.ProductService;
 import com.service.UserService;
@@ -81,7 +81,12 @@ public class UserCenter {
 	public String getProduct(@PathVariable("id") String id,Model model){
 		try {
 			String idUTF8 = new String(id.getBytes("ISO-8859-1"), "utf-8");
-			model.addAttribute("product",productService.getProduct(idUTF8));
+			Product product = productService.getProduct(idUTF8);
+			model.addAttribute("product",product);
+			
+			Manufacturer manufacturer = productService.getManufacturer(product.getManufacturerID());
+			model.addAttribute("manufacturer",manufacturer);
+			
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
@@ -115,10 +120,7 @@ public class UserCenter {
 	
 	@RequestMapping(value="/contact")
 	@ResponseBody
-	public Product contactSubmit(String name){
-		Product p =  new Product();
-		p.setName("zz");
-		p.setId("bb");
-		return p;
+	public String contactSubmit(String name){
+		return "提交成功";
 	}
 }

@@ -2,6 +2,7 @@ package com.dao;
 
 import java.util.List;
 
+import com.model.Manufacturer;
 import com.model.Product;
 
 public interface ProductDao {
@@ -13,5 +14,7 @@ public interface ProductDao {
 	public List<Product> getAllProducts(int startRow, int pageSize);
 
 	public List<Product> getAllProducts();
+
+	Manufacturer getManufacturer(String id);
 
 }
