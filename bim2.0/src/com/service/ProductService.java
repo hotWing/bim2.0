@@ -16,4 +16,13 @@ public interface ProductService {
 	List<Product> getAllProducts(String page);
 	List<Product> getAllProducts();
 
+	public void addProducts(Product product);
+	Product getProductById(String id);
+
+	public void deleteProduct(String id);
+
+
+
+	public void productUpdate(Product product);
+
 }

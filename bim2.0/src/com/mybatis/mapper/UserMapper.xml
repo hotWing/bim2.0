@@ -31,7 +31,7 @@
    </select>
    
    <insert id="addUsers" parameterType="map">
-       INSERT INTO USER VALUES (#{username}, #{password}, #{name2}, 
+       INSERT INTO USER VALUES (#{username}, #{password}, #{name}, 
        #{company}, #{certification},#{country}, #{province}, #{city}, 
        #{company_type}, #{user_role})
    </insert>
@@ -48,4 +48,10 @@
     	    and username = #{username}
         </if>
    </select>
+   
+   <update id="updateUsers" parameterType="map">
+       UPDATE USER SET username=#{username},password=#{password},name=#{name},company=#{company},
+       certification=#{certification},country=#{country},province=#{province},city=#{city},
+       company_type=#{company_type},user_role=#{user_role} WHERE username=#{username}
+   </update>
 </mapper>

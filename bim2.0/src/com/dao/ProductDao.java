@@ -14,4 +14,12 @@ public interface ProductDao {
 
 	public List<Product> getAllProducts();
 
+	public void addProducts(Product product);
+
+	public Product getProductById(String id);
+
+	public void deleteProduct(String id);
+
+	public void updateProduct(Product product);
+
 }

@@ -2,6 +2,7 @@ package com.service;
 
 import java.util.List;
 
+import com.model.Product;
 import com.model.User;
 
 public interface UserService {
@@ -11,4 +12,6 @@ public interface UserService {
 	public void addUsers(User user);
 	public void deleteUser(String username);
 	public User getUserInfo(String username);
+	public void userUpdate(User user);
+	
 }

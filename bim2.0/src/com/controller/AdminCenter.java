@@ -1,16 +1,22 @@
 package com.controller;
 
 import java.io.UnsupportedEncodingException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.beans.propertyeditors.CustomNumberEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.model.Product;
 import com.model.User;
 import com.service.ProductService;
 import com.service.UserService;
@@ -73,9 +79,27 @@ public class AdminCenter {
 		
 	}
 	
+	@RequestMapping(value="/deleteproducts/{id}")
+	public String deleteProducts(@PathVariable("id") String id,Model model){
+		try {
+			String idUTF8 = new String(id.getBytes("ISO-8859-1"), "utf-8");
+			productService.deleteProduct(idUTF8);
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		return "redirect:../productinfo";
+		
+	}
+	
 	@RequestMapping(value="/revise")
 	public @ResponseBody User userRevise( String name){
 		User p =  userService.getUserInfo(name);
+		return p;
+	}
+	
+	@RequestMapping(value="/reviseproducts")
+	public @ResponseBody Product productRevise( String id){
+		Product p =  productService.getProductById(id);
 		return p;
 	}
 	
@@ -83,5 +107,32 @@ public class AdminCenter {
 	public String productinfo(Model model){
 		model.addAttribute("products",productService.getAllProducts());
 		return "productinfo";
+	}
+	
+	@RequestMapping(value="/update")
+	public String userUpdate(User user){
+		userService.userUpdate(user);
+		return "redirect:usermanager";
+	}
+	
+	@RequestMapping(value="/updateproducts")
+	public String productsUpdate(Product product){
+		productService.productUpdate(product);
+		return "redirect:productinfo";
+	}
+	
+	@RequestMapping(value="/addproducts")
+	public String addProducts(Product product){
+		productService.addProducts(product);
+		return "redirect:productinfo";
+	}
+	
+	@InitBinder
+	public void initBinder(WebDataBinder binder) {
+	    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+	    sdf.setLenient(true);
+	    binder.registerCustomEditor(Date.class, new CustomDateEditor(sdf, true));
+	    
+	    binder.registerCustomEditor(Float.class, new CustomNumberEditor(Float.class, true));
 	}
 }
