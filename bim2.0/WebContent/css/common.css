@@ -701,14 +701,11 @@ pre.en-title{
 .download-button{
 	width:200px;
 	height:35px;
-	margin-top:20px;
-	margin-bottom:30px;
-	margin-left:10px;
+	margin-top:50px;
 	background-color:#00953b;
 	padding:10px;
 	color:white;
 	font-size:20px;
-	font-weight:bold;
 	cursor:pointer;
   	text-decoration: none
 }

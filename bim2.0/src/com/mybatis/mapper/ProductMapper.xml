@@ -89,7 +89,10 @@
        WHERE id=#{id}
    </update>
    
+     <select id="getManufacturer" parameterType="map" resultType="com.model.Manufacturer">
+        SELECT * 
+        FROM manufacturer
+        where id = #{id}   
+   </select>
+   
 </mapper>
-
-
-

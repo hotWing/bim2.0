@@ -2,6 +2,7 @@ package com.dao;
 
 import java.util.List;
 
+import com.model.Manufacturer;
 import com.model.Product;
 
 public interface ProductDao {
@@ -14,6 +15,7 @@ public interface ProductDao {
 
 	public List<Product> getAllProducts();
 
+
 	public void addProducts(Product product);
 
 	public Product getProductById(String id);
@@ -21,5 +23,7 @@ public interface ProductDao {
 	public void deleteProduct(String id);
 
 	public void updateProduct(Product product);
+	
+	Manufacturer getManufacturer(String id);
 
 }

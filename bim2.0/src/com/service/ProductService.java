@@ -2,6 +2,7 @@ package com.service;
 
 import java.util.List;
 
+import com.model.Manufacturer;
 import com.model.Product;
 
 public interface ProductService {
@@ -24,5 +25,8 @@ public interface ProductService {
 
 
 	public void productUpdate(Product product);
+
+
+	Manufacturer getManufacturer(String id);
 
 }
