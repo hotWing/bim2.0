@@ -37,6 +37,12 @@ public class Product {
 	private String manufacturer;
 	private int downloads;
 	
+	public int getDownloads() {
+		return downloads;
+	}
+	public void setDownloads(int downloads) {
+		this.downloads = downloads;
+	}
 	public String getManufacturer() {
 		return manufacturer;
 	}
