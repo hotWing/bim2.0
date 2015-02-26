@@ -107,7 +107,7 @@ public class ProductDaoImpl implements ProductDao {
 		parms.put("downloadDir", product.getDownloadDir());
 		parms.put("buildingType", product.getBuildingType());
 		parms.put("function", product.getFunction());		
-		//parms.put("manufacturer", product.getManufacturer());	
+		parms.put("downloads", product.getDownloads());	
 		
 		sqlSession.insert("com.mybatis.ProductMapper.addProducts", parms);
 	}
@@ -163,7 +163,7 @@ public class ProductDaoImpl implements ProductDao {
 		parms.put("downloadDir", product.getDownloadDir());
 		parms.put("buildingType", product.getBuildingType());
 		parms.put("function", product.getFunction());		
-		//parms.put("manufacturer", product.getManufacturer());
+		parms.put("downloads", product.getDownloads());
 		
 		sqlSession.insert("com.mybatis.ProductMapper.updateProducts", parms);
 	}
@@ -175,6 +175,18 @@ public class ProductDaoImpl implements ProductDao {
 		Manufacturer m=  sqlSession.selectOne("com.mybatis.ProductMapper.getManufacturer", params);
 		return m;
 
+	}
+
+	@Override
+	public List<Product> gethighlights() {
+		List<Product> products =  sqlSession.selectList("com.mybatis.ProductMapper.getHighlights");
+		return products;
+	}
+
+	@Override
+	public List<Product> getpopular() {
+		List<Product> products =  sqlSession.selectList("com.mybatis.ProductMapper.getPopular");
+		return products;
 	}
 	
 }

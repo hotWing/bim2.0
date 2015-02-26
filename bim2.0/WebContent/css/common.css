@@ -460,6 +460,19 @@ input.contact[type="submit"] {
  	background-repeat: no-repeat;
 }
 
+.three-col4 {
+	/* float:left; */
+	text-align:center;
+	border-style:solid; 
+	border-width:2px; 
+	border-color:#727171;
+	/* margin-top:20px; */
+	margin-right:38px;
+	height:496px;
+	width:355px;
+	border-radius:9px;
+ 	background-repeat: no-repeat;
+}
 
 
 .smalldiv {
@@ -733,4 +746,33 @@ pre.en-title{
 	color:white;
 	font-size:16px;
 
+}
+
+.header2{
+	font-size:45px;
+	color:#20b22f;
+	padding-bottom:20px;
+}
+
+.introduce{
+	font-size:25px;
+	color:gray;
+	padding-top:20px;
+	line-height:40px;
+	text-align:left;
+}
+
+.title2{
+	margin-top:15px;
+	color:green;
+	font-size:20px;
+}
+
+.para2{
+	padding-left:30px;
+	padding-right:30px;
+	padding-top:20px;
+	color:#787485;
+	line-height:32px;
+	font-size:18px;
 }

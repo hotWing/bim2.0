@@ -67,14 +67,9 @@ public class UserCenter {
 	
 	@RequestMapping(value="/products")
 	public String test(HttpSession session,String page,Model model){
-		String name = (String) session.getAttribute("username");
-		if (name==null || name.isEmpty()) {
-			 return "redirect:../bim/login.jsp";
-		 }
-		 else {
+		
 			model.addAttribute("products",productService.getAllProducts(page));
 			return "bim/download";
-		 }
 	}
 	
 	@RequestMapping(value="/getProduct/{id}")
@@ -118,9 +113,36 @@ public class UserCenter {
 		return "bim/download";
 	}
 	
+	
+	
+	@RequestMapping(value="/sequence")
+	public String popular(Model model){
+		model.addAttribute("products",productService.gethighlights());
+		model.addAttribute("products2",productService.getpopular());
+		model.addAttribute("products3",productService.gethighlights());
+		return "bim/usercenter";
+	}
+	
 	@RequestMapping(value="/contact")
 	@ResponseBody
 	public String contactSubmit(String name){
 		return "提交成功";
+	}
+	
+	@RequestMapping(value="/checkuser/{id}")
+	public String checkuser(@PathVariable("id") String id,Model model,HttpSession session) throws UnsupportedEncodingException{
+		
+			String idUTF8 = new String(id.getBytes("ISO-8859-1"), "utf-8");
+			Product product = productService.getProduct(idUTF8);
+			model.addAttribute("product",product);
+			
+			String name = (String) session.getAttribute("username");
+			if (name==null || name.isEmpty()) {
+				 return "redirect:../../bim/login.jsp";
+			 }
+			 else {
+				return "redirect:../../"+product.getDownloadDir();
+			 }
+
 	}
 }

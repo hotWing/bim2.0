@@ -79,4 +79,14 @@ public class ProductServiceImpl implements ProductService{
 
 	}
 
+	@Override
+	public List<Product> gethighlights() {
+		return productDao.gethighlights();
+	}
+
+	@Override
+	public List<Product> getpopular() {
+		return productDao.getpopular();
+	}
+
 }

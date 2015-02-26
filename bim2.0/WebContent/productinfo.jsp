@@ -246,9 +246,9 @@
 					    <div class="col-sm-4">
 					      <input id="add-function" type="text" class="form-control" name="function">
 					    </div>
-					    <label for="inputEmail3" class="col-sm-2 control-label">manufacturer</label>
+					    <label for="inputEmail3" class="col-sm-2 control-label">downloads</label>
 					    <div class="col-sm-4">
-					      <input id="add-manufacturer" type="text" class="form-control" name="manufacturer">
+					      <input id="add-downloads" type="text" class="form-control" name="downloads">
 					    </div>
 					    
 					  </div>
@@ -390,9 +390,9 @@
 					    <div class="col-sm-4">
 					      <input id="alt-function" type="text" class="form-control" name="function">
 					    </div>
-					    <label for="inputEmail3" class="col-sm-2 control-label">manufacturer</label>
+					    <label for="inputEmail3" class="col-sm-2 control-label">downloads</label>
 					    <div class="col-sm-4">
-					      <input id="alt-manufacturer" type="text" class="form-control" name="manufacturer">
+					      <input id="alt-downloads" type="text" class="form-control" name="downloads">
 					    </div>
 					    
 					  </div>

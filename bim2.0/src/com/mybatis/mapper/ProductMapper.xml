@@ -70,7 +70,7 @@
        #{length}, #{width},#{height},#{publishDate},#{edition},#{discription},#{link},#{installInstruction},
        #{certification},#{document},#{video},#{code},#{mainMaterial},#{secMaterial},#{design},#{production},
        #{weight},#{similarProduct},#{attachment},#{sccClass},#{IFCType},#{manufacturerID},#{thumbDir},
-       #{downloadDir},#{buildingType},#{function})
+       #{downloadDir},#{buildingType},#{function},#{downloads})
    </insert>
    
    <delete id="deleteProduct" parameterType="map">
@@ -85,7 +85,7 @@
        secMaterial=#{secMaterial},design=#{design},production=#{production},
        weight=#{weight},similarProduct=#{similarProduct},attachment=#{attachment},sccClass=#{sccClass},
        IFCType=#{IFCType},manufacturerID=#{manufacturerID},thumbDir=#{thumbDir},
-       downloadDir=#{downloadDir},buildingType=#{buildingType},function=#{function}
+       downloadDir=#{downloadDir},buildingType=#{buildingType},function=#{function},downloads=#{downloads}
        WHERE id=#{id}
    </update>
    
@@ -94,5 +94,14 @@
         FROM manufacturer
         where id = #{id}   
    </select>
+   <select id="getHighlights" parameterType="map" resultType="com.model.Product">
+       SELECT * 
+       FROM product ORDER BY publishDate DESC LIMIT 6
+   </select>
+   
+   <select id="getPopular" parameterType="map" resultType="com.model.Product">
+       SELECT * 
+       FROM product ORDER BY downloads DESC LIMIT 6
+   </select>  
    
 </mapper>

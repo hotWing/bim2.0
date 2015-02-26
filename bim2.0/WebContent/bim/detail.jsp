@@ -82,7 +82,7 @@
 	  	</div>
 	  	
 	  	<div  style="margin-left:100px; margin-top:30px; float:left">
-		<a href="${request.getContextPath()}/bim2.0/${product.downloadDir}" class="download-button" style="padding:10px 50px">下载</a>
+		<a href="${request.getContextPath()}/bim2.0/usercenter/checkuser/${product.id}" class="download-button" style="padding:10px 50px">下载</a>
 		<p style="margin-top:80px;margin-bottom:30px">想在Revit中直接下载使用此产品？</p>
 		<a href="${request.getContextPath()}/bim2.0/download/plugin/FamilyManager.rar" class="download-button">下载Revit插件</a>
 	</div>

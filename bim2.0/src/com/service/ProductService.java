@@ -29,4 +29,9 @@ public interface ProductService {
 
 	Manufacturer getManufacturer(String id);
 
+
+	List<Product> gethighlights();
+
+	List<Product> getpopular();
+
 }

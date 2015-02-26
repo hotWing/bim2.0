@@ -26,4 +26,8 @@ public interface ProductDao {
 	
 	Manufacturer getManufacturer(String id);
 
+	public List<Product> gethighlights();
+
+	public List<Product> getpopular();
+
 }

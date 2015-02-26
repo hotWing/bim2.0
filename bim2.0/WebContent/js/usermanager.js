@@ -91,7 +91,7 @@ $(document).ready(function(){
 	        	$("#alt-downloaddir").attr("value",Product.downloadDir);
 	        	$("#alt-buildingtype").attr("value",Product.buildingType);
 	        	$("#alt-function").attr("value",Product.name);
-	        	$("#alt-manufacturer").attr("value",Product.manufacturer);
+	        	$("#alt-downloads").attr("value",Product.downloads);
 	        	$('#pop-altproducts').modal('show');	        	
 	        	
 		        	},
