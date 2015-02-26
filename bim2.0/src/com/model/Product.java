@@ -33,7 +33,7 @@ public class Product {
 	private String buildingType;
 	private String function;
 	private String manufacturer;
-	
+	private int downloads;
 	
 	public String getManufacturer() {
 		return manufacturer;
