@@ -16,4 +16,6 @@ public interface UserDao {
 	public void deleteUser(String username);
 
 	public User getUserInfo(String username);
+
+	public void userUpdate(User user);
 }

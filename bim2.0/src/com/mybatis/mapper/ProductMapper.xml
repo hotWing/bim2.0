@@ -13,6 +13,14 @@
         </if>
    </select>
    
+   <select id="getProductById" parameterType="map" resultType="com.model.Product">
+         SELECT * FROM PRODUCT
+        <if test="id != null and id != ''">  
+    	    WHERE product.id = #{id}
+        </if>
+    </select>
+  
+   
    <select id="getAllProducts" resultType="com.model.Product">
     	 SELECT * FROM PRODUCT LIMIT ${startRow},${pageSize} 
    </select>
@@ -56,6 +64,30 @@
         SELECT * 
         FROM PRODUCT      
    </select>
+   
+   <insert id="addProducts" parameterType="map">
+       INSERT INTO PRODUCT VALUES (#{id}, #{name}, #{familyType}, 
+       #{length}, #{width},#{height},#{publishDate},#{edition},#{discription},#{link},#{installInstruction},
+       #{certification},#{document},#{video},#{code},#{mainMaterial},#{secMaterial},#{design},#{production},
+       #{weight},#{similarProduct},#{attachment},#{sccClass},#{IFCType},#{manufacturerID},#{thumbDir},
+       #{downloadDir},#{buildingType},#{function})
+   </insert>
+   
+   <delete id="deleteProduct" parameterType="map">
+       DELETE FROM PRODUCT WHERE id = #{id}
+   </delete>
+   
+   <update id="updateProducts" parameterType="map">
+       UPDATE PRODUCT SET id=#{id},name=#{name}, familyType=#{familyType}, 
+       length=#{length}, width=#{width},height=#{height},publishDate=#{publishDate},edition=#{edition},
+       discription=#{discription},link=#{link},installInstruction=#{installInstruction},
+       certification=#{certification},document=#{document},video=#{video},code=#{code},mainMaterial=#{mainMaterial},
+       secMaterial=#{secMaterial},design=#{design},production=#{production},
+       weight=#{weight},similarProduct=#{similarProduct},attachment=#{attachment},sccClass=#{sccClass},
+       IFCType=#{IFCType},manufacturerID=#{manufacturerID},thumbDir=#{thumbDir},
+       downloadDir=#{downloadDir},buildingType=#{buildingType},function=#{function}
+       WHERE id=#{id}
+   </update>
    
      <select id="getManufacturer" parameterType="map" resultType="com.model.Manufacturer">
         SELECT * 

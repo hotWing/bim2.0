@@ -13,6 +13,7 @@ public class Product {
 	private float edition;
 	private String discription;
 	private String link;
+	
 	private String installInstruction;
 	private String certification;
 	private String document;
@@ -23,6 +24,7 @@ public class Product {
 	private String design;
 	private String production;
 	private float weight;
+	
 	private String similarProduct;
 	private String attachment;
 	private String sccClass;

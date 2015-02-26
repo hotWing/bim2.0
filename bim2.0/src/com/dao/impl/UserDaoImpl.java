@@ -57,7 +57,7 @@ public class UserDaoImpl implements UserDao {
 		Map<String, Object> parms = new HashMap<String, Object>();
 		parms.put("username", user.getUsername());
 		parms.put("password", user.getPassword());
-		parms.put("name2", user.getName());
+		parms.put("name", user.getName());
 		parms.put("company", user.getCompany());
 		parms.put("certification", user.getCertification());
 		parms.put("country", user.getCountry());
@@ -84,4 +84,19 @@ public class UserDaoImpl implements UserDao {
 		return user;
 	}
 
+	public void userUpdate(User user){
+		Map<String, Object> parms = new HashMap<String, Object>();
+		parms.put("username", user.getUsername());
+		parms.put("password", user.getPassword());
+		parms.put("name", user.getName());
+		parms.put("company", user.getCompany());
+		parms.put("certification", user.getCertification());
+		parms.put("country", user.getCountry());
+		parms.put("province", user.getProvince());
+		parms.put("city", user.getCity());
+		parms.put("company_type", user.getCompany_type());
+		parms.put("user_role", user.getCompany_type());
+		
+		sqlSession.update("com.mybatis.UserMapper.updateUsers", parms);
+	}
 }

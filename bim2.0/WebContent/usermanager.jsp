@@ -61,7 +61,7 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-            	<li class="active"><a href="#user-info">admin</a></li>
+            	<li id="admin-btn" class="active"><a href="#">admin</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Info <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
@@ -140,61 +140,61 @@
 					  <div class="form-group">
 					    <label for="inputEmail3" class="col-sm-2 control-label">username</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" name="username" placeholder="Username">
+					      <input type="text" class="form-control" name="username">
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="inputPassword3" class="col-sm-2 control-label">password</label>
 					    <div class="col-sm-10">
-					      <input type="password" class="form-control" name="password" placeholder="Password">
+					      <input type="password" class="form-control" name="password">
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="inputEmail3" class="col-sm-2 control-label">name</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" name="name2" placeholder="Name">
+					      <input type="text" class="form-control" name="name">
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="inputEmail3" class="col-sm-2 control-label">company</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" name="company" placeholder="Company">
+					      <input type="text" class="form-control" name="company">
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="inputEmail3" class="col-sm-2 control-label">certification</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" name="certification" placeholder="Certification">
+					      <input type="text" class="form-control" name="certification">
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="inputEmail3" class="col-sm-2 control-label">country</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" name="country" placeholder="Country">
+					      <input type="text" class="form-control" name="country">
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="inputEmail3" class="col-sm-2 control-label">province</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" name="province" placeholder="Province">
+					      <input type="text" class="form-control" name="province">
 					    </div>
 					  </div>				
 					  <div class="form-group">
 					    <label for="inputEmail3" class="col-sm-2 control-label">city</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" name="city" placeholder="City">
+					      <input type="text" class="form-control" name="city">
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="inputEmail3" class="col-sm-2 control-label">company_type</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" name="company_type" placeholder="Company_type">
+					      <input type="text" class="form-control" name="company_type">
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="inputEmail3" class="col-sm-2 control-label">user_role</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" name="user_role" placeholder="User_role">
+					      <input type="text" class="form-control" name="user_role">
 					    </div>
 					  </div>
 					 
@@ -221,65 +221,65 @@
                     <h4 class="modal-title" id="modal-label">修改用户信息</h4>
                 </div>
                 <div class="modal-body">
-                    <form class="form-horizontal" action="${request.getContextPath()}/bim2.0/admincenter/}" method="post">
+                    <form class="form-horizontal" action="${request.getContextPath()}/bim2.0/admincenter/update" method="post">
 					  <div class="form-group">
 					    <label for="inputEmail3" class="col-sm-2 control-label">username</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" name="username" value="${username}">
+					      <input id="alt-username" type="text" class="form-control" name="username">
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="inputPassword3" class="col-sm-2 control-label">password</label>
 					    <div class="col-sm-10">
-					      <input type="password" class="form-control" name="password" value="${password}">
+					      <input id="alt-password" type="password" class="form-control" name="password">
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="inputEmail3" class="col-sm-2 control-label">name</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" name="name2" value="name2">
+					      <input id="alt-name" type="text" class="form-control" name="name">
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="inputEmail3" class="col-sm-2 control-label">company</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" name="company" placeholder="Company">
+					      <input id="alt-company" type="text" class="form-control" name="company">
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="inputEmail3" class="col-sm-2 control-label">certification</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" name="certification" placeholder="Certification">
+					      <input id="alt-certification" type="text" class="form-control" name="certification">
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="inputEmail3" class="col-sm-2 control-label">country</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" name="country" placeholder="Country">
+					      <input id="alt-country" type="text" class="form-control" name="country">
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="inputEmail3" class="col-sm-2 control-label">province</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" name="province" placeholder="Province">
+					      <input id="alt-province" type="text" class="form-control" name="province">
 					    </div>
 					  </div>				
 					  <div class="form-group">
 					    <label for="inputEmail3" class="col-sm-2 control-label">city</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" name="city" placeholder="City">
+					      <input id="alt-city" type="text" class="form-control" name="city">
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="inputEmail3" class="col-sm-2 control-label">company_type</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" name="company_type" placeholder="Company_type">
+					      <input id="alt-companytype" type="text" class="form-control" name="company_type">
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="inputEmail3" class="col-sm-2 control-label">user_role</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" name="user_role" placeholder="User_role">
+					      <input id="alt-userrole" type="text" class="form-control" name="user_role">
 					    </div>
 					  </div>
 					 

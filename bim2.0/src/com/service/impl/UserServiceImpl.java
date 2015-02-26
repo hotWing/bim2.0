@@ -52,4 +52,8 @@ public class UserServiceImpl implements UserService {
 	public User getUserInfo(String username){
 		return userDao.getUserInfo(username);
 	}
+	
+	public void userUpdate(User user){
+		userDao.userUpdate(user);
+	}
 }
