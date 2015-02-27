@@ -1,4 +1,4 @@
-$(document).onload(function(){
-
-})
+//$(document).onload(function(){
+//
+//})
 

@@ -6,9 +6,6 @@
 <head>
 	<jsp:include page="../bim/head.jsp"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<script type="text/javascript" src="${request.getContextPath()}/bim2.0/js/usercenter.js"></script>
-	<link href="../css/jquery.selectbox.css" type="text/css" rel="stylesheet" />
-	<link href="../css/jquery.selectbox2.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
 	<input id="page-name" value="download" style="display:none"></input>
@@ -107,7 +104,7 @@
 	
 	<div class="bgbar"  style="height:5px;margin-top:350px;"></div>
 	<div class="container content" style="font-size:40px">Latest added BIM objects</div>
-	<div id="scroll-container" class="container" >
+	<div class="container" style="height:350px;">
 		<div class="scroll">
 			<c:forEach items="${products3}" var="product3" varStatus="status3" >  
 				<c:choose>
@@ -132,6 +129,8 @@
 			</c:forEach>  
 		</div>
 	</div>
+	
+	<jsp:include page="../bim/bottom.jsp"/>
 	
 	<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.selectbox-0.2.min.js"></script>
