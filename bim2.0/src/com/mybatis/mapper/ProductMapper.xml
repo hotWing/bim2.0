@@ -109,4 +109,16 @@
        WHERE id=#{id}
    </update>
    
+   <insert id="contactSubmit" parameterType="map">
+       INSERT INTO feedback(name,tel,email,msg) VALUES (#{name}, #{tel}, #{email}, #{msg})
+   </insert>
+   
+   <select id="getAllContacts" parameterType="map" resultType="com.model.Contacts">
+       SELECT * FROM FEEDBACK
+   </select>
+   
+   <delete id="deleteContacts" parameterType="map">
+       DELETE FROM feedback WHERE id = #{id}
+   </delete>
+   
 </mapper>

@@ -44,7 +44,7 @@
 			</div>
 		</div>
 		<div class="content">
-			<form id="contact-form" action="../../usercenter/contact">
+			
 				<p class="header">联系我们：</p>
 				<p>如果您想联系我们，跟我们谈谈我们的工作，请填写一下表格，我们会尽快与您联系: </p><br>
 				<p>名字*</p>
@@ -57,7 +57,7 @@
 				<textarea  id="contact-msg" class="contact" name="msg" tabindex="16" rows="10" cols="50"></textarea>
 				<br>
 				<div id="submitBt" class="contact" ></div>
-			</form>
+			
 		</div>
 	</div>
 	<jsp:include page="../bottom.jsp"/>

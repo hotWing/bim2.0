@@ -8,10 +8,27 @@ $(document).ready(function(){
 //        $(this)[hasSelected ? "removeClass" : "addClass"]("active")  
 	})
 	
+	$("#contactinfo-show tr").click(function(){
+		$(".active").removeClass("active")
+        
+		$(this).addClass("active")
+//		var hasSelected = $(this).hasClass("active");  
+//        如果选中，则移出selected类，否则就加上active类  
+//        $(this)[hasSelected ? "removeClass" : "addClass"]("active")  
+	})
+	
+	
+	
 	$("#del-users").click(function(){
 		var deletename = $("#user-info tr.active td:first").text()
 		location.href = "delete/"+ deletename;
 	})
+	
+	$("#del-contacts").click(function(){
+		var deleteid = $("#contactinfo-show tr.active td:first").text()
+		location.href = "deletecontacts/"+ deleteid;
+	})
+	
 	
 	$("#del-products").click(function(){
 		var deleteid = $("#productinfo-show tr.active td:first").text()
@@ -111,6 +128,12 @@ $(document).ready(function(){
 		
 		location.href = "usermanager";
 	})
+	
+	$("#contacts-btn").click(function(){
+		
+		location.href = "contactinfo";
+	})
+	
 	
 	$("#productinfo-show tr").click(function(){
 		$(".active").removeClass("active")

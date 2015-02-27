@@ -92,7 +92,7 @@ public class AdminCenter {
 	}
 	
 	@RequestMapping(value="/revise")
-	public @ResponseBody User userRevise( String name){
+	public @ResponseBody User userRevise(String name){
 		User p =  userService.getUserInfo(name);
 		return p;
 	}
@@ -134,5 +134,17 @@ public class AdminCenter {
 	    binder.registerCustomEditor(Date.class, new CustomDateEditor(sdf, true));
 	    
 	    binder.registerCustomEditor(Float.class, new CustomNumberEditor(Float.class, true));
+	}
+	
+	@RequestMapping(value="/deletecontacts/{id}")
+	public String deleteContacts(@PathVariable("id") String id,Model model){
+		try {
+			String idUTF8 = new String(id.getBytes("ISO-8859-1"), "utf-8");
+			productService.deleteContacts(idUTF8);
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		return "redirect:../contactinfo";
+		
 	}
 }

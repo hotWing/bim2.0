@@ -125,7 +125,8 @@ public class UserCenter {
 	
 	@RequestMapping(value="/contact")
 	@ResponseBody
-	public String contactSubmit(String name){
+	public String contactSubmit(String name,String tel,String email,String msg){
+		productService.contactSubmit(name,tel,email,msg);
 		return "提交成功";
 	}
 	
@@ -146,4 +147,12 @@ public class UserCenter {
 			 }
 
 	}
+	
+	@RequestMapping(value="/contactinfo")
+	public String contactinfo(Model model){
+		model.addAttribute("contacts",productService.getAllContacts());
+		return "contactinfo";
+	}
+	
+	
 }

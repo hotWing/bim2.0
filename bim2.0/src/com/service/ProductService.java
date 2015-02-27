@@ -2,6 +2,7 @@ package com.service;
 
 import java.util.List;
 
+import com.model.Contacts;
 import com.model.Manufacturer;
 import com.model.Product;
 
@@ -37,5 +38,17 @@ public interface ProductService {
 
 
 	public void updateDownloads(String id);
+
+
+
+	public void contactSubmit(String name, String tel, String email, String msg);
+
+
+
+	List<Contacts> getAllContacts();
+
+
+
+	public void deleteContacts(String id);
 
 }

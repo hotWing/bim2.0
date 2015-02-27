@@ -59,21 +59,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">User Manager</a>
+            <a class="navbar-brand" href="${request.getContextPath()}/bim2.0/index.jsp">User Manager</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-            	<li id="admin-btn"><a href="#">admin</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Info <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#feature-tab" data-tab="tab-chrome">Chrome</a></li>
-                        <li><a href="#feature-tab" data-tab="tab-firefox">Firefox</a></li>
-                        <li><a href="#feature-tab" data-tab="tab-safari">Safari</a></li>
-                        <li><a href="#feature-tab" data-tab="tab-opera">Opera</a></li>
-                        <li><a href="#feature-tab" data-tab="tab-ie">IE</a></li>
-                    </ul>
-                </li>
+            	<li id="admin-btn"><a href="#">User Info</a></li>
+                <li id="contacts-btn"><a href="#">Contact Info</a></li>
                 <li id="product-info" class="active"><a href="#productinfo-show">Product Info</a></li>
                 <li><a href="#">关于</a></li>
             </ul>

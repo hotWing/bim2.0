@@ -2,6 +2,7 @@ package com.dao;
 
 import java.util.List;
 
+import com.model.Contacts;
 import com.model.Manufacturer;
 import com.model.Product;
 
@@ -33,5 +34,11 @@ public interface ProductDao {
 	public int getDownloads(String id);
 
 	public void updateDownloads(String id, int downloads);
+
+	public void contactSubmit(String name, String tel, String email, String msg);
+
+	public List<Contacts> getAllContacts();
+
+	public void deleteContacts(String id);
 
 }

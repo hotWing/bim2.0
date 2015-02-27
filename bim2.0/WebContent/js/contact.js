@@ -11,12 +11,15 @@ $(document).ready(function(){
 		    $.ajax({
 		        url: "../../usercenter/contact",
 		        type: "post",
-		        data:  {name: "aa"},
-//		        data:  "name="+$('#contact-name').val(),
+		        data:  {name: $("#contact-name").val(),
+			        	tel:$("#contact-tel").val(),
+			        	email:$("#contact-email").val(),
+			        	msg:$("#contact-msg").val()},
+//		        data:  {name: "aa"},
 //		        contentType : 'application/json; charset=utf-8',
 		        dataType: 'json',		
 		        success: function(data, textStatus){
-		        			alert(data.name);
+		        			alert(data);
 			        	},
 	        	error: function(XMLHttpRequest, error, errorThrown){  
 		        		  alert(error);  

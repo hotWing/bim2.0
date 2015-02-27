@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import com.dao.ProductDao;
+import com.model.Contacts;
 import com.model.Manufacturer;
 import com.model.Product;
 import com.service.ProductService;
@@ -96,6 +97,23 @@ public class ProductServiceImpl implements ProductService{
 		productDao.updateDownloads(id,downloads);
 		
 		
+	}
+
+	@Override
+	public void contactSubmit(String name, String tel, String email, String msg) {
+		productDao.contactSubmit(name,tel,email,msg);
+		
+	}
+
+	@Override
+	public List<Contacts> getAllContacts() {
+		
+		return productDao.getAllContacts();
+	}
+
+	@Override
+	public void deleteContacts(String id) {
+		productDao.deleteContacts(id);
 	}
 
 }

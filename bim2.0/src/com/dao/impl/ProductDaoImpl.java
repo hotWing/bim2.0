@@ -10,6 +10,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import com.dao.ProductDao;
+import com.model.Contacts;
 import com.model.Manufacturer;
 import com.model.Product;
 
@@ -205,6 +206,29 @@ public class ProductDaoImpl implements ProductDao {
 		//sqlSession.insert("com.mybatis.ProductMapper.updateProducts", parms);
 		sqlSession.update("com.mybatis.ProductMapper.updateDownloads", parms);
 		
+	}
+
+	@Override
+	public void contactSubmit(String name, String tel, String email, String msg) {
+		Map<String, Object> parms = new HashMap<String, Object>();
+		parms.put("name", name);
+		parms.put("tel", tel);
+		parms.put("email", email);
+		parms.put("msg", msg);
+		sqlSession.insert("com.mybatis.ProductMapper.contactSubmit", parms);
+	}
+
+	@Override
+	public List<Contacts> getAllContacts() {
+		List<Contacts> contacts =  sqlSession.selectList("com.mybatis.ProductMapper.getAllContacts");
+		return contacts;
+	}
+
+	@Override
+	public void deleteContacts(String id) {
+		Map<String, Object> parms = new HashMap<String, Object>();
+		parms.put("id", id);
+		sqlSession.delete("com.mybatis.ProductMapper.deleteContacts", parms);
 	}
 	
 }
