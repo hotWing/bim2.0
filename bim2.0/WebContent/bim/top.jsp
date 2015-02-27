@@ -43,7 +43,7 @@
 				</ul> 
 			</li>
 			<li>
-				<a id="download" class="login-needed" href="${request.getContextPath()}/bim2.0/usercenter/sequence">登录专区</a>
+				<a id="download" href="${request.getContextPath()}/bim2.0/usercenter/sequence">登录专区</a>
 				<div class="arrow-down"></div>
 			</li>
 			<li>

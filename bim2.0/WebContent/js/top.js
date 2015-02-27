@@ -3,9 +3,9 @@ $(document).ready(function(){
 	$("#"+pageName).addClass("active");
 	
 	
-	$(".login-needed").click( function() {
-		if ($("#loginname").text()=="")
-			alert("请先登录！");
-	});
+//	$(".login-needed").click( function() {
+//		if ($("#loginname").text()=="")
+//			alert("请先登录！");
+//	});
 	
 });
