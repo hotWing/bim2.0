@@ -188,5 +188,23 @@ public class ProductDaoImpl implements ProductDao {
 		List<Product> products =  sqlSession.selectList("com.mybatis.ProductMapper.getPopular");
 		return products;
 	}
+
+	@Override
+	public int getDownloads(String id) {
+		Map<String, Object> parms = new HashMap<String, Object>();
+		parms.put("id", id);
+		Product product =  sqlSession.selectOne("com.mybatis.ProductMapper.getProductById", parms);
+		return product.getDownloads();
+	}
+
+	@Override
+	public void updateDownloads(String id, int downloads) {
+		Map<String, Object> parms = new HashMap<String, Object>();
+		parms.put("id", id);
+		parms.put("downloads", downloads);
+		//sqlSession.insert("com.mybatis.ProductMapper.updateProducts", parms);
+		sqlSession.update("com.mybatis.ProductMapper.updateDownloads", parms);
+		
+	}
 	
 }

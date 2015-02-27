@@ -104,4 +104,9 @@
        FROM product ORDER BY downloads DESC LIMIT 6
    </select>  
    
+   <update id="updateDownloads" parameterType="map">
+       UPDATE PRODUCT SET downloads=#{downloads}
+       WHERE id=#{id}
+   </update>
+   
 </mapper>

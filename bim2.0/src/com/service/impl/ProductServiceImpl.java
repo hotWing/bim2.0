@@ -89,4 +89,13 @@ public class ProductServiceImpl implements ProductService{
 		return productDao.getpopular();
 	}
 
+	@Override
+	public void updateDownloads(String id) {
+		int downloads = productDao.getDownloads(id);
+		downloads++;
+		productDao.updateDownloads(id,downloads);
+		
+		
+	}
+
 }

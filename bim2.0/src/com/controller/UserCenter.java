@@ -141,6 +141,7 @@ public class UserCenter {
 				 return "redirect:../../bim/login.jsp";
 			 }
 			 else {
+				productService.updateDownloads(idUTF8);
 				return "redirect:../../"+product.getDownloadDir();
 			 }
 

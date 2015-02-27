@@ -30,4 +30,8 @@ public interface ProductDao {
 
 	public List<Product> getpopular();
 
+	public int getDownloads(String id);
+
+	public void updateDownloads(String id, int downloads);
+
 }

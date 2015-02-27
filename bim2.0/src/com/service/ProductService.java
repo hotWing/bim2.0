@@ -34,4 +34,8 @@ public interface ProductService {
 
 	List<Product> getpopular();
 
+
+
+	public void updateDownloads(String id);
+
 }
