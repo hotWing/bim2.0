@@ -38,6 +38,9 @@
 						<option value="">品牌</option>
 							<option value="肇庆亚洲铝厂有限公司">肇庆亚洲铝厂有限公司</option>
 							<option value="华为技术有限公司">华为技术有限公司</option>
+							<option value="LAMILUX">LAMILUX</option>
+							<option value="必盛">必盛</option>
+							<option value="圣戈班玻璃">圣戈班玻璃</option>
 <!-- 							<option value="2">Canada</option> -->
 <!-- 							<option value="3">France</option> -->
 <!-- 							<option value="4">Spain</option> -->
@@ -58,6 +61,11 @@
 							<option value="竖明横隐幕墙系统">竖明横隐幕墙系统</option>
 							<option value="电气">电气</option>
 							<option value="悬窗幕墙系统">悬窗幕墙系统</option>
+							<option value="自动旋转门">自动旋转门</option>
+							<option value="平屋顶窗">平屋顶窗</option>
+							<option value="串联式混合动力系统弧形窗">串联式混合动力系统弧形窗</option>
+							<option value="连续采光顶系统">连续采光顶系统</option>
+							<option value="幕墙">幕墙</option>
 					</select>					
 					<script type="text/javascript">
 					$(function () {
@@ -70,10 +78,8 @@
 	   				<select name="mainMaterial" id="mainMaterial" tabindex="1">
 						<option value="">材料</option>
 							<option value="铝型材">铝型材</option>
-							
-<!-- 							<option value="2">Canada</option> -->
-<!-- 							<option value="3">France</option> -->
-<!-- 							<option value="4">Spain</option> -->
+							<option value="玻璃">玻璃</option>
+							<option value="复合型塑料">复合型塑料</option>
 					</select>					
 					<script type="text/javascript">
 					$(function () {
