@@ -199,6 +199,8 @@
         </div>
 	</div>
 	
+<%-- 	<jsp:include page="bottom.jsp"/> --%>
+		
 	<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.selectbox-0.2.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.selectbox-0.2.min2.js"></script>

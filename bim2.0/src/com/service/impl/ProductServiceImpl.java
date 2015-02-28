@@ -29,7 +29,7 @@ public class ProductServiceImpl implements ProductService{
 	
 	@Override
 	public List<Product> getAllProducts(String page) {
-		int pageSize = 10;
+		int pageSize = 50;
 		int startRow = Integer.valueOf(page) * pageSize;
 //		int endRow = startRow + pageSize - 1;
 		return productDao.getAllProducts(startRow,pageSize);

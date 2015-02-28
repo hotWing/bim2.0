@@ -105,6 +105,7 @@ p {
 	font-size: 16px;
 	color: #fff;
 	margin:40px 50px 7px 0px;
+	cursor:pointer;
 }
 
 #navbar ul.menu li a:not(.active):hover{
@@ -740,6 +741,8 @@ pre.en-title{
 #submitBt {
 	width:150px;
 	height:40px;
+	line-height:40px;
+	text-align:center;
 	cursor:pointer;
 	background-color:#00953b;
 	border:0px;
