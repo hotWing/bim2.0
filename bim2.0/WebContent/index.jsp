@@ -51,7 +51,7 @@
 														{image : 'img/index/solution-slide.png', title : '', thumb : 'img/index/solution-slide.png', url : 'bim/solution/keyvalue.jsp'},  
 // 														{image : 'img/index/why-slide.png', title : '', thumb : 'img/index/why-slide.png', url : ''},  
 														{image : 'img/index/project-slide.png', title : '', thumb : 'img/index/project-slide.png', url : 'bim/projects/bim.jsp'},  
-// 														{image : 'img/index/contact-slide.png', title : '', thumb : 'img/index/contact-slide.png', url : ''},  
+														{image : 'img/index/model-slide.png', title : '', thumb : 'img/index/model-slide.png', url : 'bim/viewer.jsp?urn=dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6c3pibTIveHh4Lm53Yw=='},  
 
 													],
 					// Theme Options			   

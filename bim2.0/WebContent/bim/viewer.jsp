@@ -9,7 +9,7 @@
     <link type="text/css" rel="stylesheet" href="https://viewing.api.autodesk.com/viewingservice/v1/viewers/style.css" />
     
 </head>
-<body onload="initialize();">
+<body style="margin:0px" onload="initialize();">
 	<input id="urn" value="${param.urn}" style="display:none">
 	<div id="viewer"></div>
     <script src="../js/jquery-1.11.1.min.js"></script> 
