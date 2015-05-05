@@ -60,7 +60,7 @@
 			<div class="three-col">
 				<img src="../img/people/xu.png">
 				<div class="img-cover" modal-target="modal-xu">
-					<p>许盈诚</p>
+					<p>许盈辰</p>
 					<div class="arrow-down"></div>
 					<p>研发部经理</p>
 				</div>

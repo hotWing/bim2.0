@@ -14,7 +14,7 @@
 	<jsp:include page="../bim/top.jsp"/>
 	<jsp:include page="../bim/right.jsp"/>
 	<div class="container" style="padding-top:200px;height:400px">
-		<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}-d.jpg" />		
+		<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}.jpg" width="440px" height="365px"/>		
 		
 			<div style="border:solid 1px;height:340px;width:440px;margin-top:-365px;margin-left:580px;padding-top:20px;padding-left:20px;">
 				<h1 style="line-height:40px;">${product.name}</h1>

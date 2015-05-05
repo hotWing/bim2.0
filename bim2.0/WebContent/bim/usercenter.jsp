@@ -37,7 +37,7 @@
 		</div>	
 		<div class="three-col4" style="margin-top:-500px;margin-left:800px;">
 			<img src="${request.getContextPath()}/bim2.0/img/businessvalue.png" style="margin-top:30px;height:80px;width:80px;">
-			<div class="title2">真实的价值<</div>
+			<div class="title2">真实的价值</div>
 			<div class="para2">产品制造商投资BIM模型以免费提供他们的产品内容给BIM用户。这是免费的，所以你需要注册。产品制造商需要知道他们的BIM对象技术投资是有用的，同时它提供给你作为一个BIM用户一定的价值。通过使用全新的BIM对象你可以节省很多的时间，并且你的模型的质量将从根本上得到提高。</div>
 		</div>
 	</div>	
@@ -54,7 +54,7 @@
 				<c:choose>
 					<c:when test="${(status.index+1)%6!=0}">
 						<div class="multi-col" style="text-align:center;">
-							<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}.jpg"/>
+							<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}.jpg" width="170px" height="190px"/>
 							<a href="${request.getContextPath()}/bim2.0/usercenter/getProduct/${product.id}">
 								<input type="button" value="${product.name}" class="dorwa-button"></input>
 							</a>										
@@ -62,7 +62,7 @@
 					</c:when>
 					<c:otherwise>
 						<div class="multi-col" style="text-align:center;margin-right:0px;">
-								<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}.jpg"/>
+								<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}.jpg" width="170px" height="190px"/>
 								<a href="${request.getContextPath()}/bim2.0/usercenter/getProduct/${product.id}">
 									<input type="button" value="${product.name}" class="dorwa-button"></input>
 								</a>												
@@ -82,7 +82,7 @@
 				<c:choose>
 					<c:when test="${(status2.index+1)%6!=0}">
 						<div class="multi-col" style="text-align:center;">
-							<img src="${request.getContextPath()}/bim2.0/${product2.thumbDir}.jpg"/>
+							<img src="${request.getContextPath()}/bim2.0/${product2.thumbDir}.jpg" width="170px" height="190px"/>
 							<a href="${request.getContextPath()}/bim2.0/usercenter/getProduct/${product2.id}">
 								<input type="button" value="${product2.name}" class="dorwa-button"></input>
 							</a>										
@@ -90,7 +90,7 @@
 					</c:when>
 					<c:otherwise>
 						<div class="multi-col" style="text-align:center;margin-right:0px;">
-								<img src="${request.getContextPath()}/bim2.0/${product2.thumbDir}.jpg"/>
+								<img src="${request.getContextPath()}/bim2.0/${product2.thumbDir}.jpg" width="170px" height="190px"/>
 								<a href="${request.getContextPath()}/bim2.0/usercenter/getProduct/${product2.id}">
 									<input type="button" value="${product2.name}" class="dorwa-button"></input>
 								</a>												
@@ -111,7 +111,7 @@
 				<c:choose>
 					<c:when test="${(status3.index+1)%6!=0}">
 						<div class="multi-col" style="text-align:center;">
-							<img src="${request.getContextPath()}/bim2.0/${product3.thumbDir}.jpg"/>
+							<img src="${request.getContextPath()}/bim2.0/${product3.thumbDir}.jpg" width="170px" height="190px"/>
 							<a href="${request.getContextPath()}/bim2.0/usercenter/getProduct/${product3.id}">
 								<input type="button" value="${product3.name}" class="dorwa-button"></input>
 							</a>										
@@ -119,7 +119,7 @@
 					</c:when>
 					<c:otherwise>
 						<div class="multi-col" style="text-align:center;margin-right:0px;">
-								<img src="${request.getContextPath()}/bim2.0/${product3.thumbDir}.jpg"/>
+								<img src="${request.getContextPath()}/bim2.0/${product3.thumbDir}.jpg" width="170px" height="190px"/>
 								<a href="${request.getContextPath()}/bim2.0/usercenter/getProduct/${product3.id}">
 									<input type="button" value="${product3.name}" class="dorwa-button"></input>
 								</a>												

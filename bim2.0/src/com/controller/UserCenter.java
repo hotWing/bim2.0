@@ -1,8 +1,21 @@
 package com.controller;
 
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
+import java.net.URLEncoder;
 
 import javax.annotation.Resource;
+import javax.net.ssl.HttpsURLConnection;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -131,7 +144,7 @@ public class UserCenter {
 	}
 	
 	@RequestMapping(value="/checkuser/{id}")
-	public String checkuser(@PathVariable("id") String id,Model model,HttpSession session) throws UnsupportedEncodingException{
+	public String checkuser(@PathVariable("id") String id,Model model,HttpSession session,final HttpServletRequest request, final HttpServletResponse response) throws UnsupportedEncodingException{
 		
 			String idUTF8 = new String(id.getBytes("ISO-8859-1"), "utf-8");
 			Product product = productService.getProduct(idUTF8);
@@ -140,18 +153,97 @@ public class UserCenter {
 			String name = (String) session.getAttribute("username");
 			if (name==null || name.isEmpty()) {
 				 return "redirect:../../bim/login.jsp";
-			 }
-			 else {
+			}
+			else {
 				productService.updateDownloads(idUTF8);
-				return "redirect:../../"+product.getDownloadDir();
+				String path = request.getRealPath("/");
+				String fileName = path + product.getDownloadDir();  
+				response.reset(); 
+				response.setHeader("Content-Disposition", "attachment; filename=\"" + fileName + "\"");  
+				response.setContentType("application/octet-stream;charset=UTF-8");  
+				
+				try {
+					OutputStream os = response.getOutputStream();				
+					InputStream is = new FileInputStream(new File(fileName));
+					byte[] buffer = new byte[2048];
+					int len = 0;
+					while ((len = is.read(buffer)) > 0) {
+						os.write(buffer, 0, len);
+					}
+					is.close();
+					os.flush();
+					os.close();
+				}catch(Exception e){
+					System.out.println("error");
+				}
+				
+//				String downloadDir= URLEncoder.encode(product.getDownloadDir(),"UTF-8");
+				return "redirect:/";
 			 }
-
 	}
 	
 	@RequestMapping(value="/contactinfo")
 	public String contactinfo(Model model){
 		model.addAttribute("contacts",productService.getAllContacts());
 		return "contactinfo";
+	}
+	
+	@RequestMapping(value="/getToken")
+	public @ResponseBody String getToken(){
+		String key = "EwXNGMGyKtSozZ1AW3Gz3Xuf0eWm3l5u";
+		String secret= "my2llJGQlzEmriwc";
+		
+		DataOutputStream output = null;
+		InputStream input = null;
+		BufferedReader buffer = null;
+
+		//get access token
+		try {
+			URL authenticationURL = new URL(
+					"https://developer.api.autodesk.com/authentication/v1/authenticate");
+			HttpsURLConnection connection = (HttpsURLConnection) authenticationURL
+					.openConnection();
+			connection.setRequestMethod("POST");
+			connection.setRequestProperty("Content-Type",
+					"application/x-www-form-urlencoded");
+			connection.setDoOutput(true);
+			connection.setDoInput(true);
+			
+
+			output = new DataOutputStream(connection.getOutputStream());
+			output.writeBytes("client_id="
+					+ URLEncoder.encode(key, "UTF-8")
+					+ "&client_secret="
+					+ URLEncoder.encode(secret, "UTF-8")
+					+ "&grant_type=client_credentials");
+			
+
+			//get the response
+			input = connection.getInputStream();
+			buffer = new BufferedReader(new InputStreamReader(input));
+			String line;
+			StringBuffer stringBuffer = new StringBuffer();
+			
+			while ((line = buffer.readLine()) != null) {
+				stringBuffer.append(line);
+				stringBuffer.append('\r');
+			}
+
+			System.out.println(stringBuffer);
+			
+			//parse the response
+			String responseString = stringBuffer.toString();
+			int index = responseString.indexOf("\"access_token\":\"")
+					+ "\"access_token\":\"".length();
+			int index2 = responseString.indexOf("\"", index);
+			String token = responseString.substring(index, index2);
+			
+			return token;
+			
+		} catch (IOException e) {
+			System.out.println(e);
+		}
+		return null;
 	}
 	
 	

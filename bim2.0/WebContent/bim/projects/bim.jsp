@@ -126,6 +126,13 @@
 				</div>
 			</div>
 			
+			<div class="three-col">
+				<img src="../../img/projects/bim/xili.png">
+				<div class="img-cover" modal-target="modal-xili">
+					某酿酒有限公司
+				</div>
+			</div>
+			
 			
 		</div>
 	</div>
@@ -240,6 +247,14 @@
 		<div class="arrow-down-black-small"></div>
      	<img src="../../img/projects/bim/modal/meili.png">
 	</div>
+	
+	<div id="modal-xili" class="modal-projects">
+		<div class="button-close"><img src="../../img/b-close.png"></div>
+		<p>某酿酒有限公司</p>
+		<div class="arrow-down-black-small"></div>
+     	<img src="../../img/projects/bim/modal/xili.png">
+	</div>
+	
 	
 	<div id="modal-xingguang" class="modal-projects">
 		<div class="button-close"><img src="../../img/b-close.png"></div>

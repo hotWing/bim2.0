@@ -20,14 +20,14 @@
 			<p class="header">虚拟现实运用</p>
 			<div class="arrow-down-black-small"></div>
 		</div>
-		<p style="margin-top:50px;width:500px">运用Unity和Vuforia API实现虚拟现实效果。简单实现了对模型进行改变颜色，移动和对环境灯光的开关等操作。</p>
+<!-- 		<p style="margin-top:50px;width:500px">运用Unity和Vuforia API实现虚拟现实效果。简单实现了对模型进行改变颜色，移动和对环境灯光的开关等操作。</p> -->
 		<div class="content">
 			<embed src="http://www.tudou.com/v/D7YNPo8Am5k/&resourceId=0_05_02_99/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="1000" height="550"></embed>		
 		</div>
 		
 		<p class="header">NFC运用</p>
 		<div class="arrow-down-black-small"></div>
-		<p style="margin-top:50px;width:500px">用两片NFC芯片模拟两种材料，通过手机读取其中的材料信息并进行出、入库操作。</p>
+<!-- 		<p style="margin-top:50px;width:500px">用两片NFC芯片模拟两种材料，通过手机读取其中的材料信息并进行出、入库操作。</p> -->
 		<div class="content">
 			<iframe src="http://www.tudou.com/programs/view/html5embed.action?type=0&code=EZmGLUnnWbY&lcode=&resourceId=336412473_06_05_99" allowtransparency="true" allowfullscreen="true" scrolling="no" border="0" frameborder="0" style="width:1000px;height:550px;"></iframe>		
 		</div>

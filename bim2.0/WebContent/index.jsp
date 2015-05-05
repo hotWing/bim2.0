@@ -11,7 +11,7 @@
 	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
 	<script type="text/javascript" src="js/supersized.3.2.7.min.js"></script>
 	<script type="text/javascript" src="theme/supersized.shutter.min.js"></script>
-    <title>彼慕官网</title>
+    <title>苏州彼慕</title>
     
     <script type="text/javascript">
 			jQuery(function($){
@@ -26,7 +26,7 @@
 					slide_interval          :   3000,		// Length between transitions
 					transition              :   6, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
 					transition_speed		:	1000,		// Speed of transition
-					new_window				:	1,			// Image links open in new window/tab
+					new_window				:	0,			// Image links open in new window/tab
 					pause_hover             :   0,			// Pause slideshow on hover
 					keyboard_nav            :   1,			// Keyboard navigation on/off
 					performance				:	1,			// 0-Normal, 1-Hybrid speed/quality, 2-Optimizes image quality, 3-Optimizes transition speed // (Only works for Firefox/IE, not Webkit)
@@ -48,10 +48,10 @@
 					slides 					:  	[			// Slideshow Images
 // 														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/kazvan-1.jpg', title : 'Image Credit: Maria Kazvan', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/kazvan-1.jpg', url : 'http://www.nonsensesociety.com/2011/04/maria-kazvan/'},
 														{image : 'img/index/logo-slide.png', title : '', thumb : 'img/index/logo-slide.png', url : ''},  
-														{image : 'img/index/solution-slide.png', title : '', thumb : 'img/index/solution-slide.png', url : ''},  
-														{image : 'img/index/why-slide.png', title : '', thumb : 'img/index/why-slide.png', url : ''},  
-														{image : 'img/index/project-slide.png', title : '', thumb : 'img/index/project-slide.png', url : ''},  
-														{image : 'img/index/contact-slide.png', title : '', thumb : 'img/index/contact-slide.png', url : ''},  
+														{image : 'img/index/solution-slide.png', title : '', thumb : 'img/index/solution-slide.png', url : 'bim/solution/keyvalue.jsp'},  
+// 														{image : 'img/index/why-slide.png', title : '', thumb : 'img/index/why-slide.png', url : ''},  
+														{image : 'img/index/project-slide.png', title : '', thumb : 'img/index/project-slide.png', url : 'bim/projects/bim.jsp'},  
+// 														{image : 'img/index/contact-slide.png', title : '', thumb : 'img/index/contact-slide.png', url : ''},  
 
 													],
 					// Theme Options			   

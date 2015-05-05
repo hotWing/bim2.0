@@ -181,7 +181,7 @@
 				<c:choose>
 					<c:when test="${(status.index+1)%6!=0}">
 						<div class="multi-col" style="text-align:center;">
-							<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}.jpg"/>
+							<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}.jpg" width="170px" height="190px"/>
 							<a href="${request.getContextPath()}/bim2.0/usercenter/getProduct/${product.id}">
 								<input type="button" value="${product.name}" class="dorwa-button"></input>
 							</a>										
@@ -189,7 +189,7 @@
 					</c:when>
 					<c:otherwise>
 						<div class="multi-col" style="text-align:center;margin-right:0px;">
-								<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}.jpg"/>
+								<img src="${request.getContextPath()}/bim2.0/${product.thumbDir}.jpg" width="170px" height="190px"/>
 								<a href="${request.getContextPath()}/bim2.0/usercenter/getProduct/${product.id}">
 									<input type="button" value="${product.name}" class="dorwa-button"></input>
 								</a>												
