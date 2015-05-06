@@ -15,7 +15,7 @@
 	<div style="background-image:url('../img/download/top-bg.png');background-position:center top; height:600px;">
 		<div class="container" style="text-align:center;padding-top:250px">
 <%-- 			<img src="${request.getContextPath()}/bim2.0/img/download/download.png" style="margin-top:215px;"> --%>
-			<div style="text-align:center;font-size:65px;color:white; background:rgba(0,0,0,0.8)">BIM世界已经改变 </div>	
+<!-- 			<div style="text-align:center;font-size:65px;color:white; background:rgba(0,0,0,0.8)">BIM世界已经改变 </div>	 -->
 		</div>
 	</div>
 	
