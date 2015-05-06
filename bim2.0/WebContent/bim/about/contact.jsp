@@ -36,7 +36,7 @@
 			<div class="two-col" style="width:440px; height:530px; padding-left:45px; padding-right:0px;">
 				<img src="../../img/about/office.png">
 				<p style="margin-top:15px" class="header">公司地址</p>
-				<p style="font-size:25px;margin-top:20px">苏州彼慕建筑设计咨询有限公司<br>
+				<p style="font-size:25px;margin-top:20px">彼慕智造<br>
 					江苏省苏州市工业园区<br>
 					东平街288号305室<br>
 					电话：0512-62839323
