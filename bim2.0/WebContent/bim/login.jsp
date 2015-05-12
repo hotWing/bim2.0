@@ -64,7 +64,7 @@
 	<input id="msg" value="${msg}" style="display:none"></input>
 	<div style="margin-top:60px; margin-left:100px">
 		<img src="${request.getContextPath()}/bim2.0/img/index/logo.png">
-		<p style="margin-top:-42px; margin-left:70px;font-size:20px;color:white;">苏州彼慕建筑设计咨询有限公司</p>
+		<p style="margin-top:-42px; margin-left:70px;font-size:20px;color:white;">彼慕智造</p>
 	</div>
 	<div class="login-form" style="text-align:center;position:absolute;top:50%;left:50%;margin:-200px 0 0 -200px;width:400px;height:300px;">
 		<form id="form" action="${request.getContextPath()}/bim2.0/usercenter/login" method="post">
